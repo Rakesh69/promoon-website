@@ -1,0 +1,406 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Lobster&family=Montserrat&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200&family=Raleway:wght@400;700&family=Roboto+Mono:wght@100&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  @apply m-0 p-0 box-border;
+}
+html {
+  @apply scroll-smooth;
+}
+body {
+  @apply font-poppins;
+}
+
+.onHover {
+  animation-duration: 0.3s;
+  animation-name: onHover;
+  transition: color 0.3s ease-in;
+}
+
+@keyframes onHover {
+  100% {
+    color: #e82b59;
+  }
+}
+
+.increaseHeight {
+  animation-duration: 0s;
+  animation-name: increaseHeight;
+  transition: all 0s ease-in;
+}
+
+@keyframes increaseHeight {
+  0% {
+    height: 0%;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+.downArrowRound {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  animation-name: downArrowRound;
+}
+
+@keyframes downArrowRound {
+  0% {
+    transform: rotate(90deg);
+    visibility: visible;
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.downArrowRoundReturn {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  animation-name: downArrowRoundReturn;
+}
+
+@keyframes downArrowRoundReturn {
+  0% {
+    transform: rotate(90deg);
+    visibility: visible;
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.popUpSlideUpToDown {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  animation-name: popUpSlideUpToDown;
+}
+
+@keyframes popUpSlideUpToDown {
+  0% {
+    transform: translateY(-100%);
+    visibility: visible;
+  }
+  80% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.popUpSlideDownToUp {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  animation-name: popUpSlideDownToUp;
+}
+
+@keyframes popUpSlideDownToUp {
+  0% {
+    transform: translateY(100%);
+    visibility: visible;
+  }
+  80% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(-500%);
+  }
+}
+
+.slideInLeft {
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+  animation-name: slideInLeft;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slideInLeftMenues {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  animation-name: slideInLeftMenues;
+}
+
+@keyframes slideInLeftMenues {
+  0% {
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.slideInLeftMenues1 {
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
+  animation-name: slideInLeftMenues;
+}
+
+@keyframes slideInLeftMenues {
+  0% {
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.slideInLeftMenues2 {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  animation-name: slideInLeftMenues;
+}
+
+@keyframes slideInLeftMenues {
+  0% {
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.slideInLeftMenues3 {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: slideInLeftMenues;
+}
+
+@keyframes slideInLeftMenues {
+  0% {
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slideInLeftMenues4 {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  animation-name: slideInLeftMenues;
+}
+
+@keyframes slideInLeftMenues {
+  0% {
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.headerTitle {
+  animation-duration: 3s;
+  animation-name: headerTitle;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes headerTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.headerDescription {
+  animation-duration: 4s;
+  animation-name: headerTitle;
+  animation-delay: 3s;
+  animation-iteration-count: 1;
+}
+
+@keyframes headerDescription {
+  /* 0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  50% {
+    opacity: 0.5;
+  } */
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0c5f9f;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: 0.4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73c0fc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.sun svg {
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.moon svg {
+  animation: tilt 3s linear infinite;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+@keyframes upAndDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hover-up-down {
+  transition: transform 1s ease-in-out;
+}
+
+.hover-up-down:hover {
+  animation: upAndDown 1s ease-in-out forwards;
+}
+
+/* h1 {
+  color: #0056b3;
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.header {
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.footer {
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+} */

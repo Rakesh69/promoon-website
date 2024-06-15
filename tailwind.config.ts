@@ -1,0 +1,118 @@
+import { url } from 'inspector';
+import type { Config } from 'tailwindcss';
+
+const config: Config = {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      spacing: {
+        '1px': '1px',
+        '1.33px': '1.33px',
+        '2px': '2px',
+        '18px': '18px',
+        '23px': '23px',
+        '28px': '28px',
+        '30px': '30px',
+        '45px': '45px',
+        '70px': '70px',
+        '84px': '84px',
+        '85px': '85px',
+        '90px': '90px',
+        '450px': '450px',
+        '90%': '90%',
+      },
+      translate: {
+        '100%': '100%',
+      },
+      opacity: {
+        '20%': '20%',
+      },
+      lineHeight: {
+        '1px': '1px',
+        '24px': '24px',
+        '30px': '30px',
+        '45px': '45px',
+        '48px': '48px',
+      },
+      letterSpacing: {
+        '0.14px': '0.14px',
+        '1%': '1%',
+      },
+      fontSize: {
+        '28px': '28px',
+        '32px': '32px',
+      },
+      boxShadow: {
+        customShadow: '0px 8px 26px -4px #14141426',
+        solutionModelShadow:
+          '0px 17.63719367980957px 25.77743911743164px 0px #00000012',
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+      },
+      colors: {
+        primary: '#27AAE1',
+        blackBlue: '#3D3850',
+        lightRose: '#FFEAEE',
+        lightBackground: '#F3F4F6',
+        textPrimary: '#252B42',
+        textSecondary: '#737373',
+        borderColor: '#D9D9D9',
+        inputBorder: '#D2D6DA',
+        requiredField: '#D21312',
+        darkBlack: '#252F40',
+        navbarBorder: '#E7E7E7',
+        ourProcessBorder: '#CBCBCB',
+        positionBgColor: '#EDEDF0',
+        blue: '#27AAE1',
+        darkbg: '#1D1E1E',
+        darkText: '#949494',
+        darkTextPrimary: '#C7C7C7',
+        darkBorder: '#313131',
+        textWhite: '#D4D4D4',
+        inputColor: '#202020',
+        bgColor: '#EDEDF0',
+        lightBlack: '#515B6F',
+        black: '#202430',
+      },
+
+      borderRadius: {
+        'rounded-10px': '10px',
+        'rounded-13.33px': '13.33px',
+      },
+
+      gradientColor: {
+        blue: '#27AAE1',
+        darkblue: '#1C75BC',
+      },
+
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'send-message-btn': ' linear-gradient(to right, #FF7494, #E82B59)',
+        'send-bg-btn': ' linear-gradient(to right, #27AAE1, #1C75BC)',
+        'header-background': "url('/assets/DarkHeader.png')",
+        'dark-header-background': "url('/assets/darkHeaderBackground.png')",
+        'dark-header-waves': "url('/assets/darkWaves.png')",
+        'footer-background': "url('/assets/footerBackground.png')",
+        'ourProcess-topBackground':
+          "url('/assets/ourProcessTopBackground.png')",
+        'ourProcess-bottomBackground':
+          "url('/assets/ourProcessBottomBackground.png')",
+        'career-Background': "url('/assets/careerBackground.png')",
+        'career-DarkBackground': "url('/assets/darkCareerBackground.png')",
+        'our-Process-background': "url('/assets/ourProcess.png')",
+      },
+    },
+  },
+
+  plugins: [],
+};
+export default config;
