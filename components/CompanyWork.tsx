@@ -3,7 +3,6 @@ import CreditCardIcon from "@/icons/CreditCardIcon";
 import RocketIcon from "@/icons/RocketIcon";
 import MessageIcon from "@/icons/MessageIcon";
 import ToolsIcon from "@/icons/ToolsIcon";
-import termWorkImage from "../public/assets/termwork.png";
 
 const OUR_SPECIALITY: {
   id: number;
@@ -65,7 +64,7 @@ const CompanyWork = () => {
               <div className="bg-white shadow-customShadow gap-4 flex flex-col md:flex-row lg:flex-col p-4 rounded-2xl">
                 <div className="md:w-2/4 lg:w-full">
                   <Image
-                    src={termWorkImage}
+                    src="/assets/termwork.png"
                     className="rounded-2xl w-full"
                     alt="companyWorkImage"
                   />
