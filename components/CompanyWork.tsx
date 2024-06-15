@@ -1,9 +1,9 @@
-import Image from 'next/image';
-import CreditCardIcon from '@/icons/CreditCardIcon';
-import RocketIcon from '@/icons/RocketIcon';
-import MessageIcon from '@/icons/MessageIcon';
-import ToolsIcon from '@/icons/ToolsIcon';
-import termWorkImage from '../public/assets/termwork.png';
+import Image from "next/image";
+import CreditCardIcon from "@/icons/CreditCardIcon";
+import RocketIcon from "@/icons/RocketIcon";
+import MessageIcon from "@/icons/MessageIcon";
+import ToolsIcon from "@/icons/ToolsIcon";
+import termWorkImage from "../public/assets/termwork.png";
 
 const OUR_SPECIALITY: {
   id: number;
@@ -14,30 +14,30 @@ const OUR_SPECIALITY: {
   {
     id: Math.random(),
     icon: <CreditCardIcon />,
-    title: 'Powerful software platform',
+    title: "Powerful software platform",
     description:
       "For teams, we're bringing enhancements to meetings and multitasking to help users seamlessly work with their data wherever they work.",
   },
   {
     id: Math.random(),
     icon: <RocketIcon />,
-    title: 'Project management',
+    title: "Project management",
     description:
-      'An IT project manager oversees and manages IT-centric projects with a similar set of managerial and leadership skills required of a traditional project manager.',
+      "An IT project manager oversees and manages IT-centric projects with a similar set of managerial and leadership skills required of a traditional project manager.",
   },
   {
     id: Math.random(),
     icon: <ToolsIcon />,
-    title: 'Powerful software platform',
+    title: "Powerful software platform",
     description:
-      'ProMoon has the tools and expertise to help businesses leverage the latest technology to accelerate their growth.',
+      "ProMoon has the tools and expertise to help businesses leverage the latest technology to accelerate their growth.",
   },
   {
     id: Math.random(),
     icon: <MessageIcon />,
-    title: 'Innovative software solutions',
+    title: "Innovative software solutions",
     description:
-      'Our innovative solutions use software to organize and manage projects for better efficiency and outcomes.',
+      "Our innovative solutions use software to organize and manage projects for better efficiency and outcomes.",
   },
 ];
 const CompanyWork = () => {
@@ -48,10 +48,7 @@ const CompanyWork = () => {
           <div className="section-container gap-6 flex flex-col h-full w-full items-center lg:flex-row bg-top">
             <div className="part1 w-full grid grid-cols-1 grid-rows-4 lg:w-3/4 gap-10 md:grid-cols-2 md:grid-rows-2 ">
               {OUR_SPECIALITY.map(({ description, icon, id, title }) => (
-                <div
-                  key={id}
-                  className="w-full flex flex-col justify-center"
-                >
+                <div key={id} className="w-full flex flex-col justify-center">
                   <div className="flex justify-center md:block">{icon}</div>
 
                   <h3 className="text-2xl pt-2 font-semibold text-center md:text-left w-full text-textPrimary">

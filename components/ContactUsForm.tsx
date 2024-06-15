@@ -1,15 +1,15 @@
-import CheckBox from './CheckBox';
-import { useFormik } from 'formik';
-import Link from 'next/link';
-import * as Yup from 'yup';
-import { sendContactForm } from './../lib/api';
+import CheckBox from "./CheckBox";
+import { useFormik } from "formik";
+import Link from "next/link";
+import * as Yup from "yup";
+import { sendContactForm } from "./../lib/api";
 
 const validationSchema = Yup.object().shape({
-  firstname: Yup.string().required('Required'),
-  lastname: Yup.string().required('Required'),
-  email: Yup.string().email('Invalid Email').required('Required'),
-  isChecked: Yup.boolean().isTrue('Required').required(),
-  message: Yup.string().required('Required'),
+  firstname: Yup.string().required("Required"),
+  lastname: Yup.string().required("Required"),
+  email: Yup.string().email("Invalid Email").required("Required"),
+  isChecked: Yup.boolean().isTrue("Required").required(),
+  message: Yup.string().required("Required"),
 });
 
 const ContactUsForm = () => {
@@ -24,10 +24,10 @@ const ContactUsForm = () => {
   } = useFormik({
     initialValues: {
       isChecked: false,
-      firstname: '',
-      lastname: '',
-      email: '',
-      message: '',
+      firstname: "",
+      lastname: "",
+      email: "",
+      message: "",
     },
     validationSchema: validationSchema,
     onSubmit: async (values) => {
@@ -47,10 +47,7 @@ const ContactUsForm = () => {
           </div>
 
           <div>
-            <form
-              className="py-5"
-              onSubmit={handleSubmit}
-            >
+            <form className="py-5" onSubmit={handleSubmit}>
               <div className="w-full lg:flex lg:justify-between gap-5">
                 <div className="pb-3 lg:w-1/2">
                   <label
@@ -149,7 +146,7 @@ const ContactUsForm = () => {
                     id="isChecked"
                     isChecked={values.isChecked}
                     onChange={() => {
-                      setFieldValue('isChecked', !values.isChecked);
+                      setFieldValue("isChecked", !values.isChecked);
                     }}
                   />
                   <label

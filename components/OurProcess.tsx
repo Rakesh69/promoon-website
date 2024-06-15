@@ -1,25 +1,25 @@
-import React from 'react';
+import React from "react";
 
 const OUR_PROCESSES: { id: number; title: string }[] = [
   {
     id: 1,
     title:
-      'After an initial consultation, we’ll help you find the best fit lead your team. Each lead is supported by a team of experienced professionals who are dedicated to helping the lead achieve success.',
+      "After an initial consultation, we’ll help you find the best fit lead your team. Each lead is supported by a team of experienced professionals who are dedicated to helping the lead achieve success.",
   },
   {
     id: 2,
     title:
-      'Your lead becomes a core member of your team, working closely with you to develop with you to develop and implement strategies thatdrive results. They bring a wealth of experience and expertise to the table, and are dedicated to helping you achieve your goals.',
+      "Your lead becomes a core member of your team, working closely with you to develop with you to develop and implement strategies thatdrive results. They bring a wealth of experience and expertise to the table, and are dedicated to helping you achieve your goals.",
   },
   {
     id: 3,
     title:
-      'Your lead will also work with their supporting team to deliver projects/milestones weekly. While the team iterates on the project, the lead can provide updates as frequently as needed - generally during weekly or daily stand-ups.',
+      "Your lead will also work with their supporting team to deliver projects/milestones weekly. While the team iterates on the project, the lead can provide updates as frequently as needed - generally during weekly or daily stand-ups.",
   },
   {
     id: 4,
     title:
-      'You get the best of both worlds - the efficiency of a team working together towards a common goal and the flexibility of individualized attention and support from a dedicated lead.',
+      "You get the best of both worlds - the efficiency of a team working together towards a common goal and the flexibility of individualized attention and support from a dedicated lead.",
   },
 ];
 

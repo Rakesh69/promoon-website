@@ -1,5 +1,5 @@
-import Container from '@/components/Container';
-import OurProcess from '@/components/OurProcess';
+import Container from "@/components/Container";
+import OurProcess from "@/components/OurProcess";
 
 const ourprocess = () => {
   return (

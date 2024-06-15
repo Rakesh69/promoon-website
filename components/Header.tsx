@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
-import HamburgerMenu from './HamburgerMenu';
-import { useMenu } from '@/context/menu-context';
-import { useRouter } from 'next/router';
+import { useEffect } from "react";
+import HamburgerMenu from "./HamburgerMenu";
+import { useMenu } from "@/context/menu-context";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const router = useRouter();
@@ -10,9 +10,9 @@ const Header = () => {
 
   useEffect(() => {
     if (currentUser) {
-      document.body.style.overflowY = 'hidden';
+      document.body.style.overflowY = "hidden";
     } else {
-      document.body.style.overflowY = 'auto';
+      document.body.style.overflowY = "auto";
     }
   }, [currentUser]);
 
@@ -20,7 +20,7 @@ const Header = () => {
     <>
       <main
         className={`bg-header-background dark:bg-dark-header-background dark:bg-white md:py-14 bg-no-repeat bg-top bg-cover w-full h-full" ${
-          currentUser ? 'overflow-hidden' : ''
+          currentUser ? "overflow-hidden" : ""
         } object-center bg-cover w-full h-full`}
       >
         <HamburgerMenu />
@@ -48,7 +48,7 @@ const Header = () => {
               <button
                 className="flex items-center hover:changeBg justify-center gap-3"
                 onClick={() => {
-                  router.push('/contactus');
+                  router.push("/contactus");
                 }}
               >
                 <p>Let’s Discuss</p>

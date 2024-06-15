@@ -1,5 +1,5 @@
-import FooterLogoIcon from '@/icons/FooterLogoIcon';
-import ProMoonLogoDark from '@/icons/ProMoonLogoDark';
+import FooterLogoIcon from "@/icons/FooterLogoIcon";
+import ProMoonLogoDark from "@/icons/ProMoonLogoDark";
 
 const Footer = () => {
   return (

@@ -64,32 +64,32 @@
 //   },
 // };
 
-import nodemailer from 'nodemailer';
-import { mailOptions } from '../../components/config/nodemailer';
-import { transporter } from '../../components/config/nodemailer';
-import multer from 'multer';
+import nodemailer from "nodemailer";
+import { mailOptions } from "../../components/config/nodemailer";
+import { transporter } from "../../components/config/nodemailer";
+import multer from "multer";
 
 const upload = multer();
 
 const handler = async (req, res) => {
-  console.log('req.body ?>>> ', req.body);
-  if (req.method === 'POST') {
-    upload.single('resume')(req, res, async (err) => {
+  console.log("req.body ?>>> ", req.body);
+  if (req.method === "POST") {
+    upload.single("resume")(req, res, async (err) => {
       if (err) {
-        return res.status(400).json({ message: 'Error uploading file' });
+        return res.status(400).json({ message: "Error uploading file" });
       }
 
       const data = JSON.parse(req.body.data);
 
       const portfolioUrl =
-        process.env.PORTFOLIO_URL || 'https://www.example.com/portfolio';
+        process.env.PORTFOLIO_URL || "https://www.example.com/portfolio";
 
       try {
         await transporter.sendMail({
           mailOptions,
           to: data.email,
-          subject: 'inquiry',
-          subject: 'Inquiry',
+          subject: "inquiry",
+          subject: "Inquiry",
           html: `<div style="font-family: Arial, sans-serif; padding: 20px;">
             <h1>Hello ${data.firstname} ${data.lastname},</h1>
             <p>Thank you for your inquiry. We have received the following message:</p>
@@ -102,7 +102,7 @@ const handler = async (req, res) => {
             {
               filename: req.file.originalname,
               content: req.file.buffer,
-              contentType: 'application/pdf',
+              contentType: "application/pdf",
             },
           ],
         });
@@ -113,7 +113,7 @@ const handler = async (req, res) => {
       }
     });
   } else {
-    return res.status(400).json({ message: 'Bad request' });
+    return res.status(400).json({ message: "Bad request" });
   }
 };
 

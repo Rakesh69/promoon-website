@@ -1,9 +1,9 @@
-import { useMenu } from '@/context/menu-context';
-import { useRouter } from 'next/router';
-import React from 'react';
-import { useTheme } from '@/context/ThemeContext';
-import SunIcon from '@/icons/SunIcon';
-import MoonIcon from '@/icons/MoonIcon';
+import { useMenu } from "@/context/menu-context";
+import { useRouter } from "next/router";
+import React from "react";
+import { useTheme } from "@/context/ThemeContext";
+import SunIcon from "@/icons/SunIcon";
+import MoonIcon from "@/icons/MoonIcon";
 
 const HamburgerMenu: React.FC = () => {
   const { theme, toggleMode } = useTheme();
@@ -19,7 +19,7 @@ const HamburgerMenu: React.FC = () => {
                 <button
                   onClick={() => {
                     setCurrentUser(false);
-                    router.push('/');
+                    router.push("/");
                   }}
                   className="dark:hover:text-blue dark:text-white hover:text-blue"
                 >
@@ -30,7 +30,7 @@ const HamburgerMenu: React.FC = () => {
                 <button
                   onClick={() => {
                     setCurrentUser(false);
-                    router.push('/ourprocess');
+                    router.push("/ourprocess");
                   }}
                   className="dark:hover:text-blue dark:text-white hover:text-blue"
                 >
@@ -41,7 +41,7 @@ const HamburgerMenu: React.FC = () => {
                 <button
                   onClick={() => {
                     setCurrentUser(false);
-                    router.push('/contactus');
+                    router.push("/contactus");
                   }}
                   className="dark:hover:text-blue dark:text-white hover:text-blue"
                 >
@@ -52,7 +52,7 @@ const HamburgerMenu: React.FC = () => {
                 <button
                   onClick={() => {
                     setCurrentUser(false);
-                    router.push('/career');
+                    router.push("/career");
                   }}
                   className="dark:hover:text-blue dark:text-white hover:text-blue"
                 >

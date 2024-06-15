@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import { useMenu } from '@/context/menu-context';
-import { useRouter } from 'next/router';
-import PromoonLogo from '@/icons/ProMoonLogo';
-import { useTheme } from '@/context/ThemeContext';
-import ProMoonLogoDark from '@/icons/ProMoonLogoDark';
-import ResponsiveNavbar from '@/icons/ResponsiveNavbar';
-import ResponsiveCloseIcon from '@/icons/ResponsiveCloseIcon';
+import Link from "next/link";
+import { useMenu } from "@/context/menu-context";
+import { useRouter } from "next/router";
+import PromoonLogo from "@/icons/ProMoonLogo";
+import { useTheme } from "@/context/ThemeContext";
+import ProMoonLogoDark from "@/icons/ProMoonLogoDark";
+import ResponsiveNavbar from "@/icons/ResponsiveNavbar";
+import ResponsiveCloseIcon from "@/icons/ResponsiveCloseIcon";
 
 const NAV_MENUES: {
   id: number;
@@ -14,23 +14,23 @@ const NAV_MENUES: {
 }[] = [
   {
     id: 1,
-    menu: 'Home',
-    path: '/',
+    menu: "Home",
+    path: "/",
   },
   {
     id: 2,
-    menu: 'Our Process',
-    path: '/ourprocess',
+    menu: "Our Process",
+    path: "/ourprocess",
   },
   {
     id: 3,
-    menu: 'Contact US',
-    path: '/contactus',
+    menu: "Contact US",
+    path: "/contactus",
   },
   {
     id: 4,
-    menu: 'Career',
-    path: '/career',
+    menu: "Career",
+    path: "/career",
   },
 ];
 
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
         <div className="max-w-screen-xl w-90% h-[70px]  m-auto flex">
           <div className="w-full flex items-center justify-between">
             <div>
-              {theme === 'light' ? <PromoonLogo /> : <ProMoonLogoDark />}
+              {theme === "light" ? <PromoonLogo /> : <ProMoonLogoDark />}
             </div>
             <div>
               <ul className="lg:flex hidden gap-10 font-bold  text-textPrimary">

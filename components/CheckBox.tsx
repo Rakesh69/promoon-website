@@ -5,10 +5,7 @@ const CheckBox: React.FC<{
 }> = ({ isChecked, id, onChange }) => {
   return (
     <>
-      <label
-        htmlFor={id}
-        className="inline-flex items-center cursor-pointer"
-      >
+      <label htmlFor={id} className="inline-flex items-center cursor-pointer">
         <input
           type="checkbox"
           onChange={onChange}
@@ -18,7 +15,7 @@ const CheckBox: React.FC<{
         />
         <div
           className={`w-18px h-18px flex-shrink-0 border-2 ${
-            isChecked ? 'bg-primary' : ''
+            isChecked ? "bg-primary" : ""
           }  border-primary rounded-md`}
         >
           {isChecked ? (

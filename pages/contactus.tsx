@@ -1,5 +1,5 @@
-import ContactUsForm from '@/components/ContactUsForm';
-import Container from '@/components/Container';
+import ContactUsForm from "@/components/ContactUsForm";
+import Container from "@/components/Container";
 
 const ContactUs = () => {
   return (

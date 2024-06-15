@@ -1,12 +1,12 @@
-import DarkPositionIcon from '@/icons/DarkPositionIcon';
-import PositionIcon from '@/icons/PositionIcon';
-import RightArrow from '@/icons/RightArrow';
-import Position1Image from '@/public/assets/Position1Image.png';
-import Position2Image from '@/public/assets/Position2Image.png';
-import Position3Image from '@/public/assets/Position3Image.png';
-import { StaticImageData } from 'next/image';
-import Image from 'next/image';
-import Link from 'next/link';
+import DarkPositionIcon from "@/icons/DarkPositionIcon";
+import PositionIcon from "@/icons/PositionIcon";
+import RightArrow from "@/icons/RightArrow";
+import Position1Image from "@/public/assets/Position1Image.png";
+import Position2Image from "@/public/assets/Position2Image.png";
+import Position3Image from "@/public/assets/Position3Image.png";
+import { StaticImageData } from "next/image";
+import Image from "next/image";
+import Link from "next/link";
 
 const POSITIONS: {
   id: number;
@@ -18,27 +18,27 @@ const POSITIONS: {
 }[] = [
   {
     id: 1,
-    title: 'Position 1',
+    title: "Position 1",
     description:
-      'The employer is expected to reach out to our team and make a request. Conversations about the role specifics will then start between our Talent delivery associate and the employer.',
+      "The employer is expected to reach out to our team and make a request. Conversations about the role specifics will then start between our Talent delivery associate and the employer.",
     icon: <PositionIcon />,
     darkIcon: <DarkPositionIcon />,
     positonImage: Position1Image,
   },
   {
     id: 2,
-    title: 'Position 2',
+    title: "Position 2",
     description:
-      'The next step is for our Talent Delivery Associate to review and interview candidates that fit the needs of the employer. Then proceed to initiate a conversation between the client and selected candidates, Introductory interviews & further assessments could be required.',
+      "The next step is for our Talent Delivery Associate to review and interview candidates that fit the needs of the employer. Then proceed to initiate a conversation between the client and selected candidates, Introductory interviews & further assessments could be required.",
     icon: <PositionIcon />,
     darkIcon: <DarkPositionIcon />,
     positonImage: Position2Image,
   },
   {
     id: 3,
-    title: 'Position 3',
+    title: "Position 3",
     description:
-      'The employer is expected to reach out to our team and make a request. Conversations about the role specifics will then start between our Talent delivery associate and the employer.',
+      "The employer is expected to reach out to our team and make a request. Conversations about the role specifics will then start between our Talent delivery associate and the employer.",
     icon: <PositionIcon />,
     darkIcon: <DarkPositionIcon />,
     positonImage: Position3Image,
@@ -76,10 +76,7 @@ const Positions = () => {
                           {description}
                         </p>
                         <button className="bg-send-bg-btn rounded-full text-center lg:text-xl text-white  px-12 py-2 md:py-4 lg:px-14 lg:py-4">
-                          <Link
-                            href={`/hiringform`}
-                            className="flex gap-3"
-                          >
+                          <Link href={`/hiringform`} className="flex gap-3">
                             Get Started
                             <RightArrow />
                           </Link>
@@ -87,10 +84,7 @@ const Positions = () => {
                       </div>
                     </div>
                     <div className="md:w-1/2 md:flex md:justify-center">
-                      <Image
-                        src={positonImage}
-                        alt={title}
-                      />
+                      <Image src={positonImage} alt={title} />
                     </div>
                   </div>
                 );

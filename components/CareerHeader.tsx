@@ -1,7 +1,7 @@
-import RightArrow from '@/icons/RightArrow';
-import Image from 'next/image';
-import bottomOurProcessBgImage from '@/public/assets/ourProcessBottomBackground.png';
-import darkBottombgWaves from '@/public/assets/darkBottombgWaves@2x.png';
+import RightArrow from "@/icons/RightArrow";
+import Image from "next/image";
+import bottomOurProcessBgImage from "@/public/assets/ourProcessBottomBackground.png";
+import darkBottombgWaves from "@/public/assets/darkBottombgWaves@2x.png";
 
 const CareerHeader: React.FC<{ id: string }> = ({ id }) => {
   const scrollTo = (id: string) => {
@@ -27,7 +27,7 @@ const CareerHeader: React.FC<{ id: string }> = ({ id }) => {
                   <br className="hidden sm:block lg:block" /> looking for
                   talented and motivated individuals who
                   <br className="hidden sm:block lg:block" /> share our vision
-                  and want to be part of a dynamic and{' '}
+                  and want to be part of a dynamic and{" "}
                   <br className="hidden sm:block lg:block" />
                   innovative team.
                 </p>

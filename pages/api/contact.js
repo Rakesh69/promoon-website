@@ -1,14 +1,14 @@
-import { transporter } from '../../components/config/nodemailer';
-import { mailOptions } from '../../components/config/nodemailer';
+import { transporter } from "../../components/config/nodemailer";
+import { mailOptions } from "../../components/config/nodemailer";
 
 const handler = async (req, res) => {
-  if (req.method === 'POST') {
+  if (req.method === "POST") {
     const data = req.body;
     try {
       await transporter.sendMail({
         mailOptions,
         to: data.email,
-        subject: 'inquiry ',
+        subject: "inquiry ",
         html: `<h1>Hello ${data.firstname} ${data.lastname},</h1>
       <p>Thank you for your inquiry. We have received the following message:</p>
       <p>${data.message}</p>
@@ -20,6 +20,6 @@ const handler = async (req, res) => {
       return res.status(400).json({ message: error.message });
     }
   }
-  return res.status(400).json({ message: 'Bad request' });
+  return res.status(400).json({ message: "Bad request" });
 };
 export default handler;

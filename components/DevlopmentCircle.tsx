@@ -1,8 +1,8 @@
-import ReasearchIcon from '@/icons/ReasearchIcon';
-import DesignIcon from '@/icons/DesignIcon';
-import ProjectDevlopmentIcon from '@/icons/ProjectDevlopmentIcon';
-import QualityAssuranceIcon from '@/icons/QualityAssuranceIcon';
-import DeployProjectIcon from '@/icons/DeployProjectIcon';
+import ReasearchIcon from "@/icons/ReasearchIcon";
+import DesignIcon from "@/icons/DesignIcon";
+import ProjectDevlopmentIcon from "@/icons/ProjectDevlopmentIcon";
+import QualityAssuranceIcon from "@/icons/QualityAssuranceIcon";
+import DeployProjectIcon from "@/icons/DeployProjectIcon";
 
 const DEVLOPMENT_CIRCLE: {
   id: number;
@@ -12,27 +12,27 @@ const DEVLOPMENT_CIRCLE: {
   {
     id: 1,
     icon: <ReasearchIcon />,
-    title: 'Research and discovery',
+    title: "Research and discovery",
   },
   {
     id: 2,
     icon: <DesignIcon />,
-    title: 'Design and prototyping',
+    title: "Design and prototyping",
   },
   {
     id: 3,
     icon: <ProjectDevlopmentIcon />,
-    title: 'Project Development',
+    title: "Project Development",
   },
   {
     id: 4,
     icon: <QualityAssuranceIcon />,
-    title: 'Quality Assurance',
+    title: "Quality Assurance",
   },
   {
     id: 5,
     icon: <DeployProjectIcon />,
-    title: 'Project Deployment',
+    title: "Project Deployment",
   },
 ];
 
@@ -64,8 +64,8 @@ const DevlopmentCircle = () => {
                   id={id.toString()}
                   className={`bg-white text-textPrimary hover:-translate-y-2 transition duration-500  ${
                     DEVLOPMENT_CIRCLE.length === id
-                      ? 'md:col-span-2 lg:col-auto'
-                      : ''
+                      ? "md:col-span-2 lg:col-auto"
+                      : ""
                   } font-medium leading-6 tracking-0.14px flex flex-col justify-center items-center text-center  rounded-rounded-10px`}
                 >
                   <div>{icon}</div>

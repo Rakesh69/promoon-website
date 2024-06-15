@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 const SolutionModel: React.FC<{
   data: {
     id: number;

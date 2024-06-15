@@ -1,38 +1,38 @@
-import Link from 'next/link';
-import FacebookIcon from '@/icons/FacebookIcon';
-import TwitterIcon from '@/icons/TwitterIcon';
-import InstragramIcon from '@/icons/InstragramIcon';
-import LinkedinIcon from '@/icons/LinkedinIcon';
-import AddressPopup from './AddressPopup';
+import Link from "next/link";
+import FacebookIcon from "@/icons/FacebookIcon";
+import TwitterIcon from "@/icons/TwitterIcon";
+import InstragramIcon from "@/icons/InstragramIcon";
+import LinkedinIcon from "@/icons/LinkedinIcon";
+import AddressPopup from "./AddressPopup";
 
 const Services = () => {
   const FOOTER_SERVICE: { id: number; name: string; route: string }[] = [
-    { id: 1, name: 'Technology', route: 'technology' },
-    { id: 2, name: 'Website development', route: 'website-development' },
-    { id: 3, name: 'Project development', route: 'project-development' },
-    { id: 4, name: 'Mobile app development', route: 'mobile-app-development' },
+    { id: 1, name: "Technology", route: "technology" },
+    { id: 2, name: "Website development", route: "website-development" },
+    { id: 3, name: "Project development", route: "project-development" },
+    { id: 4, name: "Mobile app development", route: "mobile-app-development" },
   ];
   const FOOTER_RESOURCES: { id: number; name: string; route: string }[] = [
-    { id: 1, name: 'Success Stories', route: 'success-stories' },
-    { id: 2, name: 'Get in Touch', route: 'get-in-touch' },
-    { id: 3, name: 'About Pixeldart', route: 'about-pixeldart' },
-    { id: 4, name: 'Blog', route: 'blog' },
+    { id: 1, name: "Success Stories", route: "success-stories" },
+    { id: 2, name: "Get in Touch", route: "get-in-touch" },
+    { id: 3, name: "About Pixeldart", route: "about-pixeldart" },
+    { id: 4, name: "Blog", route: "blog" },
   ];
   const FOOTER_INFORMATION: { id: number; name: string; route: string }[] = [
-    { id: 1, name: 'Careers', route: 'career' },
-    { id: 2, name: 'FAQ', route: 'faq' },
-    { id: 3, name: 'Privacy Policy', route: 'privacy-policy' },
+    { id: 1, name: "Careers", route: "career" },
+    { id: 2, name: "FAQ", route: "faq" },
+    { id: 3, name: "Privacy Policy", route: "privacy-policy" },
     {
       id: 4,
-      name: 'Do Not Sell My Personal Information',
-      route: 'do-not-sell-my-personal-information',
+      name: "Do Not Sell My Personal Information",
+      route: "do-not-sell-my-personal-information",
     },
     {
       id: 5,
-      name: 'Terms of Use',
-      route: 'terms-of-use',
+      name: "Terms of Use",
+      route: "terms-of-use",
     },
-    { id: 6, name: 'Sitemap', route: 'sitemap' },
+    { id: 6, name: "Sitemap", route: "sitemap" },
   ];
 
   const SOCIAL_MEDIA_ICONS: {
@@ -44,26 +44,26 @@ const Services = () => {
     {
       id: 1,
       icon: <FacebookIcon />,
-      name: 'Facebook',
-      href: 'https://www.facebook.com/profile.php?id=100091227716427',
+      name: "Facebook",
+      href: "https://www.facebook.com/profile.php?id=100091227716427",
     },
     {
       id: 2,
       icon: <TwitterIcon />,
-      name: 'Twitter',
-      href: 'https://twitter.com/home',
+      name: "Twitter",
+      href: "https://twitter.com/home",
     },
     {
       id: 3,
       icon: <InstragramIcon />,
-      name: 'Instragram',
-      href: 'https://www.instagram.com/pixeldart_official/',
+      name: "Instragram",
+      href: "https://www.instagram.com/pixeldart_official/",
     },
     {
       id: 4,
       icon: <LinkedinIcon />,
-      name: 'Linkedin',
-      href: 'https://www.linkedin.com/in/hr-pixeldart-1b8351271/',
+      name: "Linkedin",
+      href: "https://www.linkedin.com/in/hr-pixeldart-1b8351271/",
     },
   ];
 
@@ -84,7 +84,7 @@ const Services = () => {
 
               <div className="flex items-center pb-4">
                 <Link
-                  href={'/contactus'}
+                  href={"/contactus"}
                   className="lg:py-4 lg:px-20 lg:text-xl py-1 px-4 shadow-customShadow  bg-white rounded-full  text-textPrimary"
                 >
                   Contact Us
