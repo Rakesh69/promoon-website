@@ -1,29 +1,49 @@
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
-import CvIcon from '@/icons/CvIcon';
-import CheckBox from './CheckBox';
-import { useState } from 'react';
-import { sendHiringForm } from './../lib/hiringapi';
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import CvIcon from "@/icons/CvIcon";
+import CheckBox from "./CheckBox";
+import { useState } from "react";
+import { sendHiringForm } from "./../lib/hiringapi";
 
 const validationSchema = Yup.object().shape({
-  firstname: Yup.string().required('Required'),
-  lastname: Yup.string().required('Required'),
-  email: Yup.string().email('Invalid Email').required('Required'),
+  firstname: Yup.string().required("Required"),
+  lastname: Yup.string().required("Required"),
+  email: Yup.string().email("Invalid Email").required("Required"),
   isChecked: Yup.boolean()
-    .isTrue('Please Read And Tick Term & Condition Checkbox')
+    .isTrue("Please Read And Tick Term & Condition Checkbox")
     .required(),
-  portfolioUrl: Yup.string().url('Invalid URL format').required('Required'),
-  message: Yup.string().required('Required'),
-  resume: Yup.mixed().required('Resume is required'),
+  portfolioUrl: Yup.string().url("Invalid URL format").required("Required"),
+  message: Yup.string().required("Required"),
+  resume: Yup.mixed().required("Resume is required"),
 });
+
+type HiringFormType = {
+  firstname: string;
+  lastname: string;
+  email: string;
+  message: string;
+  portfolioUrl: string;
+  isChecked: boolean;
+  resume: any;
+};
 
 const ContactUsForm = () => {
   const [resumeData, setResumeData] = useState<File | null>(null);
-
-  const handleFileChange = (files: File[]) => {
-    const file = files[0];
-    setResumeData(file);
-    setFieldValue('resume', file);
+  const initialValues: HiringFormType = {
+    firstname: "",
+    lastname: "",
+    email: "",
+    message: "",
+    portfolioUrl: "",
+    isChecked: false,
+    resume: null,
+  };
+  const handleFileChange = (files: FileList | null) => {
+    if (files) {
+      const file = files[0];
+      setResumeData(file);
+      setFieldValue("resume", file);
+    }
   };
 
   const {
@@ -35,25 +55,17 @@ const ContactUsForm = () => {
     errors,
     touched,
   } = useFormik({
-    initialValues: {
-      firstname: '',
-      lastname: '',
-      email: '',
-      message: '',
-      portfolioUrl: '',
-      isChecked: false,
-      resume: null,
-    },
+    initialValues: initialValues,
     validationSchema: validationSchema,
     onSubmit: async (values) => {
       const formData = new FormData();
-      formData.append('firstname', values.firstname);
-      formData.append('lastname', values.lastname);
-      formData.append('email', values.email);
-      formData.append('message', values.message);
-      formData.append('portfolioUrl', values.portfolioUrl);
-      formData.append('isChecked', values.isChecked ? 'true' : 'false');
-      formData.append('resume', values.resume);
+      formData.append("firstname", values.firstname);
+      formData.append("lastname", values.lastname);
+      formData.append("email", values.email);
+      formData.append("message", values.message);
+      formData.append("portfolioUrl", values.portfolioUrl);
+      formData.append("isChecked", values.isChecked ? "true" : "false");
+      formData.append("resume", values.resume);
 
       await sendHiringForm(formData);
     },
@@ -65,7 +77,7 @@ const ContactUsForm = () => {
   //   setFieldValue('resume', file);
   // };
 
-  console.log('Value', values);
+  console.log("Value", values);
 
   return (
     <section className="dark:bg-darkbg pt-8">
@@ -78,10 +90,7 @@ const ContactUsForm = () => {
             </p>
           </div>
           <div>
-            <form
-              className="py-5"
-              onSubmit={handleSubmit}
-            >
+            <form className="py-5" onSubmit={handleSubmit}>
               <div className="w-full lg:flex lg:justify-between gap-5">
                 <div className="pb-3 lg:w-1/2">
                   <label
@@ -232,7 +241,7 @@ const ContactUsForm = () => {
                   id="isChecked"
                   isChecked={values.isChecked}
                   onChange={() => {
-                    setFieldValue('isChecked', !values.isChecked);
+                    setFieldValue("isChecked", !values.isChecked);
                   }}
                 />
                 <label
