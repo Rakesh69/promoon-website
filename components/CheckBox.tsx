@@ -15,7 +15,7 @@ const CheckBox: React.FC<{
         />
         <div
           className={`w-18px h-18px flex-shrink-0 border-2 ${
-            isChecked ? "bg-primary" : ""
+            isChecked ? 'bg-primary' : ''
           }  border-primary rounded-md`}
         >
           {isChecked ? (

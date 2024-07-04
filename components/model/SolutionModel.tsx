@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 const SolutionModel: React.FC<{
   data: {
     id: number;
@@ -13,17 +13,18 @@ const SolutionModel: React.FC<{
         return (
           <div
             key={index}
-            className="bg-white group md:flex md:flex-col md:justify-center md:items-center lg:block shadow-solutionModelShadow p-6 lg:pt-[35px]  lg:pr-[26px] lg:pl-[47px] border rounded-lg hover:-translate-y-2 transition duration-500 "
+            className="md:flex md:flex-col md:justify-center md:items-center lg:block  p-5 border border-slate-300 rounded-lg"
           >
-            <div className="pb-3">{icon}</div>
-            <div className="pb-3">
-              <h3 className="text-textPrimary truncate font-bold  text-base lg:text-xl  lg:font-bold lg:leading-8 tracking-[0.14px]">
-                {title}
-              </h3>
+            <div className="flex justify-between gap-2">
+              <div className="">
+                <h3 className="text-textPrimary font-semibold text-lg lg:leading-7">
+                  {title}
+                </h3>
+              </div>
+              <div className="">{icon}</div>
             </div>
-            <div className="h-[4px] bg-blue group-hover:w-[30%] w-[67.84px] transition-all duration-500 ease-in-out"></div>
-            <div className="pt-3">
-              <p className="font-normal md:text-center lg:text-start text-textSecondary lg:text-lg lg:leading-7 tracking-[0.27px]">
+            <div className="pt-2.5">
+              <p className="font-normal md:text-center lg:text-start text-textSecondary text-base lg:leading-7 ">
                 {description}
               </p>
             </div>

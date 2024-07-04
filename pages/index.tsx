@@ -1,16 +1,15 @@
-import CompanyWork from "@/components/CompanyWork";
-import DevlopmentCircle from "@/components/DevlopmentCircle";
-import Services from "@/components/Services";
-import Header from "@/components/Header";
-import Navbar from "@/components/Navbar";
-import Solutions from "@/components/Solutions";
-import { useContext, useState } from "react";
-import Container from "@/components/Container";
+import CompanyWork from '@/components/CompanyWork';
+import DevlopmentCircle from '@/components/DevlopmentCircle';
+import Services from '@/components/Services';
+import Solutions from '@/components/Solutions';
+import Container from '@/components/Container';
+import HeroSection from '@/components/HeroSection';
 
 const Home = () => {
   return (
     <Container>
-      <Header />
+      {/* <Header /> */}
+      <HeroSection />
       <CompanyWork />
       <Solutions />
       <DevlopmentCircle />

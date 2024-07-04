@@ -2,8 +2,8 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { useState } from "react";
 
-import Navbar from "@/components/Navbar";
-import HamburgerMenu from "@/components/HamburgerMenu";
+import Navbar from '@/components/Navbar';
+import HamburgerMenu from '@/components/HamburgerMenu';
 
 import Footer from "@/components/Footer";
 import { MenuProvider, useMenu } from "@/context/menu-context";

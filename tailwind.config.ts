@@ -80,6 +80,10 @@ const config: Config = {
         bgColor: '#EDEDF0',
         lightBlack: '#515B6F',
         black: '#202430',
+        borderBlack: '#111721',
+        white: '#FFFFFF',
+        borderbg: '#212121',
+        shadow: '#000000',
       },
 
       borderRadius: {
@@ -98,8 +102,12 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'send-message-btn': ' linear-gradient(to right, #FF7494, #E82B59)',
         'send-bg-btn': ' linear-gradient(to right, #27AAE1, #1C75BC)',
+        'bg-colors-background':
+          ' linear-gradient(to right, #000000, #111827, #000000)',
+        'bg-colors-header':
+          ' linear-gradient(to right, #27AAE1, #27AAE1, #FFFFFF,#066A9D ,#1C75BC)',
         'header-background': "url('/assets/DarkHeader.png')",
-        'dark-header-background': "url('/assets/darkHeaderBackground.png')",
+        'dark-header-background': "url('/assets/hero-background-top.png')",
         'dark-header-waves': "url('/assets/darkWaves.png')",
         'footer-background': "url('/assets/footerBackground.png')",
         'ourProcess-topBackground':
@@ -107,8 +115,10 @@ const config: Config = {
         'ourProcess-bottomBackground':
           "url('/assets/ourProcessBottomBackground.png')",
         'career-Background': "url('/assets/careerBackground.png')",
-        'career-DarkBackground': "url('/assets/darkCareerBackground.png')",
+        'career-DarkBackground': "url('/assets/HeaderNew.png')",
         'our-Process-background': "url('/assets/ourProcess.png')",
+        'hero-gradient':
+          'linear-gradient(90deg, #000000 0%, #111827 50%, #000000 100%);',
       },
     },
   },
