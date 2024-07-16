@@ -51,9 +51,9 @@ const HeroSection = () => {
         </div>
         <div className="slideInRight  flex flex-col lg:flex-row w-full lg:w-1/2 gap-4">
           {' '}
-          <div className="flex items-end h-full w-full xl:h-full lg:h-[80%] lg:w-64">
+          <div className="flex items-end h-full w-full xl:h-[114%] lg:h-[80%] lg:w-64">
             <Image
-              src={'/assets/heroSecitionimage.webp'}
+              src={'/assets/herosectionimg1.png'}
               alt="images"
               height={1000}
               className="w-full"
@@ -62,7 +62,7 @@ const HeroSection = () => {
           </div>
           <div className="flex items-start h-full w-full lg:w-64">
             <Image
-              src={'/assets/heroSecitionimage.webp'}
+              src={'/assets/herosectionimg2.png'}
               alt="images"
               height={500}
               className="w-full"

@@ -1,5 +1,4 @@
 import { transporter } from '../../components/config/nodemailer';
-import { mailOptions } from '../../components/config/nodemailer';
 
 const handler = async (req, res) => {
   if (req.method === 'POST') {
@@ -18,13 +17,6 @@ const handler = async (req, res) => {
           <p>Pixeldart Software</p>
         </div>
       `,
-        // attachments: [
-        //   {
-        //     filename: 'lightLogo.png',
-        //     path: 'C:/devlopment/promoon-website/icons/lightLogo.png',
-        //     cid: 'logo@cid',
-        //   },
-        // ],
       });
       return res.status(200).json({ success: true });
     } catch (error) {

@@ -290,12 +290,12 @@ const ContactUsForm = () => {
                 </a>
               </div>
 
-              <div className="w-full my-5">
+              <div className="flex justify-center my-6">
                 <button
                   type="submit"
-                  className="flex justify-center items-center gap-3 bg-send-bg-btn w-full py-3 px-23px text-white font-bold rounded-full"
+                  className="flex justify-center items-center w-fit gap-3 bg-send-bg-btn py-3 px-6 text-white font-bold rounded-full"
                 >
-                  Submit {isSending && <Spinner />}
+                  SEND MESSAGE {isSending && <Spinner />}
                 </button>
               </div>
             </form>

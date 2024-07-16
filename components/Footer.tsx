@@ -5,7 +5,11 @@ import LinkedinIcon from '@/icons/LinkedinIcon';
 import ProMoonLogoDark from '@/icons/ProMoonLogoDark';
 import TwitterIcon from '@/icons/TwitterIcon';
 import Link from 'next/link';
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
+import AddressPopup from './AddressPopup';
+import { useHiring } from '@/context/Hiring-Context';
+import { useTheme } from '@/context/ThemeContext';
+import { useRouter } from 'next/router';
 
 const Footer = () => {
   const SOCIAL_MEDIA_ICONS: {
@@ -40,31 +44,168 @@ const Footer = () => {
     },
   ];
 
+  const FOOTER_SERVICE: { id: number; name: string; route: string }[] = [
+    { id: 1, name: 'Technology', route: 'technology' },
+    { id: 2, name: 'Website development', route: 'website-development' },
+    { id: 3, name: 'Project development', route: 'project-development' },
+    { id: 4, name: 'Mobile app development', route: 'mobile-app-development' },
+  ];
+  const FOOTER_RESOURCES: { id: number; name: string; route: string }[] = [
+    { id: 1, name: 'Success Stories', route: 'success-stories' },
+    { id: 2, name: 'Get in Touch', route: 'get-in-touch' },
+    { id: 3, name: 'About ProMoon', route: 'about-ProMoon' },
+    { id: 4, name: 'Blog', route: 'blog' },
+  ];
+  const FOOTER_INFORMATION: { id: number; name: string; route: string }[] = [
+    { id: 1, name: 'Careers', route: 'career' },
+    { id: 2, name: 'FAQ', route: 'faq' },
+    { id: 3, name: 'Privacy Policy', route: 'privacy-policy' },
+    {
+      id: 4,
+      name: 'Do Not Sell My Personal Information',
+      route: 'do-not-sell-my-personal-information',
+    },
+    {
+      id: 5,
+      name: 'Terms of Use',
+      route: 'terms-of-use',
+    },
+    { id: 6, name: 'Sitemap', route: 'sitemap' },
+  ];
+
+  const { isHiring } = useHiring();
+  const [active, setActive] = useState<number | null>(null);
+  const router = useRouter();
+
+  const handleClick = (id: number) => {
+    setActive(id);
+  };
+
   return (
     <>
-      <div className="flex flex-col border-t-[1.5px] border-blackBlue/20 dark:border-darkBorder justify-center items-center py-7 dark:bg-bg-colors-background">
-        <div className="dark:hidden block">
-          <FooterLogoIcon />
+      <div className=" flex flex-col border-t-[1.5px] border-blackBlue/20 dark:border-darkBorder pt-16 dark:bg-bg-colors-background">
+        <div className="container mx-auto p-4">
+          <div className="dark:hidden block">
+            <FooterLogoIcon />
+          </div>
+
+          <div className="hidden dark:block">
+            <ProMoonLogoDark />
+          </div>
+
+          <div className="pt-[35px] pb-11 flex flex-col gap-10 lg:gap-11 sm:grid sm:grid-cols-2 lg:grid lg:grid-cols-4 lg:grid-rows-1">
+            <div className="flex flex-col w-full group">
+              <div className="group-hover:flex hidden">
+                <AddressPopup />
+              </div>
+
+              <p className="text-white text-[15px] w-fit font-medium tracking-1% leading-8 mb-6 border-b-2 border-white/40">
+                Address
+              </p>
+              <p className="font-normal text-[15px] tracking-1% leading-8 hover:w-full hover:h-full hover: text-white">
+                408, ProMoon Software Service <br />
+                Silver stone
+                <br /> Arcade, Singanpor Rd,
+                <br /> Omkar Society, Riddhi
+                <br />
+                Siddhi Society, Singanpor, Surat
+              </p>
+            </div>
+            <div className="flex flex-col  w-full">
+              <p className="text-white text-[15px] w-fit font-medium tracking-1% leading-8 mb-6 border-b-2 border-white/40">
+                Services
+              </p>
+
+              <ul className="font-normal text-[15px] tracking-1% leading-8 text-white">
+                {FOOTER_SERVICE.map(({ id, name, route }) => {
+                  return (
+                    <li
+                      key={id}
+                      className="lg:mb-2.5 hover:text-blue transition-colors duration-100 ease-in-out"
+                    >
+                      <Link href={`/${route}`}>{name}</Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className="flex flex-col w-full">
+              <p className="text-white text-[15px] w-fit font-medium leading-6 mb-6 tracking-1% border-b-2 border-white/40">
+                Resources
+              </p>
+
+              <ul className="font-normal text-[15px] tracking-1% leading-8 text-white">
+                {FOOTER_RESOURCES.map(({ id, name, route }) => {
+                  return (
+                    <li
+                      key={id}
+                      className="lg:mb-2.5 hover:text-blue transition-colors duration-100 ease-in-out"
+                    >
+                      <Link href={`/${route}`}>{name}</Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div className="flex flex-col w-full">
+              <p className="text-white text-[15px] w-fit font-medium leading-6 mb-6 tracking-1% border-b-2 border-white/40">
+                Information
+              </p>
+
+              <ul className="font-normal text-[15px] w-full tracking-1% leading-6 text-white">
+                {FOOTER_INFORMATION.map(({ id, name, route }) => {
+                  return (
+                    <li
+                      key={id}
+                      className="lg:mb-2.5 hover:text-blue transition-colors duration-100 ease-in-out pb-1"
+                    >
+                      <Link
+                        className='hover:text-blue relative data-tooltip-target="tooltip-light" data-tooltip-style="light" '
+                        onClick={() => handleClick(id)}
+                        style={{
+                          color: active === id ? '#00B4FF' : 'white',
+                        }}
+                        href={`/career`}
+                      >
+                        {name}
+                        {name === 'Careers' && isHiring && (
+                          <div
+                            onClick={() => {
+                              handleClick(4);
+                              router.push('/career');
+                            }}
+                            id="tooltip-light"
+                            role="tooltip"
+                            className="absolute z-10  inline-block px-3  text-sm font-medium  w-28 text-gray-900 ml-2  bg-white border border-gray-200 rounded-lg shadow-sm "
+                          >
+                            we're hiring
+                          </div>
+                        )}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="border-t border-white/40" />
+        <div className="flex justify-center items-center flex-col pt-7">
+          <h3 className="text-textPrimary font-bold text-[15px]  lg:tracking-0.14px  dark:text-white">
+            Web and mobile development service
+          </h3>
+          <p className="text-white text-[13.5px] lg:leading-7 pt-2 md:pt-1">
+            © Copyright 2023 - ProMoon
+          </p>
         </div>
 
-        <div className="hidden dark:block">
-          <ProMoonLogoDark />
-        </div>
-
-        <h3 className="text-textPrimary font-bold text-[15px]  lg:tracking-0.14px pt-4 dark:text-white">
-          Web and mobile development service
-        </h3>
-        <p className="text-textSecondary text-[13.5px] lg:leading-7 pt-2 md:pt-1">
-          © Copyright 2023 - ProMoon
-        </p>
-
-        <div className="w-full flex justify-center pt-[15px] border-blackBlue items-center  gap-[30px]">
+        <div className="w-full flex justify-center pt-[15px] border-blackBlue items-center pb-7 gap-[30px]">
           {SOCIAL_MEDIA_ICONS.map(({ icon, id, href }) => {
             return (
               <Link
                 key={id}
                 className="hover:text-blue"
-                href={'#'}
+                href={href}
               >
                 {icon}
               </Link>

@@ -6,6 +6,7 @@ import Positions from './Position';
 const Benefit = () => {
   const [open, setIsOpen] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [isPositionsVisible, setIsPositionsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const CAREER_BENIFITS: {
     id: number;

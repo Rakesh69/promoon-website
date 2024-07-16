@@ -1,7 +1,7 @@
-import Benefit from "@/components/Benefit";
-import Career from "@/components/CareerHeader";
-import Container from "@/components/Container";
-import Positions from "@/components/Position";
+import Benefit from '@/components/Benefit';
+import Career from '@/components/CareerHeader';
+import Container from '@/components/Container';
+import Positions from '@/components/Position';
 
 const career = () => {
   return (

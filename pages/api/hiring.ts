@@ -46,8 +46,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       const filename = file.originalname.replace(/\s+/g, '_');
 
       try {
-        // const filePath = path.join(process.cwd(), filename);
-        // await writeFile(filePath, buffer);
         await transporter.sendMail({
           from: email,
           to: 'roypriyanshi99@gmail.com',

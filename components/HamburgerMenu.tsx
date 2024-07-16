@@ -1,22 +1,31 @@
 import { useMenu } from '@/context/menu-context';
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { useState } from 'react';
 import { useTheme } from '@/context/ThemeContext';
-import SunIcon from '@/icons/SunIcon';
-import MoonIcon from '@/icons/MoonIcon';
-import Link from 'next/link';
+import { useHiring } from '@/context/Hiring-Context';
 
 const HamburgerMenu: React.FC = () => {
   const { theme, toggleMode } = useTheme();
   const router = useRouter();
   const { currentUser, setCurrentUser } = useMenu();
+  const { isHiring } = useHiring();
+  const [active, setActive] = useState<number | null>(null);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const handleClick = (index: number) => {
+    setActive(index);
+  };
+
   return (
     <>
       {currentUser && (
-        <div className="fixed slideInLeft top-70px border-t z-40 bg-white dark:bg-bg-colors-background h-full w-full lg:hidden">
+        <div
+          className={`fixed top-70px border-t z-40 bg-white dark:bg-bg-colors-background h-full w-full lg:hidden
+             ${isOpen ? ' slideInLeft ' : 'slideInRight'}`}
+        >
           <div className="max-w-screen-xl w-90% m-auto">
             <ul className="text-xl leading-30px font-medium md:leading-48px">
-              <li className="my-6 slideInLeftMenues">
+              <li className="my-6">
                 <button
                   onClick={() => {
                     setCurrentUser(false);
@@ -27,7 +36,7 @@ const HamburgerMenu: React.FC = () => {
                   Home
                 </button>
               </li>
-              <li className="my-6 slideInLeftMenues1">
+              <li className="my-6">
                 <button
                   onClick={() => {
                     setCurrentUser(false);
@@ -38,7 +47,7 @@ const HamburgerMenu: React.FC = () => {
                   Our Process
                 </button>
               </li>
-              <li className="my-6 slideInLeftMenues2">
+              <li className="my-6">
                 <button
                   onClick={() => {
                     setCurrentUser(false);
@@ -46,18 +55,48 @@ const HamburgerMenu: React.FC = () => {
                   }}
                   className="dark:hover:text-blue dark:text-white hover:text-blue"
                 >
-                  Contact US
+                  Contact Us
                 </button>
               </li>
-              <li className="my-6 slideInLeftMenues3">
+              <li className="my-6">
                 <button
+                  className="relative data-tooltip-target='tooltip-light' data-tooltip-style='light'"
                   onClick={() => {
+                    handleClick(4);
                     setCurrentUser(false);
                     router.push('/career');
                   }}
+                  style={{ color: active === 4 ? '#00B4FF' : 'white' }}
+                >
+                  Careers
+                  {isHiring && (
+                    <div
+                      onClick={() => {
+                        handleClick(4);
+                        router.push('/career');
+                      }}
+                      id="tooltip-light"
+                      role="tooltip"
+                      className="absolute z-10 inline-block px-1 text-sm font-medium -top-5 -right-8 text-gray-900 bg-white border border-gray-200 rounded-lg shadow-sm"
+                    >
+                      we're hiring
+                      <div
+                        className="tooltip-arrow"
+                        data-popper-arrow
+                      ></div>
+                    </div>
+                  )}
+                </button>
+              </li>
+              <li className="my-6">
+                <button
+                  onClick={() => {
+                    setCurrentUser(false);
+                    router.push('/about');
+                  }}
                   className="dark:hover:text-blue dark:text-white hover:text-blue"
                 >
-                  Career
+                  About Us
                 </button>
               </li>
             </ul>

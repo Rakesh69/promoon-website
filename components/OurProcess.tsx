@@ -1,75 +1,72 @@
-import React from 'react';
-
-const OUR_PROCESSES: { id: number; title: string }[] = [
-  {
-    id: 1,
-    title:
-      'After an initial consultation, we’ll help you find the best fit lead your team. Each lead is supported by a team of experienced professionals who are dedicated to helping the lead achieve success.',
-  },
-  {
-    id: 2,
-    title:
-      'Your lead becomes a core member of your team, working closely with you to develop with you to develop and implement strategies thatdrive results. They bring a wealth of experience and expertise to the table, and are dedicated to helping you achieve your goals.',
-  },
-  {
-    id: 3,
-    title:
-      'Your lead will also work with their supporting team to deliver projects/milestones weekly. While the team iterates on the project, the lead can provide updates as frequently as needed - generally during weekly or daily stand-ups.',
-  },
-  {
-    id: 4,
-    title:
-      'You get the best of both worlds - the efficiency of a team working together towards a common goal and the flexibility of individualized attention and support from a dedicated lead.',
-  },
-];
+import React, { useRef } from 'react';
+import SaidMenu from './model/SaidMenu';
+import Home from '@/pages';
+import CompanyWork from './CompanyWork';
+import ContactUs from '@/pages/contactus';
+import WorkShop from './model/WorkShop';
+import Planing from './model/Planing';
+import Design from './model/Design';
+import Devolpment from './model/Devolpment';
+import Maintenance from './model/Maintenance';
+import Testing from './model/Testing';
+import Communication from './model/Communication';
+import Collaboration from './model/Collaboration';
+import Engagement from './model/Engagement';
+import Conversation from './model/Conversation';
 
 const OurProcess = () => {
   return (
     <>
-      <div className="relative w-full">
-        <div
-          className="absolute inset-0 bg-cover bg-center h-[200px]"
-          style={{
-            backgroundImage: "url('/assets/topDarkOurProcessBg.png')",
-          }}
-        />
-
-        <div className="flex h-full justify-center items-center">
-          <section className="py-8 container w-full mx-auto">
-            <div className="flex flex-col my-10 gap-10">
-              <div className="flex flex-col justify-center items-center">
-                <p className="text-2xl md:text-32px mb-2 text-textPrimary font-semibold dark:text-white">
-                  Our process
-                </p>
-                <p className="text-center text-base md:font-normal text-textSecondary dark:text-darkText">
-                  Find out how ProMoons team works to simplify scheduling for
-                  you and your team.
-                </p>
-              </div>
-              <div className="md:pt-[43px] pt-0 px-4">
-                <div className="sticky pt-[34px]">
-                  {OUR_PROCESSES.map(({ id, title }) => (
-                    <div
-                      key={id}
-                      className="gap-2 text-textSecondary my-9 border-l-2 border-ourProcessBorder pl-2"
-                    >
-                      <p className="md:text-xl font-normal dark:text-darkTextPrimary">
-                        {title}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
+      <div className="w-full  lg:p-0 p-4">
+        <div className="container mx-auto lg:p-0 p-4 slideInDown">
+          <h2 className="text-white lg:pt-24 pt-12 tracking-[4px] font-bold text-lg mb-7 leading-3">
+            HOW WE WORK
+          </h2>
+          <p className="text-white font-bold text-2xl lg:text-3xl lg:leading-[52px] max-w-[690px]">
+            The process is defined as a sequence of steps. When followed, it
+            helps to achieve a goal. We consider it - the art of thinking
+            through.
+          </p>
         </div>
+        <div className="lg:pt-12 pt-4 pb-10 lg:pb-10">
+          <div className="top-24 z-10 flex flex-col lg:flex-row">
+            <div className="lg:w-1/3 w-full pb-6 lg:pb-0">
+              <SaidMenu />
+            </div>
+            <div
+              id="content"
+              className="md:w-5/6 w-full h-full overflow-hidden "
+            >
+              <section id="workshop">
+                <WorkShop />
+              </section>
+              <section id="planning">
+                <Planing />
+              </section>
+              <section id="design">
+                <Design />
+              </section>
+              <section id="development">
+                <Devolpment />
+              </section>
+              <section id="testing">
+                <Testing />
+              </section>
+              <section id="maintenance">
+                <Maintenance />
+              </section>
+            </div>
+          </div>
+        </div>
+        <div>
+          <section id="Communication">
+            <Communication />
+          </section>
 
-        <div
-          className="bg-cover -mt-64 bg-center h-[400px]"
-          style={{
-            backgroundImage: "url('/assets/darkOurProcess.png') ",
-          }}
-        />
+          <Collaboration />
+          <Engagement />
+          <Conversation />
+        </div>
       </div>
     </>
   );

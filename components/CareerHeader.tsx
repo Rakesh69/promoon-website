@@ -2,7 +2,6 @@ import RightArrow from '@/icons/RightArrow';
 import Image from 'next/image';
 import bottomOurProcessBgImage from '@/public/assets/ourProcessBottomBackground.png';
 import darkBottombgWaves from '@/public/assets/darkBottombgWaves@2x.png';
-import { useState, useRef, useEffect } from 'react';
 
 const CareerHeader: React.FC<{ id: string }> = ({ id }) => {
   const scrollTo = (id: string) => {
@@ -48,7 +47,7 @@ const CareerHeader: React.FC<{ id: string }> = ({ id }) => {
               </div>
             </div>
           </div>
-          <div className="sticky z-50">
+          <div className=" z-50">
             <Image
               src={bottomOurProcessBgImage}
               alt="topOurProcessBgImage"

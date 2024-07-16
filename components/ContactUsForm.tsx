@@ -5,7 +5,6 @@ import Spinner from './Spinner';
 import { useState } from 'react';
 import { ContactUsType } from '@/types/ContactUsType';
 
-// Define the validation schema
 const validationSchema = Yup.object().shape({
   firstname: Yup.string().required('Required'),
   lastname: Yup.string().required('Required'),
@@ -189,11 +188,10 @@ const ContactUsForm = () => {
                     {errors.isChecked}
                   </p>
                 )}
-
-                <div className="w-full my-5">
+                <div className="flex justify-center my-6">
                   <button
                     type="submit"
-                    className="flex justify-center items-center gap-3 bg-send-bg-btn w-full py-3 px-23px text-white font-bold rounded-full"
+                    className="flex justify-center items-center w-fit gap-3 bg-send-bg-btn py-3 px-6 text-white font-bold rounded-full"
                   >
                     SEND MESSAGE {isSending && <Spinner />}
                   </button>
