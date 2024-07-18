@@ -10,6 +10,7 @@ import AddressPopup from './AddressPopup';
 import { useHiring } from '@/context/Hiring-Context';
 import { useTheme } from '@/context/ThemeContext';
 import { useRouter } from 'next/router';
+import NewTwiterIcon from './../icons/NewTwiterIcon';
 
 const Footer = () => {
   const SOCIAL_MEDIA_ICONS: {
@@ -26,7 +27,7 @@ const Footer = () => {
     },
     {
       id: 2,
-      icon: <TwitterIcon />,
+      icon: <NewTwiterIcon />,
       name: 'Twitter',
       href: 'https://twitter.com/home',
     },
@@ -190,27 +191,40 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-white/40" />
-        <div className="flex justify-center items-center flex-col pt-7">
-          <h3 className="text-textPrimary font-bold text-[15px]  lg:tracking-0.14px  dark:text-white">
-            Web and mobile development service
-          </h3>
-          <p className="text-white text-[13.5px] lg:leading-7 pt-2 md:pt-1">
-            © Copyright 2023 - ProMoon
-          </p>
-        </div>
-
-        <div className="w-full flex justify-center pt-[15px] border-blackBlue items-center pb-7 gap-[30px]">
-          {SOCIAL_MEDIA_ICONS.map(({ icon, id, href }) => {
-            return (
+        <div className="w-full border-blackBlue p-4 py-7 container mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-8">
+            <div className="flex flex-col md:flex-row gap-4 text-white">
               <Link
-                key={id}
-                className="hover:text-blue"
-                href={href}
+                href="/TermsandConditions"
+                className=" md:border-r border-gray-300 pr-4 md:border-none md:pr-0"
               >
-                {icon}
+                Terms and Conditions
               </Link>
-            );
-          })}
+              <Link
+                href="/PrivacyPolicy"
+                className=" md:border-r border-gray-300 pr-4 md:border-none md:pr-0"
+              >
+                Privacy Policy
+              </Link>
+              <p className="md:border-none md:pr-0">Cookie Policy</p>
+            </div>
+            <div className="text-white text-center md:text-left mt-4 md:mt-0">
+              Copyright © 2024 ProMoon Software Solution. All Rights Reserved.
+            </div>
+            <div className="flex flex-row gap-4 md:gap-8 mt-4 md:mt-0">
+              {SOCIAL_MEDIA_ICONS.map(({ icon, id, href }) => {
+                return (
+                  <Link
+                    key={id}
+                    className="hover:text-blue h-30 w-30"
+                    href={href}
+                  >
+                    {icon}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </>

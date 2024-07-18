@@ -77,13 +77,9 @@ const HamburgerMenu: React.FC = () => {
                       }}
                       id="tooltip-light"
                       role="tooltip"
-                      className="absolute z-10 inline-block px-1 text-sm font-medium -top-5 -right-8 text-gray-900 bg-white border border-gray-200 rounded-lg shadow-sm"
+                      className="ml-2 z-10 inline-block px-1 text-sm font-medium  text-gray-900 bg-white border border-gray-200 rounded-lg shadow-sm"
                     >
                       we're hiring
-                      <div
-                        className="tooltip-arrow"
-                        data-popper-arrow
-                      ></div>
                     </div>
                   )}
                 </button>

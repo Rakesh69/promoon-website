@@ -79,13 +79,6 @@ const Solutions = () => {
       description:
         'Our maintenance and support team provides updates, bug fixes, security patches and technical support to ensure that clients digital platforms are running smoothly. Our team is skilled and available to assist with any issues.',
     },
-    {
-      id: 9,
-      icon: <CustomMobileApp />,
-      title: 'Custom web design and development',
-      description:
-        'Our expert web app developers are skilled in using technologies and frame-work to create interactive and feature-rich web applications. They have a strong understanding of back-end technologies.',
-    },
   ];
 
   const handleClick = (id: number | null) => {

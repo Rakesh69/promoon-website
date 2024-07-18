@@ -48,6 +48,7 @@ const config: Config = {
         '32px': '32px',
       },
       boxShadow: {
+        'custom-inner': 'inset 0 0 10px 5px rgba(255, 0, 0, 0.5)',
         customShadow: '0px 8px 26px -4px #14141426',
         solutionModelShadow:
           '0px 17.63719367980957px 25.77743911743164px 0px #00000012',
@@ -104,14 +105,20 @@ const config: Config = {
         'send-bg-btn': ' linear-gradient(to right, #27AAE1, #1C75BC)',
         'bg-colors-background':
           ' linear-gradient(to right, #000000, #111827, #000000)',
+
         'bg-colors-header':
           ' linear-gradient(to right, #27AAE1, #27AAE1, #FFFFFF,#066A9D ,#1C75BC)',
         'header-background': "url('/assets/DarkHeader.png')",
+
         'dark-header-background': "url('/assets/hero-background-top.png')",
         'dark-header-waves': "url('/assets/darkWaves.png')",
         'footer-background': "url('/assets/footerBackground.png')",
         'ourProcess-topBackground':
           "url('/assets/ourProcessTopBackground.png')",
+        'hero-pattern': "url('/assets/NewAboutImage.png')",
+        'res-hero-pattern': "url('/assets/aboutus-promoon.jpg')",
+        'leading-background': "url('/assets/Landingpage.png')",
+        'hero-pattern1': "url('/assets/BlurImage.png')",
         'ourProcess-bottomBackground':
           "url('/assets/ourProcessBottomBackground.png')",
         'career-Background': "url('/assets/careerBackground.png')",

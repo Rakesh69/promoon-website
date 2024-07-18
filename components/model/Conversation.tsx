@@ -7,6 +7,7 @@ import FacebookIcon from '@/icons/FacebookIcon';
 import InstragramIcon from '@/icons/InstragramIcon';
 import LinkedinIcon from '@/icons/LinkedinIcon';
 import TwitterIcon from '@/icons/TwitterIcon';
+import NewTwiterIcon from './../../icons/NewTwiterIcon';
 const SOCIAL_MEDIA_ICONS: {
   id: number;
   icon: React.ReactNode;
@@ -21,7 +22,7 @@ const SOCIAL_MEDIA_ICONS: {
   },
   {
     id: 2,
-    icon: <TwitterIcon />,
+    icon: <NewTwiterIcon />,
     name: 'Twitter',
     href: 'https://twitter.com/home',
   },
@@ -66,7 +67,7 @@ const Conversation = () => {
         <div
           ref={sectionRef}
           className={`animated-section ${
-            isVisible ? 'slideInLeft' : ''
+            isVisible ? 'slideInLeft1' : ''
           } flex flex-col text-white px-4 pb-4`}
         >
           <h2 className="text-4xl pb-6">Like what you see?</h2>
@@ -122,7 +123,7 @@ const Conversation = () => {
         <div
           ref={sectionRef}
           className={`animated-section ${
-            isVisible ? 'slideInRight' : ''
+            isVisible ? 'md:slideInRight1' : ''
           } flex lg:flex-col flex-row text-white px-4`}
         >
           <Image

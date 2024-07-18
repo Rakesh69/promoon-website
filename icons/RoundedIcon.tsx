@@ -1,0 +1,145 @@
+const RoundedIcon = () => {
+  return (
+    <svg
+      width="874"
+      height="15"
+      viewBox="0 0 874 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <line
+        x1="13"
+        y1="7.25"
+        x2="860"
+        y2="7.25"
+        stroke="white"
+        stroke-width="1.5"
+        stroke-dasharray="3 3"
+      />
+      <circle
+        cx="7.5"
+        cy="7.5"
+        r="7.5"
+        fill="url(#paint0_linear_1261_295)"
+      />
+      <circle
+        cx="351.5"
+        cy="7.5"
+        r="7.5"
+        fill="url(#paint1_linear_1261_295)"
+      />
+      <circle
+        cx="695.5"
+        cy="7.5"
+        r="7.5"
+        fill="url(#paint2_linear_1261_295)"
+      />
+      <circle
+        cx="179.5"
+        cy="7.5"
+        r="7.5"
+        fill="url(#paint3_linear_1261_295)"
+      />
+      <circle
+        cx="523.5"
+        cy="7.5"
+        r="7.5"
+        fill="url(#paint4_linear_1261_295)"
+      />
+      <circle
+        cx="866.5"
+        cy="7.5"
+        r="7.5"
+        fill="url(#paint5_linear_1261_295)"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_1261_295"
+          x1="7.5"
+          y1="0"
+          x2="7.5"
+          y2="15"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#E84D72" />
+          <stop
+            offset="1"
+            stop-color="#BE1E43"
+          />
+        </linearGradient>
+        <linearGradient
+          id="paint1_linear_1261_295"
+          x1="351.5"
+          y1="0"
+          x2="351.5"
+          y2="15"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#E84D72" />
+          <stop
+            offset="1"
+            stop-color="#BE1E43"
+          />
+        </linearGradient>
+        <linearGradient
+          id="paint2_linear_1261_295"
+          x1="695.5"
+          y1="0"
+          x2="695.5"
+          y2="15"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#E84D72" />
+          <stop
+            offset="1"
+            stop-color="#BE1E43"
+          />
+        </linearGradient>
+        <linearGradient
+          id="paint3_linear_1261_295"
+          x1="179.5"
+          y1="0"
+          x2="179.5"
+          y2="15"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#E9AE3D" />
+          <stop
+            offset="1"
+            stop-color="#F3A62E"
+          />
+        </linearGradient>
+        <linearGradient
+          id="paint4_linear_1261_295"
+          x1="523.5"
+          y1="0"
+          x2="523.5"
+          y2="15"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#E9AE3D" />
+          <stop
+            offset="1"
+            stop-color="#F3A62E"
+          />
+        </linearGradient>
+        <linearGradient
+          id="paint5_linear_1261_295"
+          x1="866.5"
+          y1="0"
+          x2="866.5"
+          y2="15"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#E9AE3D" />
+          <stop
+            offset="1"
+            stop-color="#F3A62E"
+          />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+};
+
+export default RoundedIcon;
