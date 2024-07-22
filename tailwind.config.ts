@@ -111,6 +111,9 @@ const config: Config = {
         'header-background': "url('/assets/DarkHeader.png')",
 
         'dark-header-background': "url('/assets/hero-background-top.png')",
+        'website-hero-imag': "url('/assets/webdevelopmentHero.png')",
+        'mobile-hero-imag': "url('/assets/webdevelopmentHero.png')",
+        'whychoose-hero-imag': "url('/assets/webdevelopmentHero.png')",
         'dark-header-waves': "url('/assets/darkWaves.png')",
         'footer-background': "url('/assets/footerBackground.png')",
         'ourProcess-topBackground':

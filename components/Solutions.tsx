@@ -84,6 +84,7 @@ const Solutions = () => {
   const handleClick = (id: number | null) => {
     setSelectedItem(id);
   };
+  
   return (
     <section className="bg-gray-100 md:py-[82px] py-10">
       <div className="container mx-auto p-4 md:p-0">

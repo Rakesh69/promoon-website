@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link'; 
+import Link from 'next/link';
 
 const Cookies = () => {
   const [isAccepted, setIsAccepted] = useState(false);
@@ -31,7 +31,7 @@ const Cookies = () => {
             advertising and analytics partners. Additional details are available
             in our
             <Link
-              href="/cookie-policy"
+              href="/CookiePolicy"
               className="text-black font-bold"
             >
               {' '}

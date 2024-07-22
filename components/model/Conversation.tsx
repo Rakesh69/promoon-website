@@ -8,6 +8,8 @@ import InstragramIcon from '@/icons/InstragramIcon';
 import LinkedinIcon from '@/icons/LinkedinIcon';
 import TwitterIcon from '@/icons/TwitterIcon';
 import NewTwiterIcon from './../../icons/NewTwiterIcon';
+import NewFaceBookIcon from '@/icons/NewFaceBookIcon';
+
 const SOCIAL_MEDIA_ICONS: {
   id: number;
   icon: React.ReactNode;
@@ -16,7 +18,7 @@ const SOCIAL_MEDIA_ICONS: {
 }[] = [
   {
     id: 1,
-    icon: <FacebookIcon />,
+    icon: <NewFaceBookIcon />,
     name: 'Facebook',
     href: 'https://www.facebook.com/profile.php?id=100091227716427',
   },

@@ -1,196 +1,245 @@
-import React from 'react';
+import TrueIcon from '@/icons/TrueIcon';
+import React, { useEffect, useState } from 'react';
+
+interface SubDetail {
+  Title: string;
+}
+
 type Detail = {
   subTitle: string;
   detail?: string;
+  subdetails?: { Title: string }[];
 };
 
 type Item = {
   id: number;
   title: string;
-  description: string;
+  description?: string;
   details?: Detail[];
 };
 
 const data: Item[] = [
   {
     id: 1,
-    title: 'Information We Collect',
+    title: 'Introduction',
     description:
-      'We may collect information about you in a variety of ways. The information we may collect on the Website includes:',
-    details: [
-      {
-        subTitle: 'Personal Data:',
-        detail:
-          'Personally identifiable information, such as your name, shipping address, email address, and telephone number, and demographic information, such as your age, gender, hometown, and interests, that you voluntarily give to us when you register with the Website or when you choose to participate in various activities related to the Website, such as online chat and message boards.',
-      },
-      {
-        subTitle: 'Derivative Data:',
-        detail:
-          'Information our servers automatically collect when you access the Website, such as your IP address, your browser type, your operating system, your access times, and the pages you have viewed directly before and after accessing the Website',
-      },
-      {
-        subTitle: 'Financial Data:',
-        detail:
-          'Financial information, such as data related to your payment method (e.g., valid credit card number, card brand, expiration date) that we may collect when you purchase, order, return, exchange, or request information about our services from the Website.',
-      },
-      {
-        subTitle: 'Mobile Device Data:',
-        detail:
-          'Device information, such as your mobile device ID, model, and manufacturer, and information about the location of your device, if you access the Website from a mobile device.',
-      },
-    ],
+      'Welcome to ProMoon Software Solution. These terms and conditions ("Terms") govern your use of our Website. By accessing or using the Website https://promoon-website.vercel.app/, you agree to comply with and be bound by these Terms. If you do not agree with these Terms, please do not use the Website.',
   },
   {
     id: 2,
-    title: 'Use of Your Information',
-    description:
-      'Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Website to:',
+    title: 'Use of the Website',
     details: [
       {
-        subTitle: 'Create and manage your account.',
+        subTitle: 'Eligibility:',
+        detail:
+          'You must be at least 16 years old to use the Website. By using the Website, you represent and warrant that you meet this eligibility requirement.',
       },
       {
-        subTitle:
-          'Process your transactions and deliver the services you requested.',
+        subTitle: 'User Account:',
+        detail:
+          'To access certain features of the Website, you may be required to create an account. You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete. You are responsible for safeguarding your password and for any activities or actions under your account.',
       },
       {
-        subTitle: 'Improve and personalize your experience on the Website.',
-      },
-      {
-        subTitle: 'Send you emails regarding your account or order.',
-      },
-      {
-        subTitle: 'Enable user-to-user communications.',
-      },
-      {
-        subTitle: 'Respond to your inquiries and offer customer support.',
-      },
-      {
-        subTitle:
-          'Monitor and analyze usage and trends to improve your experience with the Website.',
-      },
-      {
-        subTitle: 'Perform other business activities as needed.',
+        subTitle: 'Prohibited Activities:',
+        detail:
+          'You agree not to engage in any of the following prohibited activities:',
+        subdetails: [
+          { Title: 'Using the Website for any illegal purpose.' },
+          {
+            Title:
+              'Interfering with or disrupting the operation of the Website.',
+          },
+          { Title: 'Attempting to gain unauthorized access to the Website.' },
+          { Title: 'Using the Website to transmit any harmful content.' },
+          { Title: 'Violating any applicable laws or regulations.' },
+        ],
       },
     ],
   },
   {
     id: 3,
-    title: 'Disclosure of Your Information',
-    description:
-      'We may share information we have collected about you in certain situations. Your information may be disclosed as follows:',
+    title: 'Intellectual Property',
     details: [
       {
-        subTitle: 'By Law or to Protect Rights:',
+        subTitle: 'Ownership:',
         detail:
-          'If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others, we may share your information as permitted or required by any applicable law, rule, or regulation.',
+          'The Website and its original content, features, and functionality are and will remain the exclusive property of ProMoon Software Solution and its licensors. The Website is protected by copyright, trademark, and other laws of the United States and foreign countries.',
       },
       {
-        subTitle: 'Third-Party Service Providers:',
+        subTitle: 'License:',
         detail:
-          'We may share your information with third parties that perform services for us or on our behalf, including payment processing, data analysis, email delivery, hosting services, customer service, and marketing assistance.',
-      },
-      {
-        subTitle: 'Business Transfers:',
-        detail:
-          'We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.',
-      },
-      {
-        subTitle: 'Marketing Communications:',
-        detail:
-          'With your consent, or with an opportunity for you to withdraw consent, we may share your information with third parties for marketing purposes, as permitted by law.',
+          'Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, and revocable license to access and use the Website for your personal and non-commercial use.',
       },
     ],
   },
   {
     id: 4,
-    title: 'Security of Your Information',
-    description:
-      'We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.',
+    title: 'Content',
+
+    details: [
+      {
+        subTitle: 'User Content:',
+        detail:
+          'You are responsible for any content that you post, upload, or otherwise make available on the Website ("User Content"). By making User Content available on the Website, you grant us a non-exclusive, transferable, sublicensable, royalty-free, worldwide license to use, copy, modify, create derivative works based on, distribute, publicly display, and perform your User Content in connection with operating and providing the Website.',
+      },
+      {
+        subTitle: 'Content Removal:',
+        detail:
+          'We reserve the right, but are not obligated, to monitor and review User Content and to remove any content that we believe violates these Terms or is otherwise objectionable.',
+      },
+    ],
   },
   {
     id: 5,
-    title: 'Policy for Children',
+    title: 'Privacy',
     description:
-      'We do not knowingly solicit information from or market to children under the age of 16. If we learn that we have collected personal information from a child under age 16 without verification of parental consent, we will delete that information as quickly as possible. If you believe we might have any information from or about a child under 16, please contact us.',
+      'Your use of the Website is also governed by our Privacy Policy, which can be found at [link to Privacy Policy]. Please review our Privacy Policy to understand our practices regarding the collection, use, and disclosure of your personal information.',
   },
+
+  {
+    id: 5,
+    title: 'Disclaimers',
+    details: [
+      {
+        subTitle: 'No Warranties:',
+        detail:
+          'The Website is provided on an "as-is" and "as available" basis. We make no warranties or representations about the accuracy or completeness of the Website\'s content and assume no liability or responsibility for any errors, mistakes, or inaccuracies of content.',
+      },
+      {
+        subTitle: 'Limitation of Liability:',
+        detail:
+          'To the fullest extent permitted by law, ProMoon Software Solution and its affiliates, officers, directors, employees, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from (i) your use of or inability to use the Website; (ii) any unauthorized access to or use of our servers and/or any personal information stored therein; (iii) any interruption or cessation of transmission to or from the Website; (iv) any bugs, viruses, trojan horses, or the like that may be transmitted to or through the Website by any third party; or (v) any errors or omissions in any content or for any loss or damage incurred as a result of the use of any content posted, emailed, transmitted, or otherwise made available through the Website.',
+      },
+    ],
+  },
+
   {
     id: 6,
-    title: 'Your Privacy Rights',
+    title: 'Indemnification',
     description:
-      'You may review, change, or terminate your account at any time. Based on the laws of your country, you may have the right to request access to the personal information we collect from you, change that information, or delete it in some circumstances. To request to review, update, or delete your personal information, please contact us.',
+      "You agree to indemnify and hold harmless ProMoon Software Solution and its affiliates, officers, directors, employees, and agents from and against any and all claims, damages, obligations, losses, liabilities, costs, or debt, and expenses (including but not limited to attorney's fees) arising from (i) your use of and access to the Website; (ii) your violation of any term of these Terms; (iii) your violation of any third-party right, including without limitation any copyright, property, or privacy right; or (iv) any claim that your User Content caused damage to a third party.",
   },
   {
     id: 7,
-    title: 'Changes to this privacy policy',
+    title: 'Termination',
     description:
-      'PromoonSoft has the discretion to update this privacy policy at any time. When we do, we will revise the updated date at the bottom of this page. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications',
+      'We may terminate or suspend your account and bar access to the Website immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of these Terms.',
   },
   {
     id: 8,
-    title: 'Acceptance of these terms',
+    title: 'Governing Law',
     description:
-      'By using this Site and sharing your contact details with PromoonSoft, you signify your acceptance of this policy. The Site is available only to individuals who are at least 16 years’ old. By using this Site you agree that you’re at least 16 years old. If you do not agree to this policy, please do not use our Site. Your continued use of the Site following the posting of changes to this policy will be deemed your acceptance of those changes.',
+      'All matters relating to the Website and these Terms of Use, and any dispute or claim arising therefrom or related thereto (in each case, including non-contractual disputes or claims), shall be governed by and construed in accordance with the internal laws of the State of Colorado without giving effect to any choice or conflict of law provision or rule. Any legal suit, action, or proceeding arising out of, or related to, these Terms of Use or the Website shall be instituted exclusively in the federal courts of India or the courts of the City and County of Denver, State of Colorado. You waive any and all objections to the exercise of jurisdiction over you by such courts and to venue in such courts. ',
   },
   {
     id: 9,
+    title: 'Changes to this Privacy Policy',
+    description:
+      'PromoonSoft has the discretion to update this privacy policy at any time. When we do, we will revise the updated date at the bottom of this page. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications.',
+  },
+  {
+    id: 10,
+    title: 'Changes to Terms',
+    description:
+      'We may update the content on this Website from time to time, but its content is not necessarily complete or up-to-date. Any of the material on the Website may be out of date at any given time, and we are under no obligation to update such material.',
+  },
+  {
+    id: 11,
     title: 'Contact Us',
     description:
-      'If you have questions or comments about this Privacy Policy, please contact us at: info@promoonsoft.com',
+      'If you have any questions about these Terms, please contact us at: info@promoonsoft.com.',
   },
 ];
 
-const TermsandConditions = () => {
+const TermsandConditions: React.FC = () => {
+  const [selectedItem, setSelectedItem] = useState<number | null>(null);
+  const [hoveredParagraph, setHoveredParagraph] = useState<number | null>(null);
+  const [yScroll, setYScroll] = useState<number>(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setYScroll(window.pageYOffset);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const handleParagraphHover = (id: number | null) => {
+    setHoveredParagraph(id);
+  };
+
   return (
-    <div className="min-h-screen w-full  bg-white md:px-0 px-4">
+    <div className="min-h-screen w-full bg-white">
       <div className="pt-[200px] pb-[100px] bg-leading-background bg-cover bg-no-repeat flex justify-center items-center px-4">
-        <div className="flex flex-col justify-between">
-          <div>
-            <h1 className="text-4xl font-bold text-white text-center">
-              Terms and Conditions
-            </h1>
-          </div>
-          <div className="flex justify-center mt-8">
-            <p className="text-white">Recent date of update: 07/15/2024</p>
-          </div>
-        </div>
-      </div>
-      <div className="container mx-auto px-4 md:px-0 pb-16 pt-4 ">
-        <div className="mb-16">
-          <h2 className="text-black text-4xl">Introduction</h2>
-          <p className="text-black text-base pt-4">
-            Welcome to ProMoon Software Solution. ProMoon Software Solution
-            ("we," "our," or "us") is committed to protecting your privacy when
-            you access the https://promoon-website.vercel.app/. This Privacy
-            Policy explains how we collect, use, disclose, and safeguard your
-            information when you visit our Website. Please read this privacy
-            policy carefully. If you do not agree with the terms of this privacy
-            policy, please do not access the Website.
+        <div className="flex flex-col justify-between md:px-0 px-4">
+          <h1 className="text-4xl font-bold text-white text-center">
+            Terms and Conditions
+          </h1>
+          <p className="text-white text-center mt-8">
+            Recent date of update: 07/15/2024
           </p>
         </div>
+      </div>
+      <div className="container mx-auto px-4 md:px-0 py-16">
         {data.map((item) => (
-          <div
+          <section
             key={item.id}
             className="mb-16"
           >
-            <h2 className="text-black text-4xl">{item.title}</h2>
-            <p className="text-black text-base pt-4">{item.description}</p>
+            <h2
+              className={`${
+                selectedItem === item.id
+                  ? 'border-b-4 border-sky-500'
+                  : 'border-b-transparent'
+              } text-black text-4xl font-bold w-fit relative `}
+            >
+              {item.title}
+              <div className="border-animation" />
+            </h2>
+            {item.description && (
+              <p
+                className={`text-black text-base font-normal pt-4 ${
+                  hoveredParagraph === item.id
+                    ? 'border-sky-500'
+                    : 'border-transparent'
+                } transition-all duration-300`}
+              >
+                {item.description}
+              </p>
+            )}
             {item.details?.map((detail, index) => (
               <div
                 key={index}
                 className="mb-4"
               >
-                <ul className="pl-8 pt-4 list-disc list-outside">
+                <ul className="pl-8 pt-4 list-disc">
                   <li className="text-xl font-semibold text-black">
                     {detail.subTitle}
                   </li>
                   {detail.detail && (
-                    <p className="text-black pl-4 pt-2">{detail.detail}</p>
+                    <p className="text-black pl-4 pt-2 font-normal">
+                      {detail.detail}
+                    </p>
                   )}
+                  {detail.subdetails?.map((subdetail, subIndex) => (
+                    <div
+                      key={subIndex}
+                      className="pl-6 text-black flex justify-start gap-4 mt-1"
+                    >
+                      <div>
+                        <TrueIcon />
+                      </div>
+                      <div> {subdetail.Title}</div>
+                    </div>
+                  ))}
                 </ul>
               </div>
             ))}
-          </div>
+          </section>
         ))}
       </div>
     </div>

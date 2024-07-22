@@ -3,14 +3,13 @@ import FooterLogoIcon from '@/icons/FooterLogoIcon';
 import InstragramIcon from '@/icons/InstragramIcon';
 import LinkedinIcon from '@/icons/LinkedinIcon';
 import ProMoonLogoDark from '@/icons/ProMoonLogoDark';
-import TwitterIcon from '@/icons/TwitterIcon';
 import Link from 'next/link';
 import { useState } from 'react';
 import AddressPopup from './AddressPopup';
 import { useHiring } from '@/context/Hiring-Context';
-import { useTheme } from '@/context/ThemeContext';
 import { useRouter } from 'next/router';
 import NewTwiterIcon from './../icons/NewTwiterIcon';
+import NewFaceBookIcon from '@/icons/NewFaceBookIcon';
 
 const Footer = () => {
   const SOCIAL_MEDIA_ICONS: {
@@ -21,7 +20,7 @@ const Footer = () => {
   }[] = [
     {
       id: 1,
-      icon: <FacebookIcon />,
+      icon: <NewFaceBookIcon />,
       name: 'Facebook',
       href: 'https://www.facebook.com/profile.php?id=100091227716427',
     },
@@ -46,10 +45,14 @@ const Footer = () => {
   ];
 
   const FOOTER_SERVICE: { id: number; name: string; route: string }[] = [
-    { id: 1, name: 'Technology', route: 'technology' },
-    { id: 2, name: 'Website development', route: 'website-development' },
-    { id: 3, name: 'Project development', route: 'project-development' },
-    { id: 4, name: 'Mobile app development', route: 'mobile-app-development' },
+    { id: 1, name: 'Website development', route: 'websitedevelopment' },
+    { id: 2, name: 'Mobile app development', route: 'mobileappdevelopment' },
+    {
+      id: 3,
+      name: 'Search Engine Optimization',
+      route: 'SearchEngineOptimization',
+    },
+    { id: 4, name: 'Quality Assurance', route: 'QualityAssurance' },
   ];
   const FOOTER_RESOURCES: { id: number; name: string; route: string }[] = [
     { id: 1, name: 'Success Stories', route: 'success-stories' },
@@ -206,7 +209,12 @@ const Footer = () => {
               >
                 Privacy Policy
               </Link>
-              <p className="md:border-none md:pr-0">Cookie Policy</p>
+              <Link
+                href="/CookiePolicy"
+                className="md:border-none md:pr-0"
+              >
+                Cookie Policy
+              </Link>
             </div>
             <div className="text-white text-center md:text-left mt-4 md:mt-0">
               Copyright © 2024 ProMoon Software Solution. All Rights Reserved.
@@ -219,7 +227,7 @@ const Footer = () => {
                     className="hover:text-blue h-30 w-30"
                     href={href}
                   >
-                    {icon}
+                    <div className="h-8 w-8">{icon}</div>
                   </Link>
                 );
               })}

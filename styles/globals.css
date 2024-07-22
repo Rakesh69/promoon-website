@@ -708,3 +708,100 @@ div.draw-line-height {
 
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 }
+
+.slideInRight2 {
+  -webkit-animation-name: slideInRight2;
+  animation-name: slideInRight2;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes slideInRight2 {
+  0% {
+    -webkit-transform: translateX(10%);
+    transform: translateX(10%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight2 {
+  0% {
+    -webkit-transform: translateX(10%);
+    transform: translateX(10%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.border-animation {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #0ea5e9, transparent);
+  background-size: 200% 100%;
+  animation: borderAnimation 2s linear infinite;
+}
+
+@keyframes borderAnimation {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.border-animation1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  border-radius: 5px;
+  background: linear-gradient(100deg, #0ea5e9, transparent);
+  background-size: 200% 100%;
+  animation: borderAnimation1 2s linear infinite;
+}
+
+@keyframes borderAnimation1 {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
