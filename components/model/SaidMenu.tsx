@@ -42,7 +42,7 @@ const SaidMenu = () => {
       sections.forEach((current) => {
         const currentElement = current as HTMLElement;
         const sectionHeight = currentElement.offsetHeight;
-        const sectionTop = currentElement.offsetTop - 120;
+        const sectionTop = currentElement.offsetTop - 200;
         const sectionId = current.getAttribute('id');
 
         if (
@@ -86,7 +86,7 @@ const SaidMenu = () => {
               <li
                 className={`py-10 hover:transition duration-300 dark:text-white text-base font-semibold hover:font-bold ease-in pl-4 border-l-2  h-[125px] border-white ${
                   active === path
-                    ? 'dark:text-sky-400 text-blue-500 font-semibold'
+                    ? 'dark:text-sky-600 font-semibold '
                     : 'text-white'
                 }`}
                 key={id}
@@ -94,11 +94,11 @@ const SaidMenu = () => {
               >
                 <div>
                   <div
-                    className="absolute h-full bg-blue"
+                    className="absolute h-full bg-blue ml-[-18px] "
                     style={{
                       width: '2px',
                       top: '0',
-                      left: '240px',
+
                       transformOrigin: 'top-25px',
                       height: lineHeight,
                       transition: 'height 0.1s ease',

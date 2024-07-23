@@ -11,7 +11,7 @@ const HeroSection = () => {
         src={'/assets/hero-background-top.png'}
         alt="images"
         height={1000}
-        className="lg:w-full w-full mx-auto absolute md:top-[87px] top-[67px] h-[190px]"
+        className="lg:w-full w-full mx-auto absolute md:top-[87px] top-[67px] md:h-[190px]  h-[50px] "
         width={1000}
       />
       <div className="container w-full mx-auto text-white md:pt-52 pt-32  pb-[115px] flex flex-col lg:flex-row gap-[50px]">
@@ -49,23 +49,23 @@ const HeroSection = () => {
             <RightArrow />
           </Link>
         </div>
-        <div className="slideInRight  flex flex-col lg:flex-row w-full lg:w-1/2 gap-4">
+        <div className="slideInRight  flex flex-col md:flex-row w-full lg:w-1/2 gap-24 lg:gap-4">
           {' '}
-          <div className="flex items-end h-full w-full xl:h-[114%] lg:h-[80%] lg:w-64">
+          <div className="flex lg:items-end items-center justify-center ">
             <Image
               src={'/assets/herosectionimg1.png'}
               alt="images"
               height={1000}
-              className="w-full"
+              className="lg:w-full md:w-[500px] w-[400px] md:h-[300px] h-[250px]"
               width={1000}
             />
           </div>
-          <div className="flex items-start h-full w-full lg:w-64">
+          <div className="flex lg:items-start justify-center h-full w-full lg:w-64">
             <Image
               src={'/assets/herosectionimg2.png'}
               alt="images"
               height={500}
-              className="w-full"
+              className="lg:w-full md:w-[300px] w-[400px] md:h-[300px] h-[250px]"
               width={1000}
             />
           </div>

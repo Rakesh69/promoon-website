@@ -191,7 +191,7 @@ const Tools = () => {
           </h3>
         </div>
         <div>
-          <div className="px-4 md:flex-row flex flex-col justify-center rounded-[10px] dark:bg-[#1c2136] md:flex-nowrap md:items-center lg:gap-4 xl:gap-12">
+          <div className="px-4 md:flex-row flex  justify-center rounded-[10px]  dark:bg-[#1c2136] md:flex-nowrap md:items-center lg:gap-4 xl:gap-12">
             {items.map((item) => (
               <div
                 key={item.id}
@@ -212,7 +212,7 @@ const Tools = () => {
             ))}
           </div>
         </div>
-        <div className="lg:grid lg:grid-cols-3 md:grid-rows-2 md:grid-cols-2 grid grid-cols-1 gap-5 py-10 ">
+        <div className="lg:grid lg:grid-cols-3  md:grid-cols-2 grid grid-cols-1 gap-5 py-10 ">
           {selectedDetails.map((detail) => (
             <div
               key={detail.id}

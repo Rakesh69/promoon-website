@@ -1,42 +1,42 @@
-import AnalysisIcon from "@/icons/AnalysisIcon";
-import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
-import PlanningIcon from "@/icons/PlanningIcon";
-import DevelopmentIcon from "@/icons/DevelopmentIcon";
-import SetupIcon from "@/icons/SetupIcon";
-import ExecutionIcon from "@/icons/ExecutionIcon";
-import ReportingIcon from "@/icons/ReportingIcon";
+import AnalysisIcon from '@/icons/AnalysisIcon';
+import Link from 'next/link';
+import React, { useEffect, useRef, useState } from 'react';
+import PlanningIcon from '@/icons/PlanningIcon';
+import DevelopmentIcon from '@/icons/DevelopmentIcon';
+import SetupIcon from '@/icons/SetupIcon';
+import ExecutionIcon from '@/icons/ExecutionIcon';
+import ReportingIcon from '@/icons/ReportingIcon';
 
 const NAV_MENUS = [
   {
     id: 1,
-    menu: "Requirement Analysis",
-    path: "#Analysis",
+    menu: 'Requirement Analysis',
+    path: '#Analysis',
     icon: <AnalysisIcon />,
   },
-  { id: 2, menu: "Test Planning", path: "#planning", icon: <PlanningIcon /> },
+  { id: 2, menu: 'Test Planning', path: '#planning', icon: <PlanningIcon /> },
   {
     id: 3,
-    menu: "Test Design & Development",
-    path: "#Development",
+    menu: 'Test Design & Development',
+    path: '#Development',
     icon: <DevelopmentIcon />,
   },
   {
     id: 4,
-    menu: "Test Environment Setup",
-    path: "#Setup",
+    menu: 'Test Environment Setup',
+    path: '#Setup',
     icon: <SetupIcon />,
   },
   {
     id: 5,
-    menu: "Test Execution",
-    path: "#Execution",
+    menu: 'Test Execution',
+    path: '#Execution',
     icon: <ExecutionIcon />,
   },
   {
     id: 6,
-    menu: "Test Reporting",
-    path: "#TestReporting",
+    menu: 'Test Reporting',
+    path: '#TestReporting',
     icon: <ReportingIcon />,
   },
 ];
@@ -44,19 +44,19 @@ const NAV_MENUS = [
 const Analysis = [
   {
     id: 1,
-    title: "Requirement Analysis",
+    title: 'Requirement Analysis',
     details: [
-      { id: 1, data: "Understand the software requirements" },
+      { id: 1, data: 'Understand the software requirements' },
       {
         id: 2,
-        data: "Identify the testing scope",
+        data: 'Identify the testing scope',
       },
       {
         id: 3,
-        data: "Analyze the requirements for completeness, consistency, and feasibility",
+        data: 'Analyze the requirements for completeness, consistency, and feasibility',
       },
-      { id: 4, data: "Prioritize the requirements" },
-      { id: 5, data: "Document the requirements" },
+      { id: 4, data: 'Prioritize the requirements' },
+      { id: 5, data: 'Document the requirements' },
     ],
   },
 ];
@@ -64,16 +64,16 @@ const Analysis = [
 const planning = [
   {
     id: 1,
-    title: "Test Planning",
+    title: 'Test Planning',
     details: [
-      { id: 1, data: "Define the test strategy" },
+      { id: 1, data: 'Define the test strategy' },
       {
         id: 2,
-        data: "Identify the test cases",
+        data: 'Identify the test cases',
       },
-      { id: 3, data: "Estimate the resources needed" },
-      { id: 4, data: "Create a test schedule" },
-      { id: 5, data: "Define the entry and exit criteria for the test phase" },
+      { id: 3, data: 'Estimate the resources needed' },
+      { id: 4, data: 'Create a test schedule' },
+      { id: 5, data: 'Define the entry and exit criteria for the test phase' },
     ],
   },
 ];
@@ -81,16 +81,16 @@ const planning = [
 const Development = [
   {
     id: 1,
-    title: "Test Design & Development",
+    title: 'Test Design & Development',
     details: [
-      { id: 1, data: "Identify the test scenarios" },
+      { id: 1, data: 'Identify the test scenarios' },
       {
         id: 2,
-        data: "Define the test conditions",
+        data: 'Define the test conditions',
       },
-      { id: 3, data: "Create the test cases" },
-      { id: 4, data: "Develop test data" },
-      { id: 5, data: "Document the test cases" },
+      { id: 3, data: 'Create the test cases' },
+      { id: 4, data: 'Develop test data' },
+      { id: 5, data: 'Document the test cases' },
     ],
   },
 ];
@@ -98,16 +98,16 @@ const Development = [
 const Setup = [
   {
     id: 1,
-    title: "Test Environment Setup",
+    title: 'Test Environment Setup',
     details: [
-      { id: 1, data: "Install the necessary hardware and software" },
+      { id: 1, data: 'Install the necessary hardware and software' },
       {
         id: 2,
-        data: "Configure the operating system and network",
+        data: 'Configure the operating system and network',
       },
-      { id: 3, data: "Deploy the software under test" },
-      { id: 4, data: "Create test data" },
-      { id: 5, data: "Verify the test environment" },
+      { id: 3, data: 'Deploy the software under test' },
+      { id: 4, data: 'Create test data' },
+      { id: 5, data: 'Verify the test environment' },
     ],
   },
 ];
@@ -115,16 +115,16 @@ const Setup = [
 const Execution = [
   {
     id: 1,
-    title: "Test Execution",
+    title: 'Test Execution',
     details: [
-      { id: 1, data: "Execute the test cases" },
+      { id: 1, data: 'Execute the test cases' },
       {
         id: 2,
-        data: "Record the test results",
+        data: 'Record the test results',
       },
-      { id: 3, data: "Identify any defects" },
-      { id: 4, data: "Report the test results to the development team" },
-      { id: 5, data: "Retest any fixed defects" },
+      { id: 3, data: 'Identify any defects' },
+      { id: 4, data: 'Report the test results to the development team' },
+      { id: 5, data: 'Retest any fixed defects' },
     ],
   },
 ];
@@ -132,16 +132,16 @@ const Execution = [
 const TestReporting = [
   {
     id: 1,
-    title: "Test Reporting",
+    title: 'Test Reporting',
     details: [
-      { id: 1, data: "Analyze the test results" },
+      { id: 1, data: 'Analyze the test results' },
       {
         id: 2,
-        data: "Generate a test report",
+        data: 'Generate a test report',
       },
-      { id: 3, data: "Communicate the test results to stakeholders" },
-      { id: 4, data: "Provide recommendations for improvement" },
-      { id: 5, data: "Archive the test report" },
+      { id: 3, data: 'Communicate the test results to stakeholders' },
+      { id: 4, data: 'Provide recommendations for improvement' },
+      { id: 5, data: 'Archive the test report' },
     ],
   },
 ];
@@ -163,19 +163,19 @@ const OurTesting = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, [isVisible]);
 
   return (
-    <div className="container mx-auto py-20 px-4 sm:px-6 lg:px-8">
+    <div className="container mx-auto py-20 px-4 sm:px-6 lg:px-8 overflow-hidden ">
       <div className="flex flex-col justify-center items-center text-center">
         <h2
           ref={sectionRef}
           className={`animated-section ${
-            isVisible ? "slideInDown" : ""
+            isVisible ? 'slideInDown' : ''
           } font-bold text-3xl md:text-4xl text-textPrimary`}
         >
           Our Testing
@@ -191,7 +191,7 @@ const OurTesting = () => {
             {NAV_MENUS.map(({ id, menu, path, icon }) => (
               <li
                 className={`py-4 flex items-center text-black text-base font-semibold hover:font-bold transition duration-300 ease-in pl-6 ${
-                  activeMenuId === id ? "border-black font-bold" : ""
+                  activeMenuId === id ? 'border-black font-bold' : ''
                 }`}
                 key={id}
                 onClick={() => setActiveMenuId(id)}

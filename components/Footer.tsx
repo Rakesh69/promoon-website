@@ -54,27 +54,15 @@ const Footer = () => {
     },
     { id: 4, name: 'Quality Assurance', route: 'QualityAssurance' },
   ];
-  const FOOTER_RESOURCES: { id: number; name: string; route: string }[] = [
-    { id: 1, name: 'Success Stories', route: 'success-stories' },
-    { id: 2, name: 'Get in Touch', route: 'get-in-touch' },
-    { id: 3, name: 'About ProMoon', route: 'about-ProMoon' },
-    { id: 4, name: 'Blog', route: 'blog' },
-  ];
+
   const FOOTER_INFORMATION: { id: number; name: string; route: string }[] = [
     { id: 1, name: 'Careers', route: 'career' },
-    { id: 2, name: 'FAQ', route: 'faq' },
-    { id: 3, name: 'Privacy Policy', route: 'privacy-policy' },
+    { id: 2, name: 'Privacy Policy', route: 'PrivacyPolicy' },
     {
-      id: 4,
-      name: 'Do Not Sell My Personal Information',
-      route: 'do-not-sell-my-personal-information',
+      id: 3,
+      name: 'Terms and Conditions',
+      route: 'TermsandConditions',
     },
-    {
-      id: 5,
-      name: 'Terms of Use',
-      route: 'terms-of-use',
-    },
-    { id: 6, name: 'Sitemap', route: 'sitemap' },
   ];
 
   const { isHiring } = useHiring();
@@ -97,7 +85,7 @@ const Footer = () => {
             <ProMoonLogoDark />
           </div>
 
-          <div className="pt-[35px] pb-11 flex flex-col gap-10 lg:gap-11 sm:grid sm:grid-cols-2 lg:grid lg:grid-cols-4 lg:grid-rows-1">
+          <div className="pt-[35px] pb-11 flex flex-col gap-10 lg:gap-11 sm:grid sm:grid-cols-2 lg:grid lg:grid-cols-3 lg:grid-rows-1">
             <div className="flex flex-col w-full group">
               <div className="group-hover:flex hidden">
                 <AddressPopup />
@@ -133,24 +121,7 @@ const Footer = () => {
                 })}
               </ul>
             </div>
-            <div className="flex flex-col w-full">
-              <p className="text-white text-[15px] w-fit font-medium leading-6 mb-6 tracking-1% border-b-2 border-white/40">
-                Resources
-              </p>
 
-              <ul className="font-normal text-[15px] tracking-1% leading-8 text-white">
-                {FOOTER_RESOURCES.map(({ id, name, route }) => {
-                  return (
-                    <li
-                      key={id}
-                      className="lg:mb-2.5 hover:text-blue transition-colors duration-100 ease-in-out"
-                    >
-                      <Link href={`/${route}`}>{name}</Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
             <div className="flex flex-col w-full">
               <p className="text-white text-[15px] w-fit font-medium leading-6 mb-6 tracking-1% border-b-2 border-white/40">
                 Information
@@ -169,7 +140,7 @@ const Footer = () => {
                         style={{
                           color: active === id ? '#00B4FF' : 'white',
                         }}
-                        href={`/career`}
+                        href={`/${route}`}
                       >
                         {name}
                         {name === 'Careers' && isHiring && (

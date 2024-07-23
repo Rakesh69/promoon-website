@@ -30,7 +30,10 @@ const OBJECTIVE = [
 ];
 const Maintenance = () => {
   return (
-    <section id="maintenance">
+    <section
+      id="maintenance"
+      className="md:pt-24"
+    >
       <div className="bg-[#F3F4F6] w-full pb-4 lg:rounded-l-xl rounded-xl shadow-lg">
         <h2 className="pt-8 font-bold text-textPrimary text-base mb-4 pl-8 text-bold">
           OBJECTIVE

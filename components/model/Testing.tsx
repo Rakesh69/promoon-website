@@ -1,9 +1,4 @@
-import FacebookIcon from '@/icons/FacebookIcon';
-import InstragramIcon from '@/icons/InstragramIcon';
 import JiraIcon from '@/icons/JiraIcon';
-import LinkedinIcon from '@/icons/LinkedinIcon';
-import TwitterIcon from '@/icons/TwitterIcon';
-import Image from 'next/image';
 import React from 'react';
 import MantisIcon from '@/icons/MantisIcon';
 import FirebaseIcon from '@/icons/FirebaseIcon';
@@ -110,7 +105,10 @@ const Testing = () => {
 
   return (
     <>
-      <section id="testing">
+      <section
+        id="testing"
+        className="md:pt-24"
+      >
         <div className=" bg-[#F3F4F6] w-full pb-4 lg:rounded-l-xl rounded-xl ">
           <h2 className="pt-8 font-bold text-textPrimary text-base mb-4 pl-8 text-bold">
             OBJECTIVE

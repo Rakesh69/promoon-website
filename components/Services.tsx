@@ -23,7 +23,7 @@ const Services = () => {
     };
   }, [isVisible]);
   return (
-    <footer className="w-full bg-white">
+    <footer className="w-full bg-white overflow-hidden">
       <div className="bg-footer-background bg-no-repeat">
         <div className="max-w-screen-xl w-90% m-auto">
           <div className="flex flex-col py-10 md:py-20 lg:py-[95px]">

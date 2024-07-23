@@ -98,7 +98,7 @@ const OurSEOServices = () => {
   }, [isVisible]);
 
   return (
-    <div className="dark:bg-[#F3F4F6] md:pt-[100px] pt-5">
+    <div className="dark:bg-[#F3F4F6] md:pt-[100px] pt-5 overflow-hidden">
       <section className="bg-[url('/assets/CompanyWorkWave.png')] dark:bg-dark-header-waves pb-14 md:pb-[96px] bg-no-repeat bg-top bg-cover w-full h-full">
         <div className="container mx-auto w-full">
           <div className="flex flex-col justify-center items-center">

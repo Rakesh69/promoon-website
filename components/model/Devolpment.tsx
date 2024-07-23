@@ -85,7 +85,10 @@ const Devolpment = () => {
   ];
   return (
     <>
-      <section id="development">
+      <section
+        id="development"
+        className="md:pt-24"
+      >
         <div
           id="planing"
           className=" bg-[#F3F4F6] w-full pb-4 lg:rounded-l-xl rounded-xl "

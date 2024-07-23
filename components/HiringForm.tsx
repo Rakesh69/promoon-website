@@ -6,7 +6,7 @@ import { useState } from 'react';
 import Spinner from './Spinner';
 import axios from 'axios';
 
-const FILE_SIZE_LIMIT = 5 * 1024 * 1024; // 5MB
+const FILE_SIZE_LIMIT = 5 * 1024 * 1024;
 
 const validationSchema = Yup.object().shape({
   firstname: Yup.string().required('Required'),

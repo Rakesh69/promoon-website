@@ -83,13 +83,16 @@ const Planing = () => {
   ];
   return (
     <>
-      <section id="planning">
+      <section
+        id="planning"
+        className="md:pt-20"
+      >
         <div
           id="planing"
           className=" bg-[#F3F4F6] w-full pb-4 lg:rounded-l-xl rounded-xl "
         >
-          <h2 className="font-bold text-white text-base mb-4 pl-6 text-bold ">
-            OUTCOME
+          <h2 className=" pt-8 font-bold text-textPrimary  text-base mb-4 pl-8 text-bold ">
+            OBJECTIVE
           </h2>
           <ul className=" pl-12">
             {OBJECTIVE.map(({ title, id }) => (
@@ -103,7 +106,7 @@ const Planing = () => {
           </ul>
         </div>
 
-        <div className=" w-full py-10 lg:px-4">
+        <div className=" w-full py-10 lg:px-4 pb-0">
           <h2 className="font-bold text-white text-base mb-4 pl-6 text-bold ">
             OUTCOME
           </h2>

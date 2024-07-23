@@ -63,7 +63,7 @@ const CompanyWork = () => {
   }, [isVisible]);
   return (
     <>
-      <div className="dark:bg-[#F3F4F6] md:pt-[156px] pt-5">
+      <div className="dark:bg-[#F3F4F6] md:pt-[156px] py-16">
         <section className="bg-[url('/assets/CompanyWorkWave.png')] dark:bg-dark-header-waves pb-14 md:pb-[96px] bg-no-repeat bg-top bg-cover w-full h-full ">
           <div className="container mx-auto  w-full">
             <div
@@ -94,9 +94,9 @@ const CompanyWork = () => {
                 ref={sectionRef}
                 className={`animated-section ${
                   isVisible ? 'slideInRight' : ''
-                }part2 lg:w-1/4 p-4 md:p-0`}
+                }part2 lg:w-1/4 p-4 md:p-0 md:pt-0 pt-16 `}
               >
-                <div className="bg-white shadow-customShadow gap-10 flex flex-col md:flex-row lg:flex-col p-4 rounded-2xl">
+                <div className="bg-white shadow-customShadow gap-10 flex flex-col md:flex-row lg:flex-col  p-4 rounded-2xl">
                   <div className="md:w-2/4 lg:w-full">
                     <Image
                       src="/assets/termWork.webp"

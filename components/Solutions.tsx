@@ -84,21 +84,21 @@ const Solutions = () => {
   const handleClick = (id: number | null) => {
     setSelectedItem(id);
   };
-  
+
   return (
-    <section className="bg-gray-100 md:py-[82px] py-10">
+    <section className="bg-gray-100 md:pb-[82px] pb-10">
       <div className="container mx-auto p-4 md:p-0">
         <div className="flex flex-col justify-center items-center pb-12 ">
           <h2 className=" font-medium text-4xl font-poppins text-textPrimary text-center">
             We Provide Services
           </h2>
-          <h3 className="text-textSecondary text-base font-normal text-center max-w-[668px] pt-5">
+          <h3 className="text-textSecondary text-base font-normal text-center max-w-[668px] md:pt-5 pt-2">
             We pride ourselves in delivering highly-customized and responsive
             solutions that help companies succeed
           </h3>
         </div>
 
-        <div className="lg:grid lg:grid-cols-3  md:grid-rows-2 md:grid-cols-2  lg:grid-rows-3 grid grid-cols-1 grid-rows-9 gap-5">
+        <div className="lg:grid lg:grid-cols-3 lg:grid-rows-3 grid grid-cols-1 gap-5">
           {items.map((item) => (
             <div
               key={item.id}
