@@ -14,7 +14,7 @@ const NAV_MENUES = [
   { id: 1, menu: 'Home', path: '/' },
   {
     id: 2,
-    menu: 'Service',
+    menu: 'Services',
     dropdown: [
       { id: 1, menu: 'Website Development', path: '/websitedevelopment' },
       { id: 2, menu: 'Mobile App Development', path: '/mobileappdevelopment' },
@@ -46,8 +46,10 @@ const Navbar: React.FC = () => {
     setActive(index);
   };
 
+  const isActive = (path: string) => router.pathname === path;
+
   return (
-    <nav className="w-full bg-white dark:bg-bg-colors-background top-0 border-b border-blackBlue/20 z-50 fixed">
+    <nav className="w-full bg-white dark:bg-bg-colors-background top-0 border-b border-blackBlue/20 z-50 fixed px-5 ">
       <div className="container mx-auto w-full py-5 flex md:px-0 px-4 sticky">
         <div className="w-full flex items-center justify-between">
           <Link href="/">
@@ -131,6 +133,7 @@ const Navbar: React.FC = () => {
               <button
                 onClick={() => {
                   router.push('/contactus');
+                  setActive(0);
                 }}
                 className="flex items-end gap-3"
               >

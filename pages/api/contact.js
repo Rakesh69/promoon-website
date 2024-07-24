@@ -4,11 +4,7 @@ const handler = async (req, res) => {
   if (req.method === 'POST') {
     const data = req.body;
     try {
-      await transporter.sendMail({
-        from: data?.email,
-        to: process.env.EMAIL,
-        subject: 'inquiry ',
-        html: `
+      let emailHtml = `
         <div style="font-family: Arial, sans-serif; padding: 20px;">
           <h1>${data.firstname} ${data.lastname}</h1>
           <p>Thank you for your inquiry. We have received the following message:</p>
@@ -16,7 +12,26 @@ const handler = async (req, res) => {
           <p>Best regards,</p>
           <p>Pixeldart Software</p>
         </div>
-      `,
+      `;
+
+      if (data.phone) {
+        emailHtml = `
+          <div style="font-family: Arial, sans-serif; padding: 20px;">
+            <h1>${data.firstname} ${data.lastname}</h1>
+            <p>Phone Number: ${data.phone}</p>
+            <p>Thank you for your inquiry. We have received the following message:</p>
+            <p>${data.message}</p>
+            <p>Best regards,</p>
+            <p>Pixeldart Software</p>
+          </div>
+        `;
+      }
+
+      await transporter.sendMail({
+        from: data?.email,
+        to: process.env.EMAIL,
+        subject: 'Inquiry',
+        html: emailHtml,
       });
       return res.status(200).json({ success: true });
     } catch (error) {
@@ -26,4 +41,5 @@ const handler = async (req, res) => {
   }
   return res.status(400).json({ message: 'Bad request' });
 };
+
 export default handler;

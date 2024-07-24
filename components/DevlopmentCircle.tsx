@@ -75,7 +75,7 @@ const DevlopmentCircle = () => {
             experienced in providing the highest quality of service possible.
           </p>
         </div>
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center px-5 ">
           <div className="h-1px w-full bg-borderbg" />
 
           <div className="grid grid-cols-1 w-full grid-rows-5 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-5 lg:grid-rows-1 gap-6 my-6">

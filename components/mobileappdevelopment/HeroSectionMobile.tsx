@@ -16,7 +16,7 @@ const HeroSectionMobile = () => {
           </p>
         </div>
       </div>
-      <div className="container mx-auto px-4 md:px-0 py-8 md:py-16 ">
+      <div className="container mx-auto px-5 py-8 md:py-16 ">
         <div className="flex flex-col md:flex-row justify-between">
           <div className="flex w-full md:w-1/2 slideInLeft">
             <p className="text-black font-normal text-lg">

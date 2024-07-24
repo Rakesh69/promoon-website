@@ -68,77 +68,70 @@ const Benefit = () => {
   }, [isVisible]);
 
   return (
-    <section>
-      <div className="container w-full mx-auto p-4 md:p-0 overflow-hidden">
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:pt-32 lg:pb-24 gap-10">
-          <div
-            ref={sectionRef}
-            className={`animated-section ${
-              isVisible ? 'slideInLeft' : ''
-            } flex flex-col lg:w-1/2 justify-center items-center lg:items-start lg:justify-start lg:gap-4`}
-          >
-            <p className="text-textPrimary dark:text-white text-center lg:text-left text-xl md:text-2xl lg:text-32px font-semibold">
-              Wellness and benefit
-            </p>
-            <p className="text-textSecondary dark:text-darkTextPrimary lg:text-lg text-center lg:text-left">
-              As part of our pursuit to lead impactful,
-              <br className="hidden lg:block" /> fulfilling lives, we take
-              benefits pretty seriously.
-            </p>
-          </div>
-          <div
-            ref={sectionRef}
-            className={`animated-section ${
-              isVisible ? 'slideInRight' : ''
-            } lg:w-1/2`}
-          >
-            <ul>
-              {CAREER_BENIFITS.map(({ title, description, id }) => {
-                return (
-                  <div
-                    onClick={() => {
-                      handleOpen(id);
-                    }}
-                    className={`flex justify-between ${
-                      open === id ? 'items-start' : 'items-center'
-                    } border-b w-full border-black dark:border-darkBorder pr-1 py-6 first:pb-3`}
-                  >
-                    <li className=" select-none lg:text-xl text-base cursor-pointer lg:font-medium  text-textPrimary dark:text-white w-[95%] ">
-                      {title}
+    <div className=" md:pt-[50px] pt-5 overflow-hidden ">
+      <section className=" dark:bg-[#F3F4F6] bg-[url('/assets/CompanyWorkWave.png')] dark:bg-dark-header-waves  bg-no-repeat bg-top bg-cover w-full h-full">
+        <div className="container mx-auto w-full">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:pt-32 lg:pb-24 gap-10">
+            <div
+              ref={sectionRef}
+              className={`animated-section ${
+                isVisible ? 'slideInLeft' : ''
+              } flex flex-col lg:w-1/2 justify-center items-center lg:items-start lg:justify-start lg:gap-4`}
+            >
+              <p className="text-textPrimary  text-center lg:text-left text-xl md:text-2xl lg:text-32px font-semibold">
+                Wellness and benefit
+              </p>
+              <p className="text-textSecondary  lg:text-lg text-center lg:text-left">
+                As part of our pursuit to lead impactful,
+                <br className="hidden lg:block" /> fulfilling lives, we take
+                benefits pretty seriously.
+              </p>
+            </div>
+            <div
+              ref={sectionRef}
+              className={`animated-section ${
+                isVisible ? 'slideInRight' : ''
+              } lg:w-1/2`}
+            >
+              <ul>
+                {CAREER_BENIFITS.map(({ title, description, id }) => {
+                  return (
+                    <div
+                      onClick={() => {
+                        handleOpen(id);
+                      }}
+                      className={`flex justify-between ${
+                        open === id ? 'items-start' : 'items-center'
+                      } border-b w-full border-black dark:border-darkBorder pr-1 py-6 first:pb-3`}
+                    >
+                      <li className=" select-none lg:text-xl text-base cursor-pointer lg:font-medium  text-textPrimary  w-[95%] ">
+                        {title}
 
+                        <div
+                          className={`overflow-hidden  increaseHeight ${
+                            open !== id ? 'h-0 ' : 'h-full'
+                          } pt-1`}
+                        >
+                          <p className="text-textSecondary  lg:text-base lg:font-normal font-medium text-sm">
+                            {description}
+                          </p>
+                        </div>
+                      </li>
                       <div
-                        className={`overflow-hidden  increaseHeight ${
-                          open !== id ? 'h-0 ' : 'h-full'
-                        } pt-1`}
+                        className={` ${open === id ? 'downArrowRound  ' : ''} `}
                       >
-                        <p className="text-textSecondary dark:text-darkTextPrimary lg:text-base lg:font-normal font-medium text-sm">
-                          {description}
-                        </p>
+                        <DownArrow />
                       </div>
-                    </li>
-                    <div
-                      className={` dark:hidden block ${
-                        open === id ? 'downArrowRound dark:hidden block' : ''
-                      } `}
-                    >
-                      <DownArrow />
                     </div>
-                    <div
-                      className={` hidden dark:block ${
-                        open === id ? 'downArrowRound hidden dark:block' : ''
-                      } `}
-                    >
-                      <DarkDownArrow />
-                    </div>
-                  </div>
-                );
-              })}
-            </ul>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
       <Positions />
-    </section>
+    </div>
   );
 };
 

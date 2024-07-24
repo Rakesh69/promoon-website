@@ -8,7 +8,6 @@ import HeroSection from '@/components/HeroSection';
 const Home = () => {
   return (
     <Container>
-      {/* <Header /> */}
       <HeroSection />
       <CompanyWork />
       <Solutions />

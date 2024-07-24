@@ -1,7 +1,7 @@
 import { ContactUsType } from '@/types/ContactUsType';
 import { useFormik } from 'formik';
 import React, { useEffect, useState } from 'react';
-import CheckBox from '../CheckBox';
+
 import Spinner from '../Spinner';
 import * as Yup from 'yup';
 import CloseIcon from '@/icons/CloseIcon';
@@ -15,9 +15,10 @@ const validationSchema = Yup.object().shape({
   firstname: Yup.string().required('Required'),
   lastname: Yup.string().required('Required'),
   email: Yup.string().email('Invalid Email').required('Required'),
-  isChecked: Yup.boolean()
-    .oneOf([true], 'You must accept the terms and conditions')
-    .required(),
+  phone: Yup.string().matches(
+    /^\d{10}$/,
+    'Phone number must be exactly 10 digits'
+  ),
   message: Yup.string().required('Required'),
 });
 
@@ -46,21 +47,21 @@ const ContactModal: React.FC<ContactModalProps> = ({
     handleSubmit,
     handleBlur,
     handleChange,
-    setFieldValue,
     values,
     errors,
     touched,
     resetForm,
   } = useFormik({
     initialValues: {
-      isChecked: false,
       firstname: '',
       lastname: '',
       email: '',
+      phone: '',
       message: '',
     },
-    validationSchema,
-    onSubmit: async (values) => {
+    validationSchema: validationSchema,
+    onSubmit: async (values, { resetForm }) => {
+      console.log('values>>', values);
       await contactUsFormApi(values);
       resetForm();
     },
@@ -169,6 +170,29 @@ const ContactModal: React.FC<ContactModalProps> = ({
 
               <div className="pb-6">
                 <label
+                  htmlFor="phone"
+                  className="font-medium text-textPrimary border-gray-500 text-base leading-1px"
+                >
+                  Phone No <span className="text-red-500">*</span>
+                </label>
+                <input
+                  placeholder="Phone Number"
+                  id="phone"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={values.phone}
+                  type="tel"
+                  className="mt-2 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 border outline-none w-full rounded border-gray-500 py-2 text-sm px-3 focus:invalid:border-red-500 focus:invalid:ring-red-500"
+                />
+                {errors.phone && touched.phone && (
+                  <span className="text-xs text-requiredField">
+                    {errors.phone}
+                  </span>
+                )}
+              </div>
+
+              <div className="pb-6">
+                <label
                   htmlFor="message"
                   className="font-medium text-textPrimary text-base leading-1px"
                 >
@@ -191,30 +215,6 @@ const ContactModal: React.FC<ContactModalProps> = ({
               </div>
 
               <div>
-                <div className="flex cursor-pointer">
-                  <CheckBox
-                    id="isChecked"
-                    isChecked={values.isChecked}
-                    onChange={() => {
-                      setFieldValue('isChecked', !values.isChecked);
-                    }}
-                  />
-                  <label
-                    htmlFor="isChecked"
-                    className="text-base pl-2 font-normal text-darkBlack"
-                  >
-                    I agree to the
-                  </label>
-                  <a className="text-base text-darkBlack font-medium pl-1 underline underline-offset-4">
-                    Terms and Conditions
-                  </a>
-                </div>
-
-                {!values.isChecked && errors.isChecked && touched.isChecked && (
-                  <p className="text-sm mt-1 text-requiredField">
-                    {errors.isChecked}
-                  </p>
-                )}
                 <div className="flex justify-center my-6">
                   <button
                     type="submit"

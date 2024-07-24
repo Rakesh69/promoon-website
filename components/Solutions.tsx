@@ -86,7 +86,7 @@ const Solutions = () => {
   };
 
   return (
-    <section className="bg-gray-100 md:pb-[82px] pb-10">
+    <section className="bg-gray-100 md:pb-[82px] pb-10 px-5 ">
       <div className="container mx-auto p-4 md:p-0">
         <div className="flex flex-col justify-center items-center pb-12 ">
           <h2 className=" font-medium text-4xl font-poppins text-textPrimary text-center">

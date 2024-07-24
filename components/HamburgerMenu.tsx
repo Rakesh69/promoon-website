@@ -26,7 +26,7 @@ const COMPANY = [
   {
     id: 1,
     option: 'Company',
-    subOptions: [{ id: 1, menu: 'Contact Us', path: '/aboutus' }],
+    subOptions: [{ id: 1, menu: 'About Us', path: '/aboutus' }],
   },
 ];
 

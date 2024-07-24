@@ -22,13 +22,13 @@ const Footer = () => {
       id: 1,
       icon: <NewFaceBookIcon />,
       name: 'Facebook',
-      href: 'https://www.facebook.com/profile.php?id=100091227716427',
+      href: 'https://www.facebook.com/profile.php?id=61562583162466',
     },
     {
       id: 2,
       icon: <NewTwiterIcon />,
       name: 'Twitter',
-      href: 'https://twitter.com/home',
+      href: 'https://twitter.com/HRatProMoonSoft',
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ const Footer = () => {
       id: 4,
       icon: <LinkedinIcon />,
       name: 'Linkedin',
-      href: 'https://www.linkedin.com/in/hr-pixeldart-1b8351271/',
+      href: 'https://www.linkedin.com/in/promoon-software-solution-10b295309/',
     },
   ];
 
@@ -56,12 +56,19 @@ const Footer = () => {
   ];
 
   const FOOTER_INFORMATION: { id: number; name: string; route: string }[] = [
-    { id: 1, name: 'Careers', route: 'career' },
-    { id: 2, name: 'Privacy Policy', route: 'PrivacyPolicy' },
+    { id: 1, name: 'Home', route: '/' },
+    { id: 2, name: 'Careers', route: 'career' },
+    { id: 3, name: 'About ProMoon', route: 'aboutus' },
+    { id: 4, name: 'Privacy Policy', route: 'PrivacyPolicy' },
     {
-      id: 3,
+      id: 5,
       name: 'Terms and Conditions',
       route: 'TermsandConditions',
+    },
+    {
+      id: 6,
+      name: ' Cookie Policy',
+      route: 'CookiePolicy',
     },
   ];
 
@@ -124,7 +131,7 @@ const Footer = () => {
 
             <div className="flex flex-col w-full">
               <p className="text-white text-[15px] w-fit font-medium leading-6 mb-6 tracking-1% border-b-2 border-white/40">
-                Information
+                Quick Links
               </p>
 
               <ul className="font-normal text-[15px] w-full tracking-1% leading-6 text-white">

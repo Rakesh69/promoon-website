@@ -9,6 +9,9 @@ import Angular from './../../icons/Angular';
 import VueIcon from './../../icons/VueIcon';
 import JavaIcon from './../../icons/JavaIcon';
 import Nodejs from './../../icons/Nodejs';
+import NestJsIcon from './../../icons/NestJsIcon';
+import LampIcon from '@/icons/LampIcon';
+import ExpressIcons from '@/icons/ExpressIcons';
 
 const Tools = () => {
   const [heading, setHeading] = useState('Web App');
@@ -21,7 +24,7 @@ const Tools = () => {
       details: [
         {
           id: '01',
-          icon: <NextJsIcon />,
+          icon: <LampIcon />,
           subtitle: 'LAMP',
           text: 'Leveraging the robust LAMP stack (Linux, Apache, MySQL, PHP), we create dynamic web applications known for their reliability and versatility',
         },
@@ -99,14 +102,14 @@ const Tools = () => {
         },
         {
           id: '03',
-          icon: <JavaIcon />,
+          icon: <ExpressIcons />,
           subtitle: 'Express.js',
           text: 'Minimalist Node.js framework, lauded for its simplicity and flexibility in creating RESTful APIs and web apps.',
         },
         {
           id: '04',
-          icon: <NextJsIcon />,
-          subtitle: 'Next.js',
+          icon: <NestJsIcon />,
+          subtitle: 'Nest.js',
           text: 'TypeScript-based Node.js framework for building scalable and maintainable server- side applications, leveraging decorators and modules',
         },
         {

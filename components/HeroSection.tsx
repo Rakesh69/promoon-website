@@ -14,7 +14,7 @@ const HeroSection = () => {
         className="lg:w-full w-full mx-auto absolute md:top-[87px] top-[67px] md:h-[190px]  h-[50px] "
         width={1000}
       />
-      <div className="container w-full mx-auto text-white md:pt-52 pt-32  pb-[115px] flex flex-col lg:flex-row gap-[50px]">
+      <div className=" px-5 container w-full mx-auto text-white md:pt-52 pt-32  pb-[115px] flex flex-col lg:flex-row gap-[120px]">
         <div className="w-full lg:w-1/2 flex flex-col gap-7 slideInLeft">
           <div className="flex items-center gap-2.5 w-fit py-[7px] px-3.5 bg-borderBlack rounded-full border border-white/10">
             <span>
@@ -49,24 +49,23 @@ const HeroSection = () => {
             <RightArrow />
           </Link>
         </div>
-        <div className="slideInRight  flex flex-col md:flex-row w-full lg:w-1/2 gap-24 lg:gap-4">
-          {' '}
-          <div className="flex lg:items-end items-center justify-center ">
+        <div className="slideInRight flex flex-col md:flex-row w-full lg:w-1/2 gap-24 lg:gap-20">
+          <div className="flex lg:items-end items-center justify-center">
             <Image
-              src={'/assets/herosectionimg1.png'}
-              alt="images"
+              src={'/assets/HeoImage1.png'}
+              alt="Image 1"
+              width={1000}
               height={1000}
               className="lg:w-full md:w-[500px] w-[400px] md:h-[300px] h-[250px]"
-              width={1000}
             />
           </div>
           <div className="flex lg:items-start justify-center h-full w-full lg:w-64">
             <Image
-              src={'/assets/herosectionimg2.png'}
-              alt="images"
+              src={'/assets/HeroImage2.png'}
+              alt="Image 2"
+              width={1000}
               height={500}
               className="lg:w-full md:w-[300px] w-[400px] md:h-[300px] h-[250px]"
-              width={1000}
             />
           </div>
         </div>

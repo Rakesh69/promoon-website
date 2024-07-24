@@ -1,6 +1,6 @@
-import AnalysisIcon from '@/icons/AnalysisIcon';
 import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
+import AnalysisIcon from '@/icons/AnalysisIcon';
 import PlanningIcon from '@/icons/PlanningIcon';
 import DevelopmentIcon from '@/icons/DevelopmentIcon';
 import SetupIcon from '@/icons/SetupIcon';
@@ -47,10 +47,7 @@ const Analysis = [
     title: 'Requirement Analysis',
     details: [
       { id: 1, data: 'Understand the software requirements' },
-      {
-        id: 2,
-        data: 'Identify the testing scope',
-      },
+      { id: 2, data: 'Identify the testing scope' },
       {
         id: 3,
         data: 'Analyze the requirements for completeness, consistency, and feasibility',
@@ -67,10 +64,7 @@ const planning = [
     title: 'Test Planning',
     details: [
       { id: 1, data: 'Define the test strategy' },
-      {
-        id: 2,
-        data: 'Identify the test cases',
-      },
+      { id: 2, data: 'Identify the test cases' },
       { id: 3, data: 'Estimate the resources needed' },
       { id: 4, data: 'Create a test schedule' },
       { id: 5, data: 'Define the entry and exit criteria for the test phase' },
@@ -84,10 +78,7 @@ const Development = [
     title: 'Test Design & Development',
     details: [
       { id: 1, data: 'Identify the test scenarios' },
-      {
-        id: 2,
-        data: 'Define the test conditions',
-      },
+      { id: 2, data: 'Define the test conditions' },
       { id: 3, data: 'Create the test cases' },
       { id: 4, data: 'Develop test data' },
       { id: 5, data: 'Document the test cases' },
@@ -101,10 +92,7 @@ const Setup = [
     title: 'Test Environment Setup',
     details: [
       { id: 1, data: 'Install the necessary hardware and software' },
-      {
-        id: 2,
-        data: 'Configure the operating system and network',
-      },
+      { id: 2, data: 'Configure the operating system and network' },
       { id: 3, data: 'Deploy the software under test' },
       { id: 4, data: 'Create test data' },
       { id: 5, data: 'Verify the test environment' },
@@ -118,10 +106,7 @@ const Execution = [
     title: 'Test Execution',
     details: [
       { id: 1, data: 'Execute the test cases' },
-      {
-        id: 2,
-        data: 'Record the test results',
-      },
+      { id: 2, data: 'Record the test results' },
       { id: 3, data: 'Identify any defects' },
       { id: 4, data: 'Report the test results to the development team' },
       { id: 5, data: 'Retest any fixed defects' },
@@ -135,10 +120,7 @@ const TestReporting = [
     title: 'Test Reporting',
     details: [
       { id: 1, data: 'Analyze the test results' },
-      {
-        id: 2,
-        data: 'Generate a test report',
-      },
+      { id: 2, data: 'Generate a test report' },
       { id: 3, data: 'Communicate the test results to stakeholders' },
       { id: 4, data: 'Provide recommendations for improvement' },
       { id: 5, data: 'Archive the test report' },
@@ -169,8 +151,12 @@ const OurTesting = () => {
     };
   }, [isVisible]);
 
+  const handleMenuClick = (id: number) => {
+    setActiveMenuId(id);
+  };
+
   return (
-    <div className="container mx-auto py-20 px-4 sm:px-6 lg:px-8 overflow-hidden ">
+    <div className="container mx-auto py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="flex flex-col justify-center items-center text-center">
         <h2
           ref={sectionRef}
@@ -190,16 +176,18 @@ const OurTesting = () => {
           <ul>
             {NAV_MENUS.map(({ id, menu, path, icon }) => (
               <li
-                className={`py-4 flex items-center text-black text-base font-semibold hover:font-bold transition duration-300 ease-in pl-6 ${
-                  activeMenuId === id ? 'border-black font-bold' : ''
-                }`}
                 key={id}
-                onClick={() => setActiveMenuId(id)}
+                className={`py-4 flex items-center text-black text-base font-semibold hover:font-bold transition duration-300 ease-in pl-6 ${
+                  activeMenuId === id ? 'font-bold border-black' : ''
+                }`}
+                onClick={() => handleMenuClick(id)}
               >
                 <Link href={path}>
                   <div className="flex items-center gap-2">
                     {icon}
-                    <span>{menu}</span>
+                    <span className={activeMenuId === id ? 'text-blue' : ''}>
+                      {menu}
+                    </span>
                   </div>
                 </Link>
               </li>
