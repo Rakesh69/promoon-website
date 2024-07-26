@@ -4,7 +4,7 @@ import Image from 'next/image';
 const HeroSectionMobile = () => {
   return (
     <div className="min-h-screen w-full bg-white overflow-hidden ">
-      <div className="pt-24 md:py-40 pb-16 bg-leading-background bg-cover bg-no-repeat flex justify-center items-center px-4">
+      <div className="pt-24 md:pt-36 md:pb-32 pb-16 bg-leading-background bg-cover bg-no-repeat flex justify-center items-center px-4">
         <div className="max-w-screen-xl flex flex-col justify-between px-4">
           <h1 className="text-4xl font-bold text-white text-center">
             Mobile App Development
@@ -18,7 +18,7 @@ const HeroSectionMobile = () => {
       </div>
       <div className="container mx-auto px-5 py-8 md:py-16 ">
         <div className="flex flex-col md:flex-row justify-between">
-          <div className="flex w-full md:w-1/2 slideInLeft">
+          <div className="flex flex-col w-full md:w-1/2 slideInLeft">
             <p className="text-black font-normal text-lg">
               Welcome to ProMoon Software Solution – your trusted partner for
               cutting-edge mobile app development services. Our seasoned experts
@@ -26,16 +26,22 @@ const HeroSectionMobile = () => {
               enhancing user engagement and optimizing workflows. Committed to
               excellence, we deliver customized solutions across diverse
               industries, staying at the forefront of app trends to give you a
-              competitive advantage. What makes us different? Our client-centric
-              approach. By understanding your unique needs, we develop apps that
-              align perfectly with your business objectives. From initial
-              ideation to final deployment, we manage the entire process –
-              covering iOS, Android, and cross-platform app development. We’re
-              more than a technical team; we’re dedicated collaborators, guiding
-              you towards app success. Discover tailored mobile app development
-              services that deliver tangible outcomes. Collaborate with ProMoon
-              Software Solution for innovation, user satisfaction, and business
-              expansion.
+              competitive advantage.
+            </p>
+            <p className="py-4 text-black font-normal text-lg ">
+              {' '}
+              What makes us different? Our client-centric approach. By
+              understanding your unique needs, we develop apps that align
+              perfectly with your business objectives. From initial ideation to
+              final deployment, we manage the entire process – covering iOS,
+              Android, and cross-platform app development. We’re more than a
+              technical team; we’re dedicated collaborators, guiding you towards
+              app success.
+            </p>{' '}
+            <p>
+              Discover tailored mobile app development services that deliver
+              tangible outcomes. Collaborate with ProMoon Software Solution for
+              innovation, user satisfaction, and business expansion.
             </p>
           </div>
           <div className="text-black slideInRight   md:w-1/2  justify-center hidden lg:flex">

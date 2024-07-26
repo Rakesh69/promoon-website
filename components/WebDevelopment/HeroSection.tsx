@@ -4,7 +4,7 @@ import Image from 'next/image';
 const HeroSection = () => {
   return (
     <div className="min-h-screen w-full bg-white overflow-hidden ">
-      <div className="pt-24 md:py-40 pb-16 bg-leading-background bg-cover bg-no-repeat flex justify-center items-center px-4">
+      <div className="pt-24 md:pt-36 md:pb-24 pb-16 bg-leading-background bg-cover bg-no-repeat flex justify-center items-center px-4">
         <div className="max-w-screen-xl flex flex-col justify-between px-4">
           <h1 className="text-4xl font-bold text-white text-center">
             Web Development
@@ -18,9 +18,9 @@ const HeroSection = () => {
           </p>
         </div>
       </div>
-      <div className="container mx-auto px-4  py-8 md:py-16 ">
+      <div className="container mx-auto px-4 md:px-0 py-8 md:py-16 ">
         <div className="flex flex-col md:flex-row justify-between">
-          <div className="flex w-full md:w-1/2 slideInLeft">
+          <div className="flex flex-col w-full lg:w-1/2 slideInLeft">
             <p className="text-black font-normal text-lg">
               At ProMoon Software Solution, we excel in crafting custom web
               applications tailored to your specific requirements. Our focus is
@@ -28,25 +28,32 @@ const HeroSection = () => {
               with your business goals, driving optimal growth. Our proficient
               team employs cutting-edge technology stacks to develop
               high-quality web applications, ensuring resource efficiency and
-              cost-effectiveness. Our impeccable track record boasts a 100%
-              success rate, not only in delivering web applications but also in
-              raising industry standards to enhance your business growth.
-              Dedicated to on-time delivery and budget compliance, our team
-              provides end-to-end services in web application programming,
-              consulting, and design & development. With a decade-long presence
-              in the web development industry, ProMoon Software Solution has
-              garnered trust and reputation from satisfied clients worldwide.
-              From small beginnings, we have expanded our reach to serve clients
-              globally.
+              cost-effectiveness.
+            </p>
+            <p className="text-black font-normal text-lg py-4 ">
+              {' '}
+              Our impeccable track record boasts a 100% success rate, not only
+              in delivering web applications but also in raising industry
+              standards to enhance your business growth. Dedicated to on-time
+              delivery and budget compliance, our team provides end-to-end
+              services in web application programming, consulting, and design &
+              development.
+            </p>{' '}
+            <p>
+              With a decade-long presence in the web development industry,
+              ProMoon Software Solution has garnered trust and reputation from
+              satisfied clients worldwide. From small beginnings, we have
+              expanded our reach to serve clients globally.
             </p>
           </div>
+
           <div className="text-black slideInRight md:w-1/2  justify-center hidden lg:flex">
             <Image
               src={'/assets/webdevelopmentHero.png'}
               alt={'image'}
               width={400}
-              height={300}
-              className="max-w-[400px] max-h-[333px]"
+              height={412}
+              className="max-w-[400px] max-h-[412px]"
             />
           </div>
           <div className="text-black md:w-1/2  justify-center   block lg:hidden">
@@ -54,7 +61,7 @@ const HeroSection = () => {
               src={'/assets/webdevelopmentHero.png'}
               alt={'image'}
               width={400}
-              height={300}
+              height={412}
             />
           </div>
         </div>

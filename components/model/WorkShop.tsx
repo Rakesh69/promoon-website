@@ -83,15 +83,14 @@ const WorkShop = () => {
   ];
   return (
     <>
-      <section id="workshop">
-        <div className="mb-7">
-          <h2 className="text-white lg:text-4xl text-[27px] font-normal lg:text-start text-center">
-            Let’s talk about the specifics
-          </h2>
-        </div>
-        <div className=" bg-[#F3F4F6] w-full pb-4 lg:rounded-l-xl rounded-xl  ">
-          <h2 className="pt-8 font-bold text-textPrimary text-base mb-4 pl-8 text-bold">
+      <section className=" md:pt-12">
+        <div className="bg-[#F3F4F6] w-full pb-4 lg:rounded-l-xl rounded-xl ">
+          <h1 className="md:hidden block text-sky-500 font-bold text-3xl py-8 px-5 ">
+            Discovery Workshop
+          </h1>
+          <h2 className=" md:pt-8 font-bold text-textPrimary text-base mb-4 pl-8 text-bold relative transition-all duration-300 pr-8 w-fit ">
             OBJECTIVE
+            <div className="border-animation ml-8 " />
           </h2>
           <ul className="pl-12">
             {OBJECTIVE.map(({ title, id }) => (
@@ -103,36 +102,38 @@ const WorkShop = () => {
               </li>
             ))}
           </ul>
-        </div>
 
-        <div className=" w-full py-10 lg:px-4">
-          <h2 className="font-bold text-white text-base mb-4 pl-6 text-bold ">
-            OUTCOME
-          </h2>
-          <ul className=" pl-12">
-            {OUTCOME.map(({ title, id }) => (
-              <li
-                key={id}
-                className="text-white text-lg mb-4 pl-4 list-disc "
-              >
-                {title}
-              </li>
-            ))}
-          </ul>
+          <div className=" w-full  lg:px-4">
+            <h2 className="font-bold text-textPrimary text-base mb-4 pl-6 text-bold relative w-fit">
+              OUTCOME
+              <div className="border-animation ml-6 " />
+            </h2>
+            <ul className=" pl-12">
+              {OUTCOME.map(({ title, id }) => (
+                <li
+                  key={id}
+                  className="text-textPrimary text-lg mb-4 pl-4 list-disc "
+                >
+                  {title}
+                </li>
+              ))}
+            </ul>
 
-          <h2 className="lg:pt-10 font-bold text-white text-base mb-4 pl-6 text-bold  pt-6 ">
-            TEAM MEMBERS INVOLVED
-          </h2>
-          <ul className=" pl-12">
-            {TEAM_MEMBERS_INVOLVED.map(({ title, id }) => (
-              <li
-                key={id}
-                className="text-white text-lg mb-4 pl-4 list-disc "
-              >
-                {title}
-              </li>
-            ))}
-          </ul>
+            <h2 className="font-bold text-textPrimary text-base mb-4 pl-6 text-bold relative w-fit ">
+              TEAM MEMBERS INVOLVED
+              <div className="border-animation ml-6 " />
+            </h2>
+            <ul className=" pl-12">
+              {TEAM_MEMBERS_INVOLVED.map(({ title, id }) => (
+                <li
+                  key={id}
+                  className="text-textPrimary text-lg mb-4 pl-4 list-disc "
+                >
+                  {title}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
     </>

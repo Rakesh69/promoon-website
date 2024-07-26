@@ -85,16 +85,17 @@ const Devolpment = () => {
   ];
   return (
     <>
-      <section
-        id="development"
-        className="md:pt-24"
-      >
+      <section className="md:pt-12">
         <div
           id="planing"
-          className=" bg-[#F3F4F6] w-full pb-4 lg:rounded-l-xl rounded-xl "
+          className=" bg-[#F3F4F6] w-full pb-8  lg:rounded-l-xl rounded-xl "
         >
-          <h2 className="pt-8 font-bold text-textPrimary text-base mb-4 pl-8 text-bold">
+          <h1 className="md:hidden block text-sky-500 font-bold text-3xl py-8 px-5 ">
+            Devolpment
+          </h1>
+          <h2 className=" md:pt-8 font-bold text-textPrimary text-base relative w-fit mb-4 pl-8 text-bold">
             OBJECTIVE
+            <div className="border-animation ml-8 " />
           </h2>
           <ul className=" pl-12">
             {OBJECTIVE.map(({ title, id }) => (
@@ -106,50 +107,53 @@ const Devolpment = () => {
               </li>
             ))}
           </ul>
-        </div>
 
-        <div className=" w-full py-10 lg:px-4">
-          <h2 className="font-bold text-white text-base mb-4 text-bold pl-6">
-            WEB TECHNOLOGIES
-          </h2>
-          <ul className=" pl-12">
-            {WEBTECHNOLOGIES.map(({ title, id }) => (
-              <li
-                key={id}
-                className="text-white text-lg mb-4 pl-4 list-disc "
-              >
-                {title}
-              </li>
-            ))}
-          </ul>
+          <div className=" w-full lg:px-4">
+            <h2 className="font-bold text-textPrimary text-base mb-4 relative w-fit text-bold pl-6">
+              WEB TECHNOLOGIES
+              <div className="border-animation ml-6 " />
+            </h2>
+            <ul className=" pl-12">
+              {WEBTECHNOLOGIES.map(({ title, id }) => (
+                <li
+                  key={id}
+                  className="text-textPrimary text-lg mb-4 pl-4 list-disc "
+                >
+                  {title}
+                </li>
+              ))}
+            </ul>
 
-          <h2 className="font-bold text-white text-base mb-4 pl-6 text-bold pt-6 lg:pt-9">
-            MOBILE TECHNOLOGIES
-          </h2>
-          <ul className=" pl-12">
-            {MOBILE_TECHNOLOGIES.map(({ title, id }) => (
-              <li
-                key={id}
-                className="text-white text-lg mb-4 pl-4 list-disc "
-              >
-                {title}
-              </li>
-            ))}
-          </ul>
+            <h2 className="font-bold text-textPrimary text-base mb-4 pl-6  relative w-fit text-bold ">
+              MOBILE TECHNOLOGIES
+              <div className="border-animation ml-6 " />
+            </h2>
+            <ul className=" pl-12">
+              {MOBILE_TECHNOLOGIES.map(({ title, id }) => (
+                <li
+                  key={id}
+                  className="text-textPrimary text-lg mb-4 pl-4 list-disc "
+                >
+                  {title}
+                </li>
+              ))}
+            </ul>
 
-          <h2 className="font-bold text-white text-base mb-4 pl-6 text-bold pt-6 lg:pt-9">
-            TEAM MEMBERS INVOLVED
-          </h2>
-          <ul className=" pl-12">
-            {TEAM_MEMBERS_INVOLVED.map(({ title, id }) => (
-              <li
-                key={id}
-                className="text-white text-lg mb-4 pl-4 list-disc "
-              >
-                {title}
-              </li>
-            ))}
-          </ul>
+            <h2 className="font-bold text-textPrimary text-base mb-4 pl-6 w-fit relative text-bold ">
+              TEAM MEMBERS INVOLVED
+              <div className="border-animation ml-6 " />
+            </h2>
+            <ul className=" pl-12">
+              {TEAM_MEMBERS_INVOLVED.map(({ title, id }) => (
+                <li
+                  key={id}
+                  className="text-textPrimary text-lg mt-4 pl-4 list-disc "
+                >
+                  {title}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
     </>

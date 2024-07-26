@@ -30,13 +30,14 @@ const OBJECTIVE = [
 ];
 const Maintenance = () => {
   return (
-    <section
-      id="maintenance"
-      className="md:pt-24"
-    >
+    <section className="md:pt-12">
       <div className="bg-[#F3F4F6] w-full pb-4 lg:rounded-l-xl rounded-xl shadow-lg">
-        <h2 className="pt-8 font-bold text-textPrimary text-base mb-4 pl-8 text-bold">
+        <h1 className="md:hidden block text-sky-500 font-bold text-3xl py-8 px-5 ">
+          Maintenance
+        </h1>
+        <h2 className=" md:pt-8 font-bold text-textPrimary text-base mb-4 pl-8 relative w-fit text-bold">
           OBJECTIVE
+          <div className="border-animation ml-8 " />
         </h2>
         <ul className="pl-12">
           {OBJECTIVE.map(({ title, id }) => (

@@ -15,22 +15,32 @@ const NAV_MENUES = [
   {
     id: 2,
     menu: 'Services',
+    path: 'service',
     dropdown: [
-      { id: 1, menu: 'Website Development', path: '/websitedevelopment' },
-      { id: 2, menu: 'Mobile App Development', path: '/mobileappdevelopment' },
+      {
+        id: 1,
+        menu: 'Website Development',
+        path: '/service/websitedevelopment',
+      },
+      {
+        id: 2,
+        menu: 'Mobile App Development',
+        path: '/service/mobileappdevelopment',
+      },
       {
         id: 3,
         menu: 'Search Engine Optimization',
-        path: '/SearchEngineOptimization',
+        path: '/service/SearchEngineOptimization',
       },
-      { id: 4, menu: 'Quality Assurance', path: '/QualityAssurance' },
+      { id: 4, menu: 'Quality Assurance', path: '/service/QualityAssurance' },
     ],
   },
   { id: 3, menu: 'Our Process', path: '/ourprocess' },
   {
     id: 4,
     menu: 'Company',
-    dropdown: [{ id: 1, menu: 'About Us', path: '/aboutus' }],
+    path: 'company',
+    dropdown: [{ id: 1, menu: 'About Us', path: '/company/aboutus' }],
   },
   { id: 5, menu: 'Careers', path: '/career' },
 ];
@@ -49,7 +59,7 @@ const Navbar: React.FC = () => {
   const isActive = (path: string) => router.pathname === path;
 
   return (
-    <nav className="w-full bg-white dark:bg-bg-colors-background top-0 border-b border-blackBlue/20 z-50 fixed px-5 ">
+    <nav className=" w-full bg-white dark:bg-bg-colors-background top-0 border-b border-blackBlue/20 z-50 fixed px-5 ">
       <div className="container mx-auto w-full py-5 flex md:px-0 px-4 sticky">
         <div className="w-full flex items-center justify-between">
           <Link href="/">
@@ -64,10 +74,14 @@ const Navbar: React.FC = () => {
                 >
                   {dropdown ? (
                     <>
-                      <div className="flex items-center">
+                      <div className="flex items-center cursor-pointer ">
                         <span
                           onClick={() => handleClick(id)}
-                          style={{ color: active === id ? '#00B4FF' : 'white' }}
+                          style={{
+                            color: router.pathname.includes(path)
+                              ? '#00B4FF'
+                              : 'white',
+                          }}
                         >
                           {menu}
                         </span>
@@ -76,12 +90,13 @@ const Navbar: React.FC = () => {
                         </button>
                       </div>
 
-                      <ul className="absolute hidden group-hover:block bg-white hover:text-sky-600 shadow-lg rounded-md mt-2">
+                      <ul className="absolute hidden group-hover:block bg-white hover:text-sky-600 shadow-lg rounded-md cursor-pointer mt-2">
                         {dropdown.map((item) => (
                           <li
                             key={item.id}
                             style={{
-                              color: active === id ? '#00B4FF' : 'white',
+                              color:
+                                router.pathname === path ? '#00B4FF' : 'white',
                             }}
                             className={` py-2 px-4  ${
                               item.id === 4 ? '' : ' p-0 '
@@ -103,7 +118,9 @@ const Navbar: React.FC = () => {
                   ) : (
                     <Link
                       onClick={() => handleClick(id)}
-                      style={{ color: active === id ? '#00B4FF' : 'white' }}
+                      style={{
+                        color: router.pathname === path ? '#00B4FF' : 'white',
+                      }}
                       href={path}
                     >
                       {menu}

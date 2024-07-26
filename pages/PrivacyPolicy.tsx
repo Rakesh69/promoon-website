@@ -173,7 +173,16 @@ const PrivacyPolicy: React.FC = () => {
 
   return (
     <div className="min-h-screen w-full bg-white">
-      <div className="pt-[200px] pb-[100px] bg-leading-background bg-cover bg-no-repeat flex justify-center items-center px-4"></div>
+      <div className="pt-36 pb-32 bg-leading-background bg-cover bg-no-repeat flex justify-center items-center px-4">
+        <div className="flex flex-col justify-between md:px-0 px-4">
+          <h1 className="text-4xl font-bold text-white text-center">
+            Privacy Policy
+          </h1>
+          <p className="text-white text-center mt-8">
+            Recent date of update: 07/15/2024
+          </p>
+        </div>
+      </div>
 
       <div className="container mx-auto px-4 md:px-0 py-16">
         {data.map((item) => (

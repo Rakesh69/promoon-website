@@ -45,20 +45,28 @@ const Footer = () => {
   ];
 
   const FOOTER_SERVICE: { id: number; name: string; route: string }[] = [
-    { id: 1, name: 'Website development', route: 'websitedevelopment' },
-    { id: 2, name: 'Mobile app development', route: 'mobileappdevelopment' },
+    {
+      id: 1,
+      name: 'Website development',
+      route: '/service/websitedevelopment',
+    },
+    {
+      id: 2,
+      name: 'Mobile app development',
+      route: '/service/mobileappdevelopment',
+    },
     {
       id: 3,
       name: 'Search Engine Optimization',
-      route: 'SearchEngineOptimization',
+      route: '/service/SearchEngineOptimization',
     },
-    { id: 4, name: 'Quality Assurance', route: 'QualityAssurance' },
+    { id: 4, name: 'Quality Assurance', route: '/service/QualityAssurance' },
   ];
 
   const FOOTER_INFORMATION: { id: number; name: string; route: string }[] = [
     { id: 1, name: 'Home', route: '/' },
     { id: 2, name: 'Careers', route: 'career' },
-    { id: 3, name: 'About ProMoon', route: 'aboutus' },
+    { id: 3, name: 'About ProMoon', route: '/company/aboutus' },
     { id: 4, name: 'Privacy Policy', route: 'PrivacyPolicy' },
     {
       id: 5,
@@ -82,8 +90,8 @@ const Footer = () => {
 
   return (
     <>
-      <div className=" flex flex-col border-t-[1.5px] border-blackBlue/20 dark:border-darkBorder pt-16 dark:bg-bg-colors-background">
-        <div className="container mx-auto p-4">
+      <div className=" flex flex-col border-t-[1.5px] border-blackBlue/20 dark:border-darkBorder dark:bg-bg-colors-background">
+        <div className="container mx-auto px-4 pt-8 pb-7 ">
           <div className="dark:hidden block">
             <FooterLogoIcon />
           </div>
@@ -92,7 +100,7 @@ const Footer = () => {
             <ProMoonLogoDark />
           </div>
 
-          <div className="pt-[35px] pb-11 flex flex-col gap-10 lg:gap-11 sm:grid sm:grid-cols-2 lg:grid lg:grid-cols-3 lg:grid-rows-1">
+          <div className="pt-[20px]  flex flex-col gap-10 lg:gap-11 sm:grid sm:grid-cols-2 lg:grid lg:grid-cols-3 lg:grid-rows-1">
             <div className="flex flex-col w-full group">
               <div className="group-hover:flex hidden">
                 <AddressPopup />
@@ -172,7 +180,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-white/40" />
-        <div className="w-full border-blackBlue p-4 py-7 container mx-auto">
+        <div className="w-full border-blackBlue p-4  container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-8">
             <div className="flex flex-col md:flex-row gap-4 text-white">
               <Link

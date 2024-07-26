@@ -109,7 +109,7 @@ const config: Config = {
         'bg-colors-header':
           ' linear-gradient(to right, #27AAE1, #27AAE1, #FFFFFF,#066A9D ,#1C75BC)',
         'header-background': "url('/assets/DarkHeader.png')",
-
+        'image-background': "url('/assets/CarrerImage.png')",
         'dark-header-background': "url('/assets/hero-background-top.png')",
         'website-hero-imag': "url('/assets/webdevelopmentHero.png')",
         'mobile-hero-imag': "url('/assets/webdevelopmentHero.png')",

@@ -50,22 +50,22 @@ const HeroSection = () => {
           </Link>
         </div>
         <div className="slideInRight flex flex-col md:flex-row w-full lg:w-1/2 gap-24 lg:gap-20">
-          <div className="flex lg:items-end items-center justify-center">
+          <div className="flex lg:items-end items-center justify-center ">
             <Image
               src={'/assets/HeoImage1.png'}
               alt="Image 1"
               width={1000}
               height={1000}
-              className="lg:w-full md:w-[500px] w-[400px] md:h-[300px] h-[250px]"
+              className="w-full md:w-fit h-auto md:h-[300px]"
             />
           </div>
-          <div className="flex lg:items-start justify-center h-full w-full lg:w-64">
+          <div className="flex lg:items-start justify-center h-full lg:w-64">
             <Image
               src={'/assets/HeroImage2.png'}
               alt="Image 2"
               width={1000}
               height={500}
-              className="lg:w-full md:w-[300px] w-[400px] md:h-[300px] h-[250px]"
+              className="w-full md:w-fit h-auto md:h-[300px]"
             />
           </div>
         </div>

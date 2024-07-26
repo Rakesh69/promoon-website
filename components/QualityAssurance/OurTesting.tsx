@@ -194,12 +194,12 @@ const OurTesting = () => {
             ))}
           </ul>
         </div>
-        <div className="bg-white border border-sky-400 rounded-md w-full md:w-3/4 h-full py-16 px-4">
+        <div className="bg-white border border-sky-400 rounded-md w-full md:w-3/4 h-full py-8 mt-8 px-4">
           <div className="text-black">
             {activeMenuId === 1 && (
               <div className="flex gap-4">
                 <div>
-                  <h3 className="font-bold text-xl md:text-2xl pb-8">
+                  <h3 className="font-bold text-xl text-blue md:text-2xl pb-8">
                     {Analysis[0].title}
                   </h3>
                   <ul className="flex flex-col gap-5 pl-6 list-disc">
@@ -212,7 +212,7 @@ const OurTesting = () => {
             )}
             {activeMenuId === 2 && (
               <div>
-                <h3 className="font-bold text-xl md:text-2xl pb-8">
+                <h3 className="font-bold text-xl md:text-2xl text-blue  pb-8">
                   {planning[0].title}
                 </h3>
                 <ul className="flex flex-col gap-5 pl-6 list-disc">
@@ -224,7 +224,7 @@ const OurTesting = () => {
             )}
             {activeMenuId === 3 && (
               <div>
-                <h3 className="font-bold text-xl md:text-2xl pb-8">
+                <h3 className="font-bold text-xl text-blue  md:text-2xl pb-8">
                   {Development[0].title}
                 </h3>
                 <ul className="flex flex-col gap-5 pl-6 list-disc">
@@ -236,7 +236,7 @@ const OurTesting = () => {
             )}
             {activeMenuId === 4 && (
               <div>
-                <h3 className="font-bold text-xl md:text-2xl pb-8">
+                <h3 className="font-bold text-xl text-blue  md:text-2xl pb-8">
                   {Setup[0].title}
                 </h3>
                 <ul className="flex flex-col gap-5 pl-6 list-disc">
@@ -248,7 +248,7 @@ const OurTesting = () => {
             )}
             {activeMenuId === 5 && (
               <div>
-                <h3 className="font-bold text-xl md:text-2xl pb-8">
+                <h3 className="font-bold text-xl text-blue  md:text-2xl pb-8">
                   {Execution[0].title}
                 </h3>
                 <ul className="flex flex-col gap-5 pl-6 list-disc">
@@ -260,7 +260,7 @@ const OurTesting = () => {
             )}
             {activeMenuId === 6 && (
               <div>
-                <h3 className="font-bold text-xl md:text-2xl pb-8">
+                <h3 className="font-bold text-xl text-blue md:text-2xl pb-8">
                   {TestReporting[0].title}
                 </h3>
                 <ul className="flex flex-col gap-5 pl-6 list-disc">

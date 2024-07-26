@@ -4,7 +4,7 @@ import Image from 'next/image';
 const HeroSectionOptimization = () => {
   return (
     <div className="min-h-screen w-full bg-white overflow-hidden ">
-      <div className="pt-24 md:py-40 pb-16 bg-leading-background bg-cover bg-no-repeat flex justify-center items-center px-4">
+      <div className="pt-24 md:pt-36 md:pb-32 pb-16 bg-leading-background bg-cover bg-no-repeat flex justify-center items-center px-4">
         <div className="max-w-screen-xl flex flex-col justify-between px-4">
           <h1 className="text-4xl font-bold text-white text-center">
             Search Engine Optimization

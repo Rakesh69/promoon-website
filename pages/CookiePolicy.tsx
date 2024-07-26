@@ -5,7 +5,7 @@ const CookiePolicy = () => {
   return (
     <>
       <div className="min-h-screen w-full bg-white">
-        <div className="pt-[200px] pb-[100px] bg-leading-background bg-cover bg-no-repeat flex justify-center items-center px-4">
+        <div className="pt-36 pb-32 bg-leading-background bg-cover bg-no-repeat flex justify-center items-center px-4">
           <div className="flex flex-col justify-between md:px-0 px-4">
             <h1 className="text-4xl font-bold text-white text-center">
               Cookies Policy

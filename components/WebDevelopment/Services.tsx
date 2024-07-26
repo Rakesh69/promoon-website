@@ -60,7 +60,7 @@ const OUR_SPECIALITY: {
       'Trust us to keep your online presence robust; we handle the tech, allowing you to focus on your businesss continued success and growth.',
   },
 ];
-const Services = () => {
+const ServicesWeb = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
@@ -84,8 +84,8 @@ const Services = () => {
   return (
     <>
       <>
-        <div className="dark:bg-[#F3F4F6] md:pt-[100px] pt-5 ">
-          <section className="bg-[url('/assets/CompanyWorkWave.png')] dark:bg-dark-header-waves pb-14 md:pb-[96px] bg-no-repeat bg-top bg-cover w-full h-full ">
+        <div className="dark:bg-[#F3F4F6] md:pt-[52px] pt-5 ">
+          <section className="bg-[url('/assets/CompanyWorkWave.png')] dark:bg-dark-header-waves pb-14 md:pb-[52px] bg-no-repeat bg-top bg-cover w-full h-full ">
             <div className="container mx-auto  w-full px-5 ">
               <div className="flex flex-col justify-center items-center">
                 <h2
@@ -138,4 +138,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesWeb;

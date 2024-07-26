@@ -1,0 +1,43 @@
+{
+  "positions": [
+    {
+      "id": 1,
+      "positonTitle": "React js",
+      "description": "The employer is expected to reach out to our team and make a request. Conversations about the role specifics will then start between our Talent delivery associate and the employer.",
+      "Experience": "Experience",
+      "Experienceyear": "4 years",
+      "LocationName": "Location",
+      "Location": "Surat",
+      "Date": "Date",
+      "postedDate": "3/7/2024",
+      "Positions": "Positions",
+      "NoOfPositions": "5"
+    },
+    {
+      "id": 2,
+      "positonTitle": "Next js",
+      "description": "The employer is expected to reach out to our team and make a request. Conversations about the role specifics will then start between our Talent delivery associate and the employer.",
+      "Experience": "Experience",
+      "Experienceyear": "3 years",
+      "LocationName": "Location",
+      "Location": "Surat",
+      "Date": "Date",
+      "postedDate": "20/7/2024",
+      "Positions": "Positions",
+      "NoOfPositions": "1"
+    },
+    {
+      "id": 3,
+      "positonTitle": "UI/UX",
+      "description": "The employer is expected to reach out to our team and make a request. Conversations about the role specifics will then start between our Talent delivery associate and the employer.",
+      "Experience": "Experience",
+      "Experienceyear": "1 years",
+      "LocationName": "Location",
+      "Location": "Surat",
+      "Date": "Date",
+      "postedDate": "23/7/2024",
+      "Positions": "Positions",
+      "NoOfPositions": "3"
+    }
+  ]
+}
