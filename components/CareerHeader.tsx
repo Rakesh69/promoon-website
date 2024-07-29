@@ -10,12 +10,12 @@ const CareerHeader: React.FC<{ id: string }> = ({ id }) => {
 
   return (
     <>
-      <div className="px-1 pt-11 bg-bg-colors-background">
-        <section className="h-full w-full md:bg-career-Background dark:md:bg-career-DarkBackground bg-cover bg-no-repeat lg:bg-cover bg-center">
+      <div className="px-1 pt-11">
+        <section className="h-full w-full bg-no-repeat bg-cover bg-center  md:bg-image-background">
           <div className="max-w-screen-xl w-90% mx-auto">
-            <div className=" slideInDown flex flex-col justify-center items-center gap-6 py-20 lg:py-52">
-              <div className=" flex justify-center items-center">
-                <p className="text-3xl lg:text-5xl font-bold lg:font-extraboldte xt-textPrimary dark:text-white text-center">
+            <div className="slideInDown flex flex-col justify-center items-center gap-6 py-20 lg:py-52">
+              <div className="flex justify-center items-center">
+                <p className="text-3xl 2xl:text-5xl font-bold 2xl:font-extrabold text-textPrimary dark:text-white text-center">
                   Start Your
                   <br className="sm:hidden" />
                   <span className="text-primary"> Career </span>with Us
@@ -27,9 +27,8 @@ const CareerHeader: React.FC<{ id: string }> = ({ id }) => {
                   <br className="hidden sm:block lg:block" /> looking for
                   talented and motivated individuals who
                   <br className="hidden sm:block lg:block" /> share our vision
-                  and want to be part of a dynamic and{' '}
-                  <br className="hidden sm:block lg:block" />
-                  innovative team.
+                  and want to be part of a dynamic and
+                  <br className="hidden sm:block lg:block" /> innovative team.
                 </p>
               </div>
               <div className="mt-2">
@@ -46,18 +45,6 @@ const CareerHeader: React.FC<{ id: string }> = ({ id }) => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className=" z-50">
-            <Image
-              src={bottomOurProcessBgImage}
-              alt="topOurProcessBgImage"
-              className="dark:hidden block"
-            />
-            <Image
-              src={darkBottombgWaves}
-              alt="DarkOurProcessBg"
-              className="hidden dark:block"
-            />
           </div>
         </section>
       </div>

@@ -1,10 +1,25 @@
+import { ContactUsType } from '@/types/ContactUsType';
 import { useFormik } from 'formik';
+import React, { useEffect, useState } from 'react';
+
+import Spinner from '../Spinner';
 import * as Yup from 'yup';
+import CloseIcon from '@/icons/CloseIcon';
 import CvIcon from '@/icons/CvIcon';
-import CheckBox from './CheckBox';
-import { useState } from 'react';
-import Spinner from './Spinner';
-import axios from 'axios';
+
+interface HiringModalProps {
+  isHiringModalOpen: boolean;
+  closeModal: () => void;
+}
+
+type HiringFormType = {
+  firstname: string;
+  lastname: string;
+  email: string;
+  message: string;
+
+  resume: File | null;
+};
 
 const FILE_SIZE_LIMIT = 5 * 1024 * 1024;
 
@@ -16,15 +31,10 @@ const validationSchema = Yup.object().shape({
   resume: Yup.mixed().required('A file is required'),
 });
 
-type HiringFormType = {
-  firstname: string;
-  lastname: string;
-  email: string;
-  message: string;
-  resume: File | null;
-};
-
-const ContactUsForm = () => {
+const HiringModal: React.FC<HiringModalProps> = ({
+  isHiringModalOpen,
+  closeModal,
+}) => {
   const [isSending, setIsSending] = useState<boolean | null>(null);
   const [fileError, setFileError] = useState<string | null>(null);
 
@@ -92,30 +102,44 @@ const ContactUsForm = () => {
       resetForm();
     },
   });
+  useEffect(() => {
+    if (isHiringModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isHiringModalOpen]);
 
   return (
-    <section className="bg-bg-colors-background pt-8">
-      <div className="max-w-full w-90% md:w-[50%] lg:w-[40%] m-auto">
-        <div className="flex flex-col justify-center">
-          <div>
-            <p className="text-center text-textPrimary dark:text-white text-xl md:text-xl md:font-semibold lg:text-xl xl:text-3xl lg:font-semibold font-semibold md:pt-40 pt-20 pb-4">
-              Join our company and start your career
-              <br className="hidden md:hidden lg:block" /> with us
-            </p>
-          </div>
-          <div>
+    <>
+      {isHiringModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-50">
+          <div className="max-w-full w-90% md:w-[50%] lg:w-[40%] pb-7 m-auto bg-white border rounded-md p-5 shadow-2xl shadow-black">
+            <div className="flex justify-between py-4 border-b border-gray-500">
+              <p className="text-xl font-semibold text-black">Apply Now</p>
+              <button
+                onClick={closeModal}
+                className="text-black"
+              >
+                <CloseIcon />
+              </button>
+            </div>
+
             <form
               action="/upload"
               method="post"
               encType="multipart/form-data"
-              className="pt-5  pb-7 md:pb-[115px]"
+              className="pt-5  pb-7"
               onSubmit={handleSubmit}
             >
               <div className="w-full lg:flex lg:justify-between gap-5">
                 <div className="pb-9  lg:w-1/2">
                   <label
                     htmlFor="firstname"
-                    className="font-medium text-textPrimary dark:text-white text-base leading-1px"
+                    className="font-medium text-textPrimary  text-base leading-1px"
                   >
                     First Name<span className="text-red-500 px-1">*</span>
                   </label>
@@ -126,7 +150,7 @@ const ContactUsForm = () => {
                     value={values.firstname}
                     placeholder="First Name"
                     type="text"
-                    className=" mt-2 border text-sm outline-none w-full rounded dark:text-white border-inputBorder dark:border-darkBorder dark:bg-borderBlack py-2 px-3 focus:invalid:border-red-500 focus:invalid:ring-red-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                    className=" mt-2 border text-sm outline-none w-full rounded  border-inputBorder dark:border-darkBorder  py-2 px-3 focus:invalid:border-red-500 focus:invalid:ring-red-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
                   />
                   {errors.firstname && touched.firstname && (
                     <span className="text-xs text-red-500">
@@ -138,7 +162,7 @@ const ContactUsForm = () => {
                 <div className="pb-9 lg:w-1/2">
                   <label
                     htmlFor="lastname"
-                    className="font-medium text-textPrimary dark:text-white dark:border-darkBorder text-base leading-1px"
+                    className="font-medium text-textPrimary  dark:border-darkBorder text-base leading-1px"
                   >
                     Last Name<span className="text-red-500 px-1">*</span>
                   </label>
@@ -149,7 +173,7 @@ const ContactUsForm = () => {
                     onChange={handleChange}
                     value={values.lastname}
                     type="text"
-                    className=" mt-2 border outline-none text-sm w-full rounded dark:border-darkBorder dark:text-white border-inputBorder dark:bg-borderBlack py-2 px-3 focus:invalid:border-red-500 focus:invalid:ring-red-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                    className=" mt-2 border outline-none text-sm w-full rounded dark:border-darkBorder  border-inputBorder  py-2 px-3 focus:invalid:border-red-500 focus:invalid:ring-red-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
                   />
                   {errors.lastname && touched.lastname && (
                     <span className="text-xs text-requiredField">
@@ -162,7 +186,7 @@ const ContactUsForm = () => {
               <div className="pb-9">
                 <label
                   htmlFor="email"
-                  className="font-medium text-textPrimary dark:text-white dark:border-darkBorder text-base leading-1px"
+                  className="font-medium text-textPrimary  dark:border-darkBorder text-base leading-1px"
                 >
                   Email Address<span className="text-red-500 px-1">*</span>
                 </label>
@@ -173,7 +197,7 @@ const ContactUsForm = () => {
                   onChange={handleChange}
                   value={values.email}
                   type="email"
-                  className=" mt-2 border outline-none w-full text-sm dark:text-white rounded dark:bg-borderBlack dark:border-darkBorder border-inputBorder py-2 px-3 focus:invalid:border-red-500 focus:invalid:ring-red-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                  className=" mt-2 border outline-none w-full text-sm  rounded  dark:border-darkBorder border-inputBorder py-2 px-3 focus:invalid:border-red-500 focus:invalid:ring-red-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
                 />
                 {errors.email && touched.email && (
                   <span className="text-xs text-requiredField">
@@ -184,7 +208,7 @@ const ContactUsForm = () => {
               <div className="pb-9">
                 <label
                   htmlFor="message"
-                  className="font-medium text-textPrimary dark:text-white text-base leading-1px"
+                  className="font-medium text-textPrimary  text-base leading-1px"
                 >
                   Additional information
                   <span className="text-red-500 px-1">*</span>
@@ -196,7 +220,7 @@ const ContactUsForm = () => {
                   value={values.message}
                   placeholder="Add a cover letter or anything else you want to share"
                   typeof="text"
-                  className="mt-2 border resize-none text-sm h-[106px] outline-none w-full dark:text-white rounded dark:border-darkBorder border-inputBorder dark:bg-borderBlack py-2 px-3 focus:invalid:border-red-500 focus:invalid:ring-red-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                  className="mt-2 border resize-none text-sm h-[106px] outline-none w-full  rounded dark:border-darkBorder border-inputBorder  py-2 px-3 focus:invalid:border-red-500 focus:invalid:ring-red-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
                 />
                 {errors.message && touched.message && (
                   <span className="text-xs text-requiredField">
@@ -206,7 +230,7 @@ const ContactUsForm = () => {
               </div>
               <div className="w-full flex flex-col sm:flex-row justify-between gap-2 items-center">
                 <div className="flex justify-start items-start">
-                  <span className="font-semibold text-base dark:text-white text-black">
+                  <span className="font-semibold text-base  text-black">
                     Attach your resume
                   </span>
                 </div>
@@ -222,9 +246,7 @@ const ContactUsForm = () => {
                   <label className="flex justify-between cursor-pointer gap-4 p-2 border border-primary border-dashed">
                     <CvIcon />
                     <div>
-                      <span className="text-lightBlack dark:text-white">
-                        Attach Resume/CV
-                      </span>
+                      <span className="text-lightBlack ">Attach Resume/CV</span>
                     </div>
                     <input
                       type="file"
@@ -240,7 +262,7 @@ const ContactUsForm = () => {
               <div className="flex justify-center my-6">
                 <button
                   type="submit"
-                  className="flex justify-center items-center w-fit gap-3 bg-send-bg-btn py-3 px-6 text-white font-bold rounded-full"
+                  className="flex justify-center items-center w-fit gap-3 bg-send-bg-btn py-3 px-6 text-white font-bold rounded-md "
                 >
                   SEND MESSAGE {isSending && <Spinner />}
                 </button>
@@ -248,9 +270,9 @@ const ContactUsForm = () => {
             </form>
           </div>
         </div>
-      </div>
-    </section>
+      )}
+    </>
   );
 };
 
-export default ContactUsForm;
+export default HiringModal;

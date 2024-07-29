@@ -9,6 +9,7 @@ import Communication from './model/Communication';
 import Collaboration from './model/Collaboration';
 import Engagement from './model/Engagement';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const res_NAV_MENUES = [
   { id: 1, menu: ' Discovery Workshop', path: '#workshop' },
@@ -29,24 +30,48 @@ const OurProcess = () => {
   return (
     <>
       <div className="w-full  lg:p-0 p-4 ">
-        <div className="container mx-auto lg:p-0 p-4 slideInDown">
-          <h2 className="text-white lg:pt-24 pt-12 tracking-[4px] font-bold text-lg mb-7 leading-3">
-            HOW WE WORK
-          </h2>
-          <p className="text-white font-bold text-2xl lg:text-3xl lg:leading-[52px] max-w-[690px]">
-            The process is defined as a sequence of steps. When followed, it
-            helps to achieve a goal. We consider it - the art of thinking
-            through.
-          </p>
+        <div className="container mx-auto lg:p-0 p-4  ">
+          <div className="flex flex-col lg:flex-row justify-between md:pt-10">
+            <div className="flex flex-col w-full lg:w-1/2 slideInLeft">
+              <h2 className="text-white lg:pt-24 pt-12 tracking-[4px] font-bold text-lg mb-7 leading-3">
+                HOW WE WORK
+              </h2>
+              <p className="text-white font-bold text-2xl lg:text-3xl lg:leading-[52px] max-w-[690px]">
+                The process is defined as a sequence of steps. When followed, it
+                helps to achieve a goal. We consider it - the art of thinking
+                through.
+              </p>
 
-          <h2 className="text-white lg:text-4xl text-[27px] pt-8 font-normal lg:text-start text-center">
-            Let’s talk about the specifics
-          </h2>
+              <h2 className="text-white lg:text-4xl text-[27px] pt-8 font-normal lg:text-start text-center">
+                Let’s talk about the specifics
+              </h2>
+            </div>
+            <div className="flex flex-col lg:flex-row justify-between">
+              <div className="text-black slideInRight lg:w-1/2  justify-center hidden lg:flex">
+                <Image
+                  src={'/assets/Process.png'}
+                  alt={'image'}
+                  width={400}
+                  height={300}
+                  className="max-w-[700px] max-h-[700px]"
+                />
+              </div>
+              <div className="text-black flex justify-center lg:hidden">
+                <Image
+                  src={'/assets/Process.png'}
+                  alt={'image'}
+                  width={400}
+                  height={300}
+                />
+              </div>
+            </div>
+          </div>
         </div>
+
         <div className="lg:pt-12 pt-4 pb-10 lg:pb-10">
           <div className=" z-10 flex flex-col container mx-auto  ">
             <div className="w-full relative md:block hidden">
-              <nav className=" !top-[700px] !z-50 !sticky">
+              <nav className=" !top-[700px]  !sticky">
                 <div className="w-full">
                   <div className="relative flex flex-col items-center mt-8">
                     <ul className="relative flex justify-between w-full">

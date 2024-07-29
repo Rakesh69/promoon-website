@@ -68,15 +68,15 @@ const Benefit = () => {
   }, [isVisible]);
 
   return (
-    <div className=" md:pt-[50px] pt-5 overflow-hidden ">
+    <div className=" md:pt-[50px]  overflow-hidden ">
       <section className=" dark:bg-[#F3F4F6] bg-[url('/assets/CompanyWorkWave.png')] dark:bg-dark-header-waves  bg-no-repeat bg-top bg-cover w-full h-full">
-        <div className="container mx-auto w-full">
-          <div className="flex flex-col lg:flex-row lg:justify-between lg:pt-32 lg:pb-24 gap-10">
+        <div className="container mx-auto w-full p-5">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:py-24 gap-10">
             <div
               ref={sectionRef}
               className={`animated-section ${
                 isVisible ? 'slideInLeft' : ''
-              } flex flex-col lg:w-1/2 justify-center items-center lg:items-start lg:justify-start lg:gap-4`}
+              } flex flex-col pt-12 lg:w-1/2 justify-center items-center lg:items-start lg:justify-start lg:gap-4`}
             >
               <p className="text-textPrimary  text-center lg:text-left text-xl md:text-2xl lg:text-32px font-semibold">
                 Wellness and benefit

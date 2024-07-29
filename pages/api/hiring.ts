@@ -28,13 +28,12 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
           .json({ message: 'Error uploading file', error: err.message });
       }
 
-      const { firstname, lastname, email, message, portfolioUrl } =
+      const { firstname, lastname, email, message } =
         req.body as {
           firstname: string;
           lastname: string;
           email: string;
           message: string;
-          portfolioUrl: string;
         };
       const file = (req as any).file;
 
@@ -55,7 +54,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
            <h1>${firstname} ${lastname}</h1>
             <p>Thank you for your inquiry. We have received the following message:</p>
             <p>${message}</p>
-            <p>Portfolio URL: <a href="${portfolioUrl}">${portfolioUrl}</a></p>
             <p>Best regards,</p>
             <p>Pixeldart Software</p>
           </div>

@@ -805,3 +805,18 @@ div.draw-line-height {
     background-position: 0 0;
   }
 }
+.custom-list {
+  list-style-type: none;
+}
+
+.custom-list-item {
+  position: relative;
+  padding-left: 1em;
+}
+
+.custom-list-item::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: white; /* Set the color of the dot */
+}
