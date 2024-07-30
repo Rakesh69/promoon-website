@@ -50,7 +50,7 @@ const Services = () => {
               >
                 <Link
                   href={'/contactus'}
-                  className="lg:py-4 lg:px-[67px] md:py-2 px-6 font-normal lg:text-[15px] py-1 md:px-12 shadow-customShadow  bg-white rounded-full text-textPrimary"
+                  className="lg:py-4 lg:px-[67px]  px-6 font-normal lg:text-xl py-2 md:px-4 shadow-customShadow  bg-white rounded-full text-textPrimary  w-fit flex "
                 >
                   Contact Us
                 </Link>

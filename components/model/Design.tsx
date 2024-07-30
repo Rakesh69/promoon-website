@@ -109,7 +109,7 @@ const Design = () => {
             </ul>
 
             <div className=" px-8  lg:pb-0">
-              <h2 className="pt-10 font-bold text-textPrimary text-xl mb-4 leading-tight relative w-fit text-bold">
+              <h2 className="font-bold text-textPrimary text-xl mb-4 leading-tight relative w-fit text-bold">
                 Tools
                 <div className="border-animation  " />
               </h2>

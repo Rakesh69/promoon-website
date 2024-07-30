@@ -126,7 +126,7 @@ const Industries = () => {
         ref={sectionRef}
         className={`animated-section ${
           isVisible ? 'slideInDown' : ''
-        } container w-full mx-auto  px-5 py-[52px]`}
+        } container w-full mx-auto  px-5 md:px-12 xl:px-5 py-[52px]`}
       >
         <div className="flex flex-col gap-4 mb-[40px] justify-center items-center">
           <h3 className="text-white text-center font-semibold tracking-0.14px leading-2 text-3xl lg:leading-48px">

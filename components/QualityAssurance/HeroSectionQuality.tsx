@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const HeroSectionQuality = () => {
   return (
-    <div className="min-h-screen w-full bg-white overflow-hidden ">
+    <div className=" w-full bg-white overflow-hidden ">
       <div className="pt-24 md:pt-36 md:pb-24 pb-16 bg-leading-background bg-cover bg-no-repeat flex justify-center items-center px-4">
         <div className="max-w-screen-xl flex flex-col justify-between px-4">
           <h1 className="text-4xl font-bold text-white text-center">
@@ -17,7 +17,7 @@ const HeroSectionQuality = () => {
           </p>
         </div>
       </div>
-      <div className="container mx-auto px-4 md:px-0 py-8 md:py-16 ">
+      <div className="container mx-auto px-5 md:px-12 xl:px-5 py-8 ">
         <div className="flex flex-col lg:flex-row justify-between">
           <div className="flex flex-col w-full lg:w-1/2 slideInLeft">
             <p className="text-black font-normal text-lg">

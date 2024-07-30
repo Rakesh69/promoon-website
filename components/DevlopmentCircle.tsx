@@ -64,7 +64,7 @@ const DevlopmentCircle = () => {
         ref={sectionRef}
         className={`animated-section ${
           isVisible ? 'slideInDown' : ''
-        } container w-full mx-auto py-[52px]`}
+        } container w-full mx-auto py-[52px] xl:px-5 md:px-12 px-5 `}
       >
         <div className="flex flex-col gap-4 mb-[40px] justify-center items-center">
           <h3 className="text-white text-center font-semibold tracking-0.14px leading-2 text-3xl lg:leading-48px">
@@ -75,7 +75,7 @@ const DevlopmentCircle = () => {
             experienced in providing the highest quality of service possible.
           </p>
         </div>
-        <div className="flex flex-col justify-center px-5 ">
+        <div className="flex flex-col justify-center  ">
           <div className="h-1px w-full bg-borderbg" />
 
           <div className="grid grid-cols-1 w-full grid-rows-5 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-5 lg:grid-rows-1 gap-6 my-6">

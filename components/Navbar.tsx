@@ -1,21 +1,21 @@
 import Link from 'next/link';
-import { useHiring } from '@/context/Hiring-Context';
 import { useTheme } from '@/context/ThemeContext';
 import PromoonLogo from '@/icons/ProMoonLogo';
 import ProMoonLogoDark from '@/icons/ProMoonLogoDark';
 import ResponsiveNavbar from '@/icons/ResponsiveNavbar';
 import ResponsiveCloseIcon from '@/icons/ResponsiveCloseIcon';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useMenu } from '@/context/menu-context';
 import { useRouter } from 'next/router';
 import DropDownIcon from '@/icons/DropDownIcon';
+import JsonData from '@/components/json/Position.json';
 
 const NAV_MENUES = [
   { id: 1, menu: 'Home', path: '/' },
   {
     id: 2,
     menu: 'Services',
-    path: 'service',
+    path: '/service',
     dropdown: [
       {
         id: 1,
@@ -47,10 +47,11 @@ const NAV_MENUES = [
 
 const Navbar: React.FC = () => {
   const { currentUser, setCurrentUser } = useMenu();
-  const { isHiring } = useHiring();
   const { theme } = useTheme();
   const [active, setActive] = useState<number | null>(null);
   const router = useRouter();
+
+  const hasPositions = JsonData.positions.length > 0;
 
   const handleClick = (index: number) => {
     setActive(index);
@@ -59,13 +60,13 @@ const Navbar: React.FC = () => {
   const isActive = (path: string) => router.pathname === path;
 
   return (
-    <nav className=" w-full bg-white dark:bg-bg-colors-background top-0 border-b border-blackBlue/20 z-50 fixed px-5 ">
+    <nav className="w-full bg-white dark:bg-bg-colors-background top-0 border-b border-blackBlue/20 z-50 fixed px-5">
       <div className="container mx-auto w-full py-5 flex md:px-0 px-4 sticky">
         <div className="w-full flex items-center justify-between">
           <Link href="/">
             {theme === 'light' ? <PromoonLogo /> : <ProMoonLogoDark />}
           </Link>
-          <div className="flex justify-between gap-20 ">
+          <div className="flex justify-between gap-20">
             <ul className="px-7 lg:flex items-center justify-between hidden gap-9 text-textPrimary rounded-full">
               {NAV_MENUES.map(({ id, menu, path, dropdown }) => (
                 <li
@@ -74,7 +75,7 @@ const Navbar: React.FC = () => {
                 >
                   {dropdown ? (
                     <>
-                      <div className="flex items-center cursor-pointer ">
+                      <div className="flex items-center cursor-pointer">
                         <span
                           onClick={() => handleClick(id)}
                           style={{
@@ -123,30 +124,42 @@ const Navbar: React.FC = () => {
                       }}
                       href={path}
                     >
-                      {menu}
-                      {menu === 'Careers' && isHiring && (
-                        <div
-                          onClick={() => {
-                            handleClick(id);
-                            router.push('/career');
-                          }}
-                          id="tooltip-light"
-                          role="tooltip"
-                          className="absolute z-10 inline-block px-1 text-sm font-medium -top-5 -right-8 text-gray-900 bg-white border border-gray-200 rounded-lg shadow-sm"
-                        >
-                          we're hiring
-                          <div
-                            className="tooltip-arrow"
-                            data-popper-arrow
-                          ></div>
-                        </div>
-                      )}
+                      <div>
+                        {menu}
+                        {menu === 'Careers' && hasPositions && (
+                          <span
+                            id="tooltip-light"
+                            role="tooltip"
+                            className="absolute z-10 inline-block  text-sm mx-1
+                             font-medium -top-4 -right-8 text-gray-900 bg-white border border-gray-200 rounded-lg shadow-sm"
+                          >
+                            We're hiring
+                            <div
+                              className="tooltip-arrow"
+                              data-popper-arrow
+                            ></div>
+                          </span>
+                        )}
+                        {menu === 'Careers' && !hasPositions && (
+                          <span
+                            id="tooltip-light"
+                            role="tooltip"
+                            className="absolute z-10 inline-block px-1 text-sm font-medium -top-5 -right-8 text-gray-900 bg-white border border-gray-200 rounded-lg shadow-sm"
+                          >
+                            No hiring at the moment
+                            <div
+                              className="tooltip-arrow"
+                              data-popper-arrow
+                            ></div>
+                          </span>
+                        )}
+                      </div>
                     </Link>
                   )}
                 </li>
               ))}
             </ul>
-            <div className="bg-send-bg-btn cursor-pointer rounded-full lg:text-base text-white py-2 px-4 lg:flex hidden ">
+            <div className="bg-send-bg-btn cursor-pointer rounded-full lg:text-base text-white py-2 px-4 lg:flex hidden">
               <button
                 onClick={() => {
                   router.push('/contactus');

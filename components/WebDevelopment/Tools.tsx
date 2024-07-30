@@ -169,7 +169,7 @@ const Tools = () => {
   }, [isVisible]);
 
   return (
-    <div className="container pb-20 mx-auto p-4">
+    <div className="container  mx-auto p-4 md:px-12 xl:p-4 ">
       <div
         ref={sectionRef}
         className=" mx-auto pt-16 "
@@ -179,7 +179,7 @@ const Tools = () => {
             ref={sectionRef}
             className={`animated-section ${
               isVisible ? 'slideInDown' : ''
-            } font-bold text-4xl text-textPrimary text-center `}
+            } font-bold md:text-4xl text-3xl text-textPrimary text-center `}
           >
             <div className="relative inline-block">
               <span className="text-blue pr-2 ">Tools & Technologies</span>

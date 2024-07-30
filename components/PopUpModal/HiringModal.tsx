@@ -17,7 +17,7 @@ type HiringFormType = {
   lastname: string;
   email: string;
   message: string;
-
+  phone: string;
   resume: File | null;
 };
 
@@ -28,6 +28,10 @@ const validationSchema = Yup.object().shape({
   lastname: Yup.string().required('Required'),
   email: Yup.string().email('Invalid Email').required('Required'),
   message: Yup.string().required('Required'),
+  phone: Yup.string().matches(
+    /^\d{10}$/,
+    'Phone number must be exactly 10 digits'
+  ),
   resume: Yup.mixed().required('A file is required'),
 });
 
@@ -43,6 +47,7 @@ const HiringModal: React.FC<HiringModalProps> = ({
     lastname: '',
     email: '',
     message: '',
+    phone: '',
     resume: null,
   };
 
@@ -54,6 +59,7 @@ const HiringModal: React.FC<HiringModalProps> = ({
     formDataObj.append('lastname', formData.lastname);
     formDataObj.append('email', formData.email);
     formDataObj.append('message', formData.message);
+    formDataObj.append('phone', formData.phone);
     formDataObj.append('resume', formData.resume as File);
     try {
       const response = await fetch('/api/hiring', {
@@ -117,8 +123,8 @@ const HiringModal: React.FC<HiringModalProps> = ({
     <>
       {isHiringModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-50">
-          <div className="max-w-full w-90% md:w-[50%] lg:w-[40%] pb-7 m-auto bg-white border rounded-md p-5 shadow-2xl shadow-black">
-            <div className="flex justify-between py-4 border-b border-gray-500">
+          <div className="max-w-full w-90% md:w-[60%] 2xl:w-[30%] pb-7 m-auto bg-white border rounded-md p-5 shadow-2xl shadow-black">
+            <div className="flex justify-between pb-4 border-b border-gray-500">
               <p className="text-xl font-semibold text-black">Apply Now</p>
               <button
                 onClick={closeModal}
@@ -132,11 +138,11 @@ const HiringModal: React.FC<HiringModalProps> = ({
               action="/upload"
               method="post"
               encType="multipart/form-data"
-              className="pt-5  pb-7"
+              className="pt-3"
               onSubmit={handleSubmit}
             >
-              <div className="w-full lg:flex lg:justify-between gap-5">
-                <div className="pb-9  lg:w-1/2">
+              <div className="w-full ">
+                <div className=" ">
                   <label
                     htmlFor="firstname"
                     className="font-medium text-textPrimary  text-base leading-1px"
@@ -159,7 +165,7 @@ const HiringModal: React.FC<HiringModalProps> = ({
                   )}
                 </div>
 
-                <div className="pb-9 lg:w-1/2">
+                <div className="">
                   <label
                     htmlFor="lastname"
                     className="font-medium text-textPrimary  dark:border-darkBorder text-base leading-1px"
@@ -173,7 +179,7 @@ const HiringModal: React.FC<HiringModalProps> = ({
                     onChange={handleChange}
                     value={values.lastname}
                     type="text"
-                    className=" mt-2 border outline-none text-sm w-full rounded dark:border-darkBorder  border-inputBorder  py-2 px-3 focus:invalid:border-red-500 focus:invalid:ring-red-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                    className=" mt-2 border  text-sm w-full rounded dark:border-darkBorder  border-inputBorder  py-2 px-3 focus:invalid:border-red-500 focus:invalid:ring-red-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
                   />
                   {errors.lastname && touched.lastname && (
                     <span className="text-xs text-requiredField">
@@ -183,7 +189,7 @@ const HiringModal: React.FC<HiringModalProps> = ({
                 </div>
               </div>
 
-              <div className="pb-9">
+              <div className="">
                 <label
                   htmlFor="email"
                   className="font-medium text-textPrimary  dark:border-darkBorder text-base leading-1px"
@@ -205,7 +211,30 @@ const HiringModal: React.FC<HiringModalProps> = ({
                   </span>
                 )}
               </div>
-              <div className="pb-9">
+
+              <div className="">
+                <label
+                  htmlFor="phone"
+                  className="font-medium text-textPrimary border-gray-500 text-base leading-1px"
+                >
+                  Phone No
+                </label>
+                <input
+                  placeholder="Phone Number"
+                  id="phone"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={values.phone}
+                  type="tel"
+                  className="mt-2 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 border outline-none w-full rounded border-gray-500 py-2 text-sm px-3 focus:invalid:border-red-500 focus:invalid:ring-red-500"
+                />
+                {errors.phone && touched.phone && (
+                  <span className="text-xs text-requiredField">
+                    {errors.phone}
+                  </span>
+                )}
+              </div>
+              <div className="">
                 <label
                   htmlFor="message"
                   className="font-medium text-textPrimary  text-base leading-1px"
@@ -259,7 +288,7 @@ const HiringModal: React.FC<HiringModalProps> = ({
                 </div>
               </div>
 
-              <div className="flex justify-center my-6">
+              <div className="flex justify-center mt-6">
                 <button
                   type="submit"
                   className="flex justify-center items-center w-fit gap-3 bg-send-bg-btn py-3 px-6 text-white font-bold rounded-md "

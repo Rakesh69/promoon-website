@@ -84,15 +84,15 @@ const ServicesWeb = () => {
   return (
     <>
       <>
-        <div className="dark:bg-[#F3F4F6] md:pt-[52px] pt-5 ">
+        <div className="dark:bg-[#F3F4F6] pt-5 ">
           <section className="bg-[url('/assets/CompanyWorkWave.png')] dark:bg-dark-header-waves pb-14 md:pb-[52px] bg-no-repeat bg-top bg-cover w-full h-full ">
-            <div className="container mx-auto  w-full px-5 ">
+            <div className="container mx-auto  w-full px-5 md:px-12 xl:px-5 ">
               <div className="flex flex-col justify-center items-center">
                 <h2
                   ref={sectionRef}
                   className={`animated-section ${
                     isVisible ? 'slideInDown' : ''
-                  } text-center text-4xl font-bold text-black pb-10  `}
+                  } text-center md:text-4xl text-3xl font-bold text-black pb-10  `}
                 >
                   Our Web Application Development Services
                 </h2>
@@ -112,7 +112,7 @@ const ServicesWeb = () => {
                   isVisible ? 'slideInDown' : ''
                 } section-container flex flex-col h-full w-full items-center lg:flex-row bg-top`}
               >
-                <div className="part1 w-full grid grid-cols-1 grid-rows-4 lg:w-full gap-10 md:grid-cols-3 md:grid-rows-2 ">
+                <div className="part1 w-full grid grid-cols-1 grid-rows-4 lg:w-full gap-10 md:grid-cols-2 lg:grid-cols-3 md:grid-rows-2 ">
                   {OUR_SPECIALITY.map(({ description, icon, id, title }) => (
                     <div
                       key={id}

@@ -35,7 +35,7 @@ const ProjectIdea = () => {
   };
 
   return (
-    <div className="flex justify-center items-center pb-20 container mx-auto md:px-0 px-8">
+    <div className="flex justify-center items-center pb-20 container mx-auto px-5 xl:px-5 md:px-12  ">
       <div
         ref={sectionRef}
         className={`animated-section ${
@@ -46,9 +46,7 @@ const ProjectIdea = () => {
           <div className="mr-3 flex justify-center items-center">
             <FaHandshake className="h-14 w-8 text-center" />
           </div>
-          <div
-            className="flex items-center gap-3 py-1 text-white"
-          >
+          <div className="flex items-center gap-3 py-1 text-white">
             SAY HELLO
           </div>
         </div>

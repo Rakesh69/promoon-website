@@ -9,7 +9,7 @@ const VueIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_17_31)">
+      <g clipPath="url(#clip0_17_31)">
         <path
           d="M17.7669 0L14.4334 5.77429L11.0999 0H0L14.4334 25L28.8668 0H17.7669Z"
           fill="#4DBA87"

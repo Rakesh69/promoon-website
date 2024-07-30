@@ -83,7 +83,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
       {isContactModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-50">
           <div className="max-w-full w-90% md:w-[50%] lg:w-[40%] pb-7 m-auto bg-white border rounded-md p-5 shadow-2xl shadow-black">
-            <div className="flex justify-between py-4 border-b border-gray-500">
+            <div className="flex justify-between pb-4 border-b border-gray-500">
               <p className="text-xl font-semibold">Contact Us</p>
               <button
                 onClick={closeModal}
@@ -121,7 +121,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
                   )}
                 </div>
 
-                <div className="pb-6 w-full">
+                <div className=" w-full">
                   <label
                     htmlFor="lastname"
                     className="font-medium text-textPrimary border-gray-500 text-base leading-1px"
@@ -145,7 +145,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
                 </div>
               </div>
 
-              <div className="pb-6">
+              <div className="">
                 <label
                   htmlFor="email"
                   className="font-medium text-textPrimary border-gray-500 text-base leading-1px"
@@ -168,12 +168,12 @@ const ContactModal: React.FC<ContactModalProps> = ({
                 )}
               </div>
 
-              <div className="pb-6">
+              <div className="">
                 <label
                   htmlFor="phone"
                   className="font-medium text-textPrimary border-gray-500 text-base leading-1px"
                 >
-                  Phone No <span className="text-red-500">*</span>
+                  Phone No
                 </label>
                 <input
                   placeholder="Phone Number"
@@ -191,7 +191,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
                 )}
               </div>
 
-              <div className="pb-6">
+              <div className="">
                 <label
                   htmlFor="message"
                   className="font-medium text-textPrimary text-base leading-1px"

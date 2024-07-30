@@ -29,9 +29,9 @@ const OurProcess = () => {
 
   return (
     <>
-      <div className="w-full  lg:p-0 p-4 ">
+      <div className="w-full  lg:p-0 p-4 overflow-hidden  ">
         <div className="container mx-auto lg:p-0 p-4  ">
-          <div className="flex flex-col lg:flex-row justify-between md:pt-10">
+          <div className="flex flex-col lg:flex-row justify-between md:pt-10 px-5 md:px-12 xl:px-5">
             <div className="flex flex-col w-full lg:w-1/2 slideInLeft">
               <h2 className="text-white lg:pt-24 pt-12 tracking-[4px] font-bold text-lg mb-7 leading-3">
                 HOW WE WORK
@@ -68,7 +68,7 @@ const OurProcess = () => {
           </div>
         </div>
 
-        <div className="lg:pt-12 pt-4 pb-10 lg:pb-10">
+        <div className="lg:pt-12 px-5 md:px-12 xl:px-5 pt-4 pb-10 lg:pb-10">
           <div className=" z-10 flex flex-col container mx-auto  ">
             <div className="w-full relative md:block hidden">
               <nav className=" !top-[700px]  !sticky">

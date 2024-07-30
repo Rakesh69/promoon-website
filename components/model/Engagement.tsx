@@ -46,12 +46,12 @@ const Engagement = () => {
 
   return (
     <div className="container mx-auto lg:pb-24">
-      <div className="flex justify-between lg:flex-row flex-col">
+      <div className="flex justify-between lg:flex-row flex-col px-5 md:px-12 xl:px-5 ">
         <div
           ref={sectionRef}
           className={`animated-section ${
             isVisible ? 'slideInLeft' : ''
-          } flex flex-col text-white px-4`}
+          } flex flex-col text-white `}
         >
           <h2 className="text-4xl pb-6">Engagement Models</h2>
           <p className="text-lg pb-4">
@@ -63,7 +63,7 @@ const Engagement = () => {
           ref={sectionRef}
           className={`animated-section ${
             isVisible ? 'slideInRight' : ''
-          }flex lg:flex-col flex-row text-white w-full px-4`}
+          } flex lg:flex-col flex-row text-white w-full `}
         >
           <div className="rounded-lg shadow-solid-8 w-full">
             {OPSITIONMENU.map(({ id, title, subtitle }) => (

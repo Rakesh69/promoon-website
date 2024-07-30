@@ -9,7 +9,7 @@ const NextJsIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_17_14)">
+      <g clipPath="url(#clip0_17_14)">
         <path
           d="M12.4864 24.9336C19.363 24.9336 24.9376 19.359 24.9376 12.4824C24.9376 5.60583 19.363 0.03125 12.4864 0.03125C5.60983 0.03125 0.0352554 5.60583 0.0352554 12.4824C0.0352554 19.359 5.60983 24.9336 12.4864 24.9336Z"
           fill="black"
@@ -19,8 +19,8 @@ const NextJsIcon = () => {
           fill="url(#paint0_linear_17_14)"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M15.9451 7.50195H17.6051V17.4629H15.9451V7.50195Z"
           fill="url(#paint1_linear_17_14)"
         />
@@ -34,11 +34,11 @@ const NextJsIcon = () => {
           y2="22.236"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
+          <stop stopColor="white" />
           <stop
             offset="1"
-            stop-color="white"
-            stop-opacity="0"
+            stopColor="white"
+            stopOpacity="0"
           />
         </linearGradient>
         <linearGradient
@@ -49,11 +49,11 @@ const NextJsIcon = () => {
           y2="14.8172"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
+          <stop stopColor="white" />
           <stop
             offset="1"
-            stop-color="white"
-            stop-opacity="0"
+            stopColor="white"
+            stopOpacity="0"
           />
         </linearGradient>
         <clipPath id="clip0_17_14">

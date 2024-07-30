@@ -156,7 +156,7 @@ const OurTesting = () => {
   };
 
   return (
-    <div className="container mx-auto py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div className="container mx-auto py-20 px-5 md:px-12 xl:px-5 lg:px-8 overflow-hidden">
       <div className="flex flex-col justify-center items-center text-center">
         <h2
           ref={sectionRef}
@@ -171,8 +171,8 @@ const OurTesting = () => {
           </div>
         </h2>
       </div>
-      <div className="flex flex-col md:flex-row justify-start gap-6 md:gap-12 w-full pt-8">
-        <div className="flex flex-col justify-start w-full md:w-1/4">
+      <div className="flex flex-col lg:flex-row justify-start gap-6 lg:gap-12 w-full pt-8">
+        <div className="flex flex-col justify-start w-full lg:w-1/4">
           <ul>
             {NAV_MENUS.map(({ id, menu, path, icon }) => (
               <li
@@ -194,12 +194,12 @@ const OurTesting = () => {
             ))}
           </ul>
         </div>
-        <div className="bg-white border border-sky-400 rounded-md w-full md:w-3/4 h-full py-8 mt-8 px-4">
+        <div className="bg-white border border-sky-400 rounded-md w-full lg:w-3/4 h-full py-8 mt-8 px-4">
           <div className="text-black">
             {activeMenuId === 1 && (
               <div className="flex gap-4">
                 <div>
-                  <h3 className="font-bold text-xl text-blue md:text-2xl pb-8">
+                  <h3 className="font-bold text-xl text-blue lg:text-2xl pb-8">
                     {Analysis[0].title}
                   </h3>
                   <ul className="flex flex-col gap-5 pl-6 list-disc">
@@ -212,7 +212,7 @@ const OurTesting = () => {
             )}
             {activeMenuId === 2 && (
               <div>
-                <h3 className="font-bold text-xl md:text-2xl text-blue  pb-8">
+                <h3 className="font-bold text-xl lh:text-2xl text-blue  pb-8">
                   {planning[0].title}
                 </h3>
                 <ul className="flex flex-col gap-5 pl-6 list-disc">
@@ -224,7 +224,7 @@ const OurTesting = () => {
             )}
             {activeMenuId === 3 && (
               <div>
-                <h3 className="font-bold text-xl text-blue  md:text-2xl pb-8">
+                <h3 className="font-bold text-xl text-blue  lg:text-2xl pb-8">
                   {Development[0].title}
                 </h3>
                 <ul className="flex flex-col gap-5 pl-6 list-disc">
@@ -236,7 +236,7 @@ const OurTesting = () => {
             )}
             {activeMenuId === 4 && (
               <div>
-                <h3 className="font-bold text-xl text-blue  md:text-2xl pb-8">
+                <h3 className="font-bold text-xl text-blue  lg:text-2xl pb-8">
                   {Setup[0].title}
                 </h3>
                 <ul className="flex flex-col gap-5 pl-6 list-disc">
@@ -248,7 +248,7 @@ const OurTesting = () => {
             )}
             {activeMenuId === 5 && (
               <div>
-                <h3 className="font-bold text-xl text-blue  md:text-2xl pb-8">
+                <h3 className="font-bold text-xl text-blue  lg:text-2xl pb-8">
                   {Execution[0].title}
                 </h3>
                 <ul className="flex flex-col gap-5 pl-6 list-disc">
@@ -260,7 +260,7 @@ const OurTesting = () => {
             )}
             {activeMenuId === 6 && (
               <div>
-                <h3 className="font-bold text-xl text-blue md:text-2xl pb-8">
+                <h3 className="font-bold text-xl text-blue lg:text-2xl pb-8">
                   {TestReporting[0].title}
                 </h3>
                 <ul className="flex flex-col gap-5 pl-6 list-disc">

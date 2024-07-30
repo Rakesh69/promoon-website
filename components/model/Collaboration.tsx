@@ -81,9 +81,9 @@ const Collaboration = () => {
         ref={sectionRef}
         className={`animated-section ${
           isVisible ? 'slideInDown' : ''
-        } flex justify-between lg:flex-row flex-col `}
+        } flex justify-between lg:flex-row flex-col px-5 md:px-12 xl:px-5`}
       >
-        <div className="flex flex-col text-white px-4">
+        <div className="flex flex-col text-white ">
           <h2 className="text-4xl pb-6">Collaboration Tools</h2>
           <p className="text-lg pb-4">
             We make sure to use the tools that are top of the market to bring
@@ -92,7 +92,7 @@ const Collaboration = () => {
           </p>
         </div>
         <div className="flex justify-start">
-          <ul className="flex justify-evenly flex-wrap pb-4 gap-9">
+          <ul className="flex justify-evenly flex-wrap pb-4 gap-4">
             {OBJECTIVE.map(({ icon, id }) => (
               <li
                 key={id}

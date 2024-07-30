@@ -69,7 +69,7 @@ const Communication = ({}) => {
       </div>
       <div className="flex justify-between">
         <div className="">
-          <div className="container mx-auto flex flex-wrap justify-center gap-7 lg:flex-nowrap">
+          <div className=" flex flex-wrap justify-center  gap-7 xl:flex-nowrap">
             {Communications.map(
               ({ title, subtitle, day, time, detail }, index) => (
                 <div className="bg-white md:w-1/3 lg:w-1/3 py-6 px-5 w-72 rounded-xl shadow-xl shadow-sky-300/25">

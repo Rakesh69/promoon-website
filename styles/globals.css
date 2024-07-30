@@ -611,7 +611,7 @@ div.draw-line-height {
 
 #sidebar .draw-line-height svg line {
   stroke: #2baae2;
-  stroke-width: 4;
+  strokewidth: 4;
 }
 
 .tooltip-arrow {

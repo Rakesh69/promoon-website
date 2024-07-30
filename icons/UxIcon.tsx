@@ -9,7 +9,7 @@ const UxIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_21_2)">
+      <g clipPath="url(#clip0_21_2)">
         <mask
           id="mask0_21_2"
           maskUnits="userSpaceOnUse"
@@ -52,10 +52,10 @@ const UxIcon = () => {
           width="60.0593"
           height="52.1154"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood
-            flood-opacity="0"
+            floodOpacity="0"
             result="BackgroundImageFix"
           />
           <feBlend

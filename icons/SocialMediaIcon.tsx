@@ -9,7 +9,7 @@ const SocialMediaIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_3_92)">
+      <g clipPath="url(#clip0_3_92)">
         <mask
           id="mask0_3_92"
           maskUnits="userSpaceOnUse"
@@ -75,10 +75,10 @@ const SocialMediaIcon = () => {
           width="13.187"
           height="13.1874"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood
-            flood-opacity="0"
+            floodOpacity="0"
             result="BackgroundImageFix"
           />
           <feColorMatrix

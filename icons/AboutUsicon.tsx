@@ -16,7 +16,7 @@ const AboutUsicon = () => {
         cy="19.5"
         r="18.5"
         stroke="white"
-        stroke-width="2"
+        strokeWidth="2"
       />
       <path
         d="M114 19.5C114.552 19.5 115 19.0523 115 18.5C115 17.9477 114.552 17.5 114 17.5V19.5ZM76 19.5H114V17.5H76V19.5Z"

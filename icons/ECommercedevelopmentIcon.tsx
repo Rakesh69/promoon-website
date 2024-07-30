@@ -10,7 +10,7 @@ const ECommercedevelopmentIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g
-        clip-path="url(#clip0_36_7)"
+        clipPath="url(#clip0_36_7)"
         filter="url(#filter0_i_36_7)"
       >
         <path
@@ -26,10 +26,10 @@ const ECommercedevelopmentIcon = () => {
           width="24"
           height="28"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood
-            flood-opacity="0"
+            floodOpacity="0"
             result="BackgroundImageFix"
           />
           <feBlend

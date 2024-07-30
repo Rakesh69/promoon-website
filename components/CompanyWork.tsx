@@ -65,7 +65,7 @@ const CompanyWork = () => {
     <>
       <div className="dark:bg-[#F3F4F6] md:pt-[156px] py-16 overflow-hidden ">
         <section className="bg-[url('/assets/CompanyWorkWave.png')] dark:bg-dark-header-waves pb-14 md:pb-[96px] bg-no-repeat bg-top bg-cover w-full h-full ">
-          <div className="container mx-auto px-5  w-full">
+          <div className="container mx-auto px-5 xl:px-5 md:px-12  w-full">
             <div
               ref={sectionRef}
               className={`animated-section ${

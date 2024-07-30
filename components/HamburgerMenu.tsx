@@ -2,22 +2,31 @@ import { useMenu } from '@/context/menu-context';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { useTheme } from '@/context/ThemeContext';
-import { useHiring } from '@/context/Hiring-Context';
+
 import DropDownIcon from '@/icons/DropDownIcon';
+import JsonData from '@/components/json/Position.json';
 
 const FOOTER_OPTIONS = [
   {
     id: 1,
     option: 'Service',
     subOptions: [
-      { id: 1, menu: 'Website Development', path: '/websitedevelopment' },
-      { id: 2, menu: 'Mobile App Development', path: '/mobileappdevelopment' },
+      {
+        id: 1,
+        menu: 'Website Development',
+        path: '/service/websitedevelopment',
+      },
+      {
+        id: 2,
+        menu: 'Mobile App Development',
+        path: '/service/mobileappdevelopment',
+      },
       {
         id: 3,
         menu: 'Search Engine Optimization',
-        path: '/SearchEngineOptimization',
+        path: '/service/SearchEngineOptimization',
       },
-      { id: 4, menu: 'Quality Assurance', path: '/QualityAssurance' },
+      { id: 4, menu: 'Quality Assurance', path: '/service/QualityAssurance' },
     ],
   },
 ];
@@ -26,7 +35,7 @@ const COMPANY = [
   {
     id: 1,
     option: 'Company',
-    subOptions: [{ id: 1, menu: 'About Us', path: '/aboutus' }],
+    subOptions: [{ id: 1, menu: 'About Us', path: '/company/aboutus' }],
   },
 ];
 
@@ -45,7 +54,8 @@ const HamburgerMenu: React.FC = () => {
   const { theme, toggleMode } = useTheme();
   const router = useRouter();
   const { currentUser, setCurrentUser } = useMenu();
-  const { isHiring } = useHiring();
+
+  const hasPositions = JsonData.positions.length > 0;
   const [active, setActive] = useState<number | null>(null);
 
   const handleClick = (index: number, path: string) => {
@@ -135,7 +145,7 @@ const HamburgerMenu: React.FC = () => {
                   style={{ color: active === 2 ? '#00B4FF' : 'white' }}
                 >
                   Careers
-                  {isHiring && (
+                  {hasPositions && (
                     <div
                       onClick={() => handleClick(2, '/career')}
                       id="tooltip-light"
@@ -143,6 +153,16 @@ const HamburgerMenu: React.FC = () => {
                       className="ml-2 z-10 inline-block px-1 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg shadow-sm"
                     >
                       we're hiring
+                    </div>
+                  )}
+                  {!hasPositions && (
+                    <div
+                      onClick={() => handleClick(2, '/career')}
+                      id="tooltip-light"
+                      role="tooltip"
+                      className="ml-2 z-10 inline-block px-1 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg shadow-sm"
+                    >
+                      No hiring at the moment
                     </div>
                   )}
                 </button>

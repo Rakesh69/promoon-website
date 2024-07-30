@@ -1,7 +1,5 @@
 import RightArrow from '@/icons/RightArrow';
 import Image from 'next/image';
-import bottomOurProcessBgImage from '@/public/assets/ourProcessBottomBackground.png';
-import darkBottombgWaves from '@/public/assets/darkBottombgWaves@2x.png';
 
 const CareerHeader: React.FC<{ id: string }> = ({ id }) => {
   const scrollTo = (id: string) => {
@@ -10,10 +8,10 @@ const CareerHeader: React.FC<{ id: string }> = ({ id }) => {
 
   return (
     <>
-      <div className="px-1 pt-11">
-        <section className="h-full w-full bg-no-repeat bg-cover bg-center  md:bg-image-background">
+      <div className="px-1 lg:pt-11 md:pt-0 pt-8 text-center">
+        <section className="h-auto w-auto bg-no-repeat lg:bg-cover bg-contain bg-center 2xl:pt-36 md:bg-image-background flex flex-col justify-center items-center">
           <div className="max-w-screen-xl w-90% mx-auto">
-            <div className="slideInDown flex flex-col justify-center items-center gap-6 py-20 lg:py-52">
+            <div className="slideInDown flex flex-col justify-center items-center gap-6 py-20 md:py-32 2xl:py-52">
               <div className="flex justify-center items-center">
                 <p className="text-3xl 2xl:text-5xl font-bold 2xl:font-extrabold text-textPrimary dark:text-white text-center">
                   Start Your

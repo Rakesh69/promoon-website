@@ -13,7 +13,7 @@ const RoundedIcon = () => {
         x2="860"
         y2="7.25"
         stroke="white"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         stroke-dasharray="3 3"
       />
       <circle
@@ -61,10 +61,10 @@ const RoundedIcon = () => {
           y2="15"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E84D72" />
+          <stop stopColor="#E84D72" />
           <stop
             offset="1"
-            stop-color="#BE1E43"
+            stopColor="#BE1E43"
           />
         </linearGradient>
         <linearGradient
@@ -75,10 +75,10 @@ const RoundedIcon = () => {
           y2="15"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E84D72" />
+          <stop stopColor="#E84D72" />
           <stop
             offset="1"
-            stop-color="#BE1E43"
+            stopColor="#BE1E43"
           />
         </linearGradient>
         <linearGradient
@@ -89,10 +89,10 @@ const RoundedIcon = () => {
           y2="15"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E84D72" />
+          <stop stopColor="#E84D72" />
           <stop
             offset="1"
-            stop-color="#BE1E43"
+            stopColor="#BE1E43"
           />
         </linearGradient>
         <linearGradient
@@ -103,10 +103,10 @@ const RoundedIcon = () => {
           y2="15"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E9AE3D" />
+          <stop stopColor="#E9AE3D" />
           <stop
             offset="1"
-            stop-color="#F3A62E"
+            stopColor="#F3A62E"
           />
         </linearGradient>
         <linearGradient
@@ -117,10 +117,10 @@ const RoundedIcon = () => {
           y2="15"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E9AE3D" />
+          <stop stopColor="#E9AE3D" />
           <stop
             offset="1"
-            stop-color="#F3A62E"
+            stopColor="#F3A62E"
           />
         </linearGradient>
         <linearGradient
@@ -131,10 +131,10 @@ const RoundedIcon = () => {
           y2="15"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E9AE3D" />
+          <stop stopColor="#E9AE3D" />
           <stop
             offset="1"
-            stop-color="#F3A62E"
+            stopColor="#F3A62E"
           />
         </linearGradient>
       </defs>

@@ -26,7 +26,7 @@ const OurCompany = () => {
       ref={sectionRef}
       className={`animated-section ${
         isVisible ? 'slideInLeft1' : ''
-      } container mx-auto py-20 px-4 md:px-0 `}
+      } container mx-auto py-20 px-5 md:px-12 xl:px-5 `}
     >
       <div className="flex flex-col border-l-4 border-blue">
         <div className="pl-8">

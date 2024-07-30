@@ -6,7 +6,7 @@ import { useState, useRef, useEffect } from 'react';
 
 const HeroSection = () => {
   return (
-    <div className="h-fit relative bg-hero-gradient px-5 md:px-0 overflow-hidden ">
+    <div className="h-fit relative bg-hero-gradient px-5 xl:px-0 md:px-12 overflow-hidden ">
       <Image
         src={'/assets/hero-background-top.png'}
         alt="images"
@@ -14,19 +14,12 @@ const HeroSection = () => {
         className="lg:w-full w-full mx-auto absolute md:top-[87px] top-[67px] md:h-[190px]  h-[50px] "
         width={1000}
       />
-      <div className=" px-5 container w-full mx-auto text-white md:pt-52 pt-32  pb-[115px] flex flex-col lg:flex-row gap-[120px]">
+      <div className=" container w-full mx-auto text-white xl:pt-52 pt-32  pb-[115px] flex flex-col lg:flex-row md:gap-14 2xl:gap-[120px]">
         <div className="w-full lg:w-1/2 flex flex-col gap-7 slideInLeft">
-          <div className="flex items-center gap-2.5 w-fit py-[7px] px-3.5 bg-borderBlack rounded-full border border-white/10">
-            <span>
-              <StarIcon />
-            </span>
-            <p className="font-medium text-sm">New: Our Innovation Software</p>
-          </div>
-
-          <h1 className="font-medium text-[36px] md:text-[50px] leading-[48px] md:leading-[69px]">
+          <h1 className="font-medium pt-12  pb-[7px]  text-[36px] md:text-[42px] leading-[48px] md:leading-[62px]">
             Pr
             <span
-              className="font-medium text-[36px] md:text-[50px] leading-[48px] md:leading-[69px] bg-clip-text text-transparent"
+              className="font-medium text-[36px] md:text-[42px] leading-[48px] md:leading-[69px] bg-clip-text text-transparent"
               style={{
                 backgroundImage:
                   'linear-gradient(90deg, #27AAE1 0%, #27AAE1 19.31%, #FFFFFF 46.77%, #066A9D 76.49%, #1C75BC 100%)',
@@ -49,8 +42,8 @@ const HeroSection = () => {
             <RightArrow />
           </Link>
         </div>
-        <div className="slideInRight flex flex-col md:flex-row w-full lg:w-1/2 gap-24 lg:gap-20">
-          <div className="flex lg:items-end items-center justify-center ">
+        <div className="slideInRight flex-col md:flex-row w-full lg:w-1/2 gap-24 2xl:justify-normal md:justify-center lg:gap-4 2xl:gap-20 overflow-hidden md:flex hidden">
+          <div className="flex xl:items-end items-center justify-center ">
             <Image
               src={'/assets/HeoImage1.png'}
               alt="Image 1"
@@ -65,7 +58,7 @@ const HeroSection = () => {
               alt="Image 2"
               width={1000}
               height={500}
-              className="w-full md:w-fit h-auto md:h-[300px]"
+              className=" w-full md:w-fit h-auto md:h-[300px]"
             />
           </div>
         </div>

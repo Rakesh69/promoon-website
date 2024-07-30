@@ -13,6 +13,10 @@ const validationSchema = Yup.object().shape({
   lastname: Yup.string().required('Required'),
   email: Yup.string().email('Invalid Email').required('Required'),
   message: Yup.string().required('Required'),
+  phone: Yup.string().matches(
+    /^\d{10}$/,
+    'Phone number must be exactly 10 digits'
+  ),
   resume: Yup.mixed().required('A file is required'),
 });
 
@@ -21,6 +25,7 @@ type HiringFormType = {
   lastname: string;
   email: string;
   message: string;
+  phone: string;
   resume: File | null;
 };
 
@@ -33,6 +38,7 @@ const ContactUsForm = () => {
     lastname: '',
     email: '',
     message: '',
+    phone: '',
     resume: null,
   };
 
@@ -44,6 +50,7 @@ const ContactUsForm = () => {
     formDataObj.append('lastname', formData.lastname);
     formDataObj.append('email', formData.email);
     formDataObj.append('message', formData.message);
+    formDataObj.append('phone', formData.phone);
     formDataObj.append('resume', formData.resume as File);
     try {
       const response = await fetch('/api/hiring', {
@@ -181,6 +188,30 @@ const ContactUsForm = () => {
                   </span>
                 )}
               </div>
+
+              <div className="pb-9">
+                <label
+                  htmlFor="phone"
+                  className="font-medium text-textPrimary dark:text-white dark:border-darkBorder text-base leading-1px"
+                >
+                  Phone No 
+                </label>
+                <input
+                  placeholder="Phone Number"
+                  id="phone"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={values.phone}
+                  type="tel"
+                  className="mt-2 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 border outline-none dark:text-white w-full rounded border-inputBorder dark:border-darkBorder dark:bg-borderBlack py-2 text-sm px-3 focus:invalid:border-red-500 focus:invalid:ring-red-500"
+                />
+                {errors.phone && touched.phone && (
+                  <span className="text-xs text-requiredField">
+                    {errors.phone}
+                  </span>
+                )}
+              </div>
+
               <div className="pb-9">
                 <label
                   htmlFor="message"

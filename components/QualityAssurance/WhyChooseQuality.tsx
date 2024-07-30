@@ -64,7 +64,7 @@ const WhyChooseQuality = () => {
     };
   }, [isVisible]);
   return (
-    <div className="container mx-auto px-4 pb-20 overflow-hidden ">
+    <div className="container mx-auto px-5 md:px-12 xl:px-5 pb-20 overflow-hidden ">
       <div className="flex justify-center items-center flex-col mb-8">
         <h1 className="text-center text-black text-3xl pr-2 font-bold py-4 relative">
           <div className="relative inline-block">

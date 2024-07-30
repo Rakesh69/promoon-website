@@ -28,13 +28,13 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
           .json({ message: 'Error uploading file', error: err.message });
       }
 
-      const { firstname, lastname, email, message } =
-        req.body as {
-          firstname: string;
-          lastname: string;
-          email: string;
-          message: string;
-        };
+      const { firstname, lastname, email, phone, message } = req.body as {
+        firstname: string;
+        lastname: string;
+        email: string;
+        phone: string;
+        message: string;
+      };
       const file = (req as any).file;
 
       if (!file) {
@@ -54,6 +54,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
            <h1>${firstname} ${lastname}</h1>
             <p>Thank you for your inquiry. We have received the following message:</p>
             <p>${message}</p>
+            ${phone ? `<p>phone Number: ${phone}</p>` : ''}
             <p>Best regards,</p>
             <p>Pixeldart Software</p>
           </div>

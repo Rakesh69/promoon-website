@@ -125,7 +125,7 @@ const ContactUsForm = () => {
                   htmlFor="email"
                   className="font-medium text-textPrimary dark:text-white dark:border-darkBorder text-base leading-1px"
                 >
-                  Email <span className="text-red-500">*</span>
+                  Email Address <span className="text-red-500">*</span>
                 </label>
                 <input
                   placeholder="Email Address"
@@ -148,7 +148,7 @@ const ContactUsForm = () => {
                   htmlFor="phone"
                   className="font-medium text-textPrimary dark:text-white dark:border-darkBorder text-base leading-1px"
                 >
-                  Phone No <span className="text-red-500">*</span>
+                  Phone No
                 </label>
                 <input
                   placeholder="Phone Number"

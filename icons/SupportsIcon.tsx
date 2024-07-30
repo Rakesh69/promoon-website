@@ -8,7 +8,7 @@ const SupportsIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g
-        clip-path="url(#clip0_37_15)"
+        clipPath="url(#clip0_37_15)"
         filter="url(#filter0_i_37_15)"
       >
         <path
@@ -24,10 +24,10 @@ const SupportsIcon = () => {
           width="24"
           height="28"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood
-            flood-opacity="0"
+            floodOpacity="0"
             result="BackgroundImageFix"
           />
           <feBlend

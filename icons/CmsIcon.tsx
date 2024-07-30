@@ -8,7 +8,7 @@ const CmsIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g filter="url(#filter0_i_37_14)">
-        <g clip-path="url(#clip0_37_14)">
+        <g clipPath="url(#clip0_37_14)">
           <path
             d="M20.125 1.91666H2.875C1.29375 1.91666 0 3.21041 0 4.79166V21.0833H23V4.79166C23 3.21041 21.7062 1.91666 20.125 1.91666ZM2.875 3.83332H20.125C20.6521 3.83332 21.0833 4.26457 21.0833 4.79166V6.70832H1.91667V4.79166C1.91667 4.26457 2.34792 3.83332 2.875 3.83332ZM1.91667 19.1667V8.62499H21.0833V19.1667H1.91667ZM11.5 10.5417H18.2083V12.4583H11.5V10.5417ZM11.5 14.375H18.2083V16.2917H11.5V14.375Z"
             fill="#2196F3"
@@ -27,10 +27,10 @@ const CmsIcon = () => {
           width="23"
           height="27"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood
-            flood-opacity="0"
+            floodOpacity="0"
             result="BackgroundImageFix"
           />
           <feBlend

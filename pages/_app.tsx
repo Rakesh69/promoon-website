@@ -8,7 +8,6 @@ import HamburgerMenu from '@/components/HamburgerMenu';
 import Footer from '@/components/Footer';
 import { MenuProvider, useMenu } from '@/context/menu-context';
 import { ThemeProvider } from '@/context/ThemeContext';
-import { HiringProvider } from '@/context/Hiring-Context';
 import ScrollToTopButton from '@/components/ScroolToTopButton';
 import Cookies from '@/components/Cookies';
 
@@ -18,7 +17,6 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <ThemeProvider>
-        <HiringProvider>
           <MenuProvider>
             <Navbar />
             {!currentUser && <HamburgerMenu />}
@@ -30,7 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
             <Cookies />
             <Footer />
           </MenuProvider>
-        </HiringProvider>
+       
       </ThemeProvider>
     </>
   );

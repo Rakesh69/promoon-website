@@ -74,7 +74,7 @@ const ChooseUs = () => {
   };
 
   return (
-    <div className="pb-20 container mx-auto px-4">
+    <div className="pb-20 container mx-auto px-5 xl:px-5 md:px-12 ">
       <div className="items-center text-center">
         <h2
           ref={sectionRef}
@@ -90,15 +90,6 @@ const ChooseUs = () => {
           improve customer experience with the outcome of our work, and we don't
           forget to have some fun at work.
         </p>
-        <div className="flex justify-center">
-          <button
-            onClick={openModal}
-            className="flex items-center gap-3 bg-send-bg-btn cursor-pointer rounded-full text-base text-white py-2 px-4"
-          >
-            CONTACT US
-            <RightArrow />
-          </button>
-        </div>
 
         <div
           ref={sectionRef}
@@ -126,10 +117,6 @@ const ChooseUs = () => {
           <RoundedIcon />
         </div>
       </div>
-      <ContactModal
-        isContactModalOpen={isContactModalOpen}
-        closeModal={closeModal}
-      />
     </div>
   );
 };

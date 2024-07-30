@@ -70,7 +70,7 @@ const Conversation = () => {
           ref={sectionRef}
           className={`animated-section ${
             isVisible ? 'slideInLeft1' : ''
-          } flex flex-col text-white px-4 pb-4`}
+          } flex flex-col text-white px-5 md:px-12 xl:px-5 pb-4`}
         >
           <h2 className="text-4xl pb-6">Like what you see?</h2>
           <h2 className="text-4xl pb-6"> Let’s start a conversation.</h2>

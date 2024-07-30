@@ -9,7 +9,7 @@ const JumxIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_17_46)">
+      <g clipPath="url(#clip0_17_46)">
         <path
           d="M12.5 0C5.58803 0 0 5.58803 0 12.5C0 19.4119 5.58803 25 12.5 25C19.4119 25 25 19.4119 25 12.5V0H12.5Z"
           fill="#F0047F"

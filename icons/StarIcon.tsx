@@ -40,22 +40,22 @@ const StarIcon = () => {
           y2="11.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#27AAE1" />
+          <stop stopColor="#27AAE1" />
           <stop
             offset="0.1931"
-            stop-color="#27AAE1"
+            stopColor="#27AAE1"
           />
           <stop
             offset="0.4474"
-            stop-color="white"
+            stopColor="white"
           />
           <stop
             offset="0.7649"
-            stop-color="#066A9D"
+            stopColor="#066A9D"
           />
           <stop
             offset="1"
-            stop-color="#1C75BC"
+            stopColor="#1C75BC"
           />
         </linearGradient>
         <linearGradient
@@ -66,22 +66,22 @@ const StarIcon = () => {
           y2="11.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#27AAE1" />
+          <stop stopColor="#27AAE1" />
           <stop
             offset="0.1931"
-            stop-color="#27AAE1"
+            stopColor="#27AAE1"
           />
           <stop
             offset="0.4474"
-            stop-color="white"
+            stopColor="white"
           />
           <stop
             offset="0.7649"
-            stop-color="#066A9D"
+            stopColor="#066A9D"
           />
           <stop
             offset="1"
-            stop-color="#1C75BC"
+            stopColor="#1C75BC"
           />
         </linearGradient>
         <linearGradient
@@ -92,22 +92,22 @@ const StarIcon = () => {
           y2="11.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#27AAE1" />
+          <stop stopColor="#27AAE1" />
           <stop
             offset="0.1931"
-            stop-color="#27AAE1"
+            stopColor="#27AAE1"
           />
           <stop
             offset="0.4474"
-            stop-color="white"
+            stopColor="white"
           />
           <stop
             offset="0.7649"
-            stop-color="#066A9D"
+            stopColor="#066A9D"
           />
           <stop
             offset="1"
-            stop-color="#1C75BC"
+            stopColor="#1C75BC"
           />
         </linearGradient>
         <linearGradient
@@ -118,22 +118,22 @@ const StarIcon = () => {
           y2="11.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#27AAE1" />
+          <stop stopColor="#27AAE1" />
           <stop
             offset="0.1931"
-            stop-color="#27AAE1"
+            stopColor="#27AAE1"
           />
           <stop
             offset="0.4474"
-            stop-color="white"
+            stopColor="white"
           />
           <stop
             offset="0.7649"
-            stop-color="#066A9D"
+            stopColor="#066A9D"
           />
           <stop
             offset="1"
-            stop-color="#1C75BC"
+            stopColor="#1C75BC"
           />
         </linearGradient>
         <linearGradient
@@ -144,22 +144,22 @@ const StarIcon = () => {
           y2="11.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#27AAE1" />
+          <stop stopColor="#27AAE1" />
           <stop
             offset="0.1931"
-            stop-color="#27AAE1"
+            stopColor="#27AAE1"
           />
           <stop
             offset="0.4474"
-            stop-color="white"
+            stopColor="white"
           />
           <stop
             offset="0.7649"
-            stop-color="#066A9D"
+            stopColor="#066A9D"
           />
           <stop
             offset="1"
-            stop-color="#1C75BC"
+            stopColor="#1C75BC"
           />
         </linearGradient>
         <linearGradient
@@ -170,22 +170,22 @@ const StarIcon = () => {
           y2="11.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#27AAE1" />
+          <stop stopColor="#27AAE1" />
           <stop
             offset="0.1931"
-            stop-color="#27AAE1"
+            stopColor="#27AAE1"
           />
           <stop
             offset="0.4474"
-            stop-color="white"
+            stopColor="white"
           />
           <stop
             offset="0.7649"
-            stop-color="#066A9D"
+            stopColor="#066A9D"
           />
           <stop
             offset="1"
-            stop-color="#1C75BC"
+            stopColor="#1C75BC"
           />
         </linearGradient>
       </defs>

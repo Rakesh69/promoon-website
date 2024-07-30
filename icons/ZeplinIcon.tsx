@@ -8,38 +8,38 @@ const ZeplinIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M3.06065 16.3795L0 12.9565L9.36849 9.54645L10.8267 13.553L3.06065 16.3795Z"
         fill="#F89920"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M3.03825 16.3178L2.89406 20.9076L12.2626 17.4975L10.8043 13.4913L3.03825 16.3178Z"
         fill="#FFBE22"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M29.0728 6.91901C30.4096 10.7918 26.1024 15.8807 19.4024 18.3194C12.7019 20.7579 6.13142 19.6283 4.66583 15.8021L29.0728 6.91901Z"
         fill="#F0670A"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M29.0731 6.9187C27.617 3.08276 21.0395 1.94851 14.3322 4.38943C7.62463 6.83065 3.31529 11.9278 4.66583 15.8024L29.0731 6.9187Z"
         fill="#FFD00E"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M29.0722 6.91931C29.9055 9.51056 25.2292 13.5462 18.5498 15.977C11.8701 18.4084 5.69393 18.3228 4.66676 15.8021L29.0722 6.91931Z"
         fill="#F89920"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M29.0725 6.91897C28.0607 4.38633 21.8749 4.29644 15.1845 6.73183C8.4941 9.16691 3.81354 13.2115 4.66614 15.8021L29.0725 6.91897Z"
         fill="#FFBE22"
       />
@@ -52,8 +52,8 @@ const ZeplinIcon = () => {
         fill="#F0670A"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M43.8459 13.4412H47.4297V15.2332H41.755V7.76683H47.4297V9.55842H43.8459V10.4546H46.0855V12.2465H43.8459V13.4412ZM60.1228 13.4412H63.4077V15.2332H58.0322V7.76683H60.1231L60.1228 13.4412ZM65.4986 7.76648H67.5891V15.2332H65.4986V7.76648ZM69.9782 7.76648V15.2332H71.9196V11.0514L74.6074 15.2332H76.5488V7.76648H74.6074V12.0101L71.9196 7.77731L69.9782 7.76648Z"
         fill="white"
       />
@@ -62,8 +62,8 @@ const ZeplinIcon = () => {
         fill="white"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M39.3658 9.55891V7.76697H33.2434V9.55856H36.6778L33.2434 13.4417V15.2337H39.3658V13.4417H36.0806L39.3658 9.55891Z"
         fill="white"
       />

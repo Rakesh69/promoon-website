@@ -11,8 +11,8 @@ const TrueIcon = () => {
     >
       <g filter="url(#filter0_i_25_8)">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M33.4142 10.5858C34.1952 11.3668 34.1952 12.6332 33.4142 13.4142L17.4142 29.4142C16.6332 30.1952 15.3668 30.1952 14.5858 29.4142L6.58578 21.4142C5.80474 20.6332 5.80474 19.3668 6.58578 18.5858C7.36684 17.8047 8.63316 17.8047 9.41422 18.5858L16 25.1716L30.5858 10.5858C31.3668 9.80474 32.6332 9.80474 33.4142 10.5858Z"
           fill="black"
         />
@@ -25,10 +25,10 @@ const TrueIcon = () => {
           width="28"
           height="24"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood
-            flood-opacity="0"
+            floodOpacity="0"
             result="BackgroundImageFix"
           />
           <feBlend

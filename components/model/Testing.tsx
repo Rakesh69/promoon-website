@@ -161,7 +161,7 @@ const Testing = () => {
                 Tools
                 <div className="border-animation" />
               </h2>
-              <div className="flex lg:gap-x-16 lg:gap-y-12 gap-12 max-w-[446px] flex-wrap ">
+              <div className="flex lg:gap-x-16 lg:gap-y-12 gap-12 max-w-[446px] lg:max-w-full flex-wrap ">
                 {OBJECTIVES.map(({ icon, id }) => (
                   <div key={id}>{icon}</div>
                 ))}

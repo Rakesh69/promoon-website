@@ -172,7 +172,7 @@ const PrivacyPolicy: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen w-full bg-white">
+    <div className="min-h-screen w-full bg-white ">
       <div className="pt-36 pb-32 bg-leading-background bg-cover bg-no-repeat flex justify-center items-center px-4">
         <div className="flex flex-col justify-between md:px-0 px-4">
           <h1 className="text-4xl font-bold text-white text-center">
@@ -184,7 +184,7 @@ const PrivacyPolicy: React.FC = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 md:px-0 py-16">
+      <div className="container mx-auto md:px-12 xl:px-5 px-5 py-16">
         {data.map((item) => (
           <div
             key={item.id}
@@ -195,7 +195,7 @@ const PrivacyPolicy: React.FC = () => {
                 selectedItem === item.id
                   ? 'border-b-4 border-sky-500'
                   : 'border-b-transparent'
-              } text-black text-4xl font-bold w-fit transition-all duration-300 relative `}
+              } text-black text-2xl md:text-4xl font-bold w-fit transition-all duration-300 relative `}
             >
               {item.title}
               <div className="border-animation" />

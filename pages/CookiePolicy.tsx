@@ -15,9 +15,9 @@ const CookiePolicy = () => {
             </p>
           </div>
         </div>
-        <div className="container mx-auto px-4 md:px-0 py-16 ">
+        <div className="container mx-auto md:px-12 xl:px-5 px-5 py-16  ">
           <div className="mb-16">
-            <h2 className="text-black text-4xl font-bold relative w-fit ">
+            <h2 className="text-black text-2xl md:text-4xl font-bold relative w-fit ">
               {' '}
               Introduction <div className="border-animation" />
             </h2>
@@ -44,7 +44,7 @@ const CookiePolicy = () => {
             </p>
           </div>
           <div className="">
-            <h2 className="text-black text-4xl font-bold  relative w-fit ">
+            <h2 className="text-black text-2xl md:text-4xl font-bold  relative w-fit ">
               Your Choices Regarding Cookies
               <div className="border-animation" />
             </h2>
@@ -118,7 +118,7 @@ const CookiePolicy = () => {
             </p>
           </div>
           <div className="mb-16">
-            <h2 className="text-black text-4xl font-bold relative w-fit">
+            <h2 className="text-black text-2xl md:text-4xl font-bold relative w-fit">
               Contact Us <div className="border-animation" />
             </h2>
             <p className="text-black text-base font-normal pt-4">

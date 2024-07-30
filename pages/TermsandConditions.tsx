@@ -184,7 +184,7 @@ const TermsandConditions: React.FC = () => {
           </p>
         </div>
       </div>
-      <div className="container mx-auto px-4 md:px-0 py-16">
+      <div className="container mx-auto md:px-12 xl:px-5 px-5 py-16">
         {data.map((item) => (
           <section
             key={item.id}
@@ -195,7 +195,7 @@ const TermsandConditions: React.FC = () => {
                 selectedItem === item.id
                   ? 'border-b-4 border-sky-500'
                   : 'border-b-transparent'
-              } text-black text-4xl font-bold w-fit relative `}
+              } text-black md:text-4xl text-2xl font-bold w-fit relative `}
             >
               {item.title}
               <div className="border-animation" />

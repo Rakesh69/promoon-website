@@ -9,22 +9,22 @@ const Angular = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_17_26)">
+      <g clipPath="url(#clip0_17_26)">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M11.6374 0L0 4.15039L1.77409 19.5374L11.6374 25L21.5007 19.5374L23.2747 4.15039L11.6374 0Z"
           fill="#DD0031"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M11.6374 0V2.77507V2.76286V15.4256V25L21.5007 19.5374L23.2747 4.15039L11.6374 0Z"
           fill="#C3002F"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M11.6374 2.76288L4.36198 19.0755H7.07398L8.53679 15.4256H14.7115L16.1743 19.0755H18.8863L11.6374 2.76288ZM13.7634 13.1755H9.51335L11.6374 8.06277L13.7634 13.1755Z"
           fill="white"
         />

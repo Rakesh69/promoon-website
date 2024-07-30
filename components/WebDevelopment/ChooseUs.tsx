@@ -64,7 +64,7 @@ const ChooseUs = () => {
     };
   }, [isVisible]);
   return (
-    <div className="container mx-auto px-4 pb-20">
+    <div className="container mx-auto px-5 md:px-12 xl:px-5 pb-20 overflow-hidden  ">
       <div className="flex justify-center items-center flex-col mb-8">
         <h1 className="text-center text-black text-3xl pr-2 font-bold py-4 relative">
           <div className="relative inline-block">
@@ -77,12 +77,12 @@ const ChooseUs = () => {
           <div className="border-animation" />
         </h1>
       </div>
-      <div className="flex flex-col md:flex-row md:justify-between items-center">
+      <div className="flex flex-col lg:flex-row lg:justify-between items-center ">
         <div
           ref={sectionRef}
           className={`animated-section ${
             isVisible ? 'slideInLeft' : ''
-          } grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-1/2 mb-8 md:mb-0 `}
+          } grid grid-cols-1 lg:grid-cols-2 gap-4 w-full lg:w-1/2 mb-8 md:mb-0 `}
         >
           {OUTCOME.map(({ title, id, details }) => (
             <div
@@ -99,6 +99,7 @@ const ChooseUs = () => {
             </div>
           ))}
         </div>
+
         <div
           ref={sectionRef}
           className={`animated-section ${
